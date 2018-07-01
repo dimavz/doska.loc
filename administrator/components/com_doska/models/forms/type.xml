@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
     <fields name="type_fields">
-        <field name='tel' type='tel' label='Телефон'></field>
+        <field name='tel' type='tel' label='Телефон'/>
         <fieldset name="basic">
-            <field name='id' type='hidden'></field>
+            <field name='id' type='hidden'/>
             <field name='name' type='text' default='' label='COM_DOSKA_TYPE_FILED_TITLE_LABEL'
-                   description='COM_DOSKA_TYPE_FILED_TITLE_DESC' required='true'></field>
+                   description='COM_DOSKA_TYPE_FILED_TITLE_DESC' required='true'/>
             <field name='alias' type='text' default='' label='COM_DOSKA_TYPE_FILED_ALIAS_LABEL'
-                   description='COM_DOSKA_TYPE_FILED_ALIAS_DESC'></field>
+                   description='COM_DOSKA_TYPE_FILED_ALIAS_DESC'/>
             <field name="state" type="list" default="1" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
                    class="chzn-single chzn-color-state">
                 <option value="0">JUNPUBLISHED</option>
