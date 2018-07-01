@@ -20,9 +20,9 @@ defined('_JEXEC') or die('Restricted Access');
 $fields = $this->form->getGroup('type_fields'); //Получаем массив полей по группе полей
 //print_r($fields);
 
-//foreach ($fields as $field){
-//    echo $field->renderField();
-//}
+foreach ($fields as $field){
+    echo $field->renderField();
+}
 
 // Альтернативный вывод полей
 //foreach ($fields as $field){
@@ -30,8 +30,8 @@ $fields = $this->form->getGroup('type_fields'); //Получаем массив 
 //    echo $field->input;
 //}
 
-echo $this->form->getLabel('name','type_fields');
-echo $this->form->getInput('name','type_fields');
-echo $this->form->getName();
+//echo $this->form->getLabel('name','type_fields');
+//echo $this->form->getInput('name','type_fields');
+//echo $this->form->getName();
 
 //print_r($obj);
