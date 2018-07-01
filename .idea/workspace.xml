@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79a37a09-fa9f-4a73-a4f2-08f08d299580" name="Default" comment="Инициализация файлов">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/cec58ba5-ad62-4930-9e33-9052fc4afc6e.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/admin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/controllers/profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/helpers/html/directory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/helpers/html/phpsetting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/helpers/html/system.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/models/forms/profile.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/models/help.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/models/profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/models/sysinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/eaccelerator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/htaccess.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/joomla40checks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/languageaccess340.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/statscollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/postinstall/updatedefaultsettings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/script.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/others/mysql/utf8mb4-conversion-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/others/mysql/utf8mb4-conversion-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-21-1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-21-2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-23.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2011-12-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2012-01-10.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.0-2012-01-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.1-2012-01-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.2-2012-03-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.3-2012-03-13.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.4-2012-03-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.4-2012-03-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.5.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.6.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/2.5.7.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.0.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.0.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.0.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.0.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.4.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.1.5.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2013-12-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2013-12-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2014-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2014-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2014-01-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.2-2014-01-23.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.2.3-2014-02-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.3.0-2014-02-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.3.0-2014-04-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.3.4-2014-08-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.3.6-2014-09-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2014-08-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2014-09-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2014-09-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2014-10-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2014-12-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2015-01-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.4.0-2015-02-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-07-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-10-13.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-10-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-10-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2015-11-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2016-02-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.0-2016-03-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.1-2016-03-25.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.5.1-2016-03-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-04-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-04-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-04-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-04-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-05-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-06-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.0-2016-06-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.3-2016-08-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.6.3-2016-08-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-08-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-08-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-08-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-09-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-10-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-10-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-11-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-11-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-11-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2016-11-27.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-01-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-01-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-01-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-02-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-02-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-02-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-03-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-03-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-03-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-04-10.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.0-2017-04-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.3-2017-06-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.7.4-2017-07-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.0-2017-07-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.0-2017-07-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.2-2017-10-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.4-2018-01-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.6-2018-02-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/mysql/3.8.8-2018-05-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.0.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.0.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.0.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.0.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.4.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.1.5.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2013-12-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2013-12-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2014-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2014-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2014-01-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.2-2014-01-23.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.2.3-2014-02-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.3.0-2013-12-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.3.0-2014-02-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.3.0-2014-04-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.3.4-2014-08-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.3.6-2014-09-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2014-08-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2014-09-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2014-09-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2014-10-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2014-12-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2015-01-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.0-2015-02-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.4.4-2015-07-11.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2015-10-13.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2015-10-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2015-10-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2015-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2015-11-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.5.0-2016-03-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-04-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-04-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-04-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-05-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-06-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.0-2016-06-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.3-2016-08-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.3-2016-08-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.6.3-2016-10-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-08-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-08-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-08-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-09-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-10-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-10-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-11-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-11-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2016-11-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-01-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-01-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-01-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-02-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-02-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-02-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-03-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-03-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-04-10.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.0-2017-04-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.7.4-2017-07-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.0-2017-07-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.0-2017-07-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.2-2017-10-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.4-2018-01-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.6-2018-02-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/postgresql/3.8.8-2018-05-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.2-2012-03-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.3-2012-03-13.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.4-2012-03-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.4-2012-03-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.5.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.6.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/2.5.7.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.0.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.0.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.0.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.0.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.4.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.1.5.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.0.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.1.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2013-12-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2013-12-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2014-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2014-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2014-01-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.2-2014-01-23.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.2.3-2014-02-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.3.0-2014-02-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.3.0-2014-04-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.3.4-2014-08-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.3.6-2014-09-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2014-08-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2014-09-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2014-09-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2014-10-20.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2014-12-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2015-01-21.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.0-2015-02-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.4.4-2015-07-11.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2015-10-13.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2015-10-26.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2015-10-30.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2015-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2015-11-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.5.0-2016-03-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-04-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-04-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-04-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-04-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-05-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-06-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.0-2016-06-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.3-2016-08-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.6.3-2016-08-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-08-06.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-08-22.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-08-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-09-29.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-10-01.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-10-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-11-04.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-11-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2016-11-24.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-01-08.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-01-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-01-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-01-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-01-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-02-02.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-02-15.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-02-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-02-17.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-03-03.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-03-09.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-04-10.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.0-2017-04-19.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.7.4-2017-07-05.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.0-2017-07-28.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.0-2017-07-31.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.2-2017-10-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.4-2018-01-16.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.6-2018-02-14.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/sql/updates/sqlazure/3.8.8-2018-05-18.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/help/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/help/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/help/tmpl/langforum.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/help/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/profile/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/profile/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default_directory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default_phpinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default_phpsettings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/tmpl/default_system.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/view.json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_admin/views/sysinfo/view.text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_ajax/ajax.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_ajax/ajax.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/associations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/controllers/association.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/controllers/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/helpers/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/layouts/joomla/searchtools/default/bar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/association.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/fields/itemlanguage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/fields/itemtype.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/fields/modalassociation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/forms/association.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/models/forms/filter_associations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/association/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/association/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/associations/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/associations/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/associations/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_associations/views/associations/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/banners.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/banners.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/banner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/banners.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/clients.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/tracks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/controllers/tracks.raw.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/helpers/banners.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/helpers/html/banner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/banner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/banners.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/clients.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/download.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/fields/bannerclient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/fields/clicks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/fields/impmade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/fields/imptotal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/banner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/client.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/download.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/filter_banners.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/filter_clients.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/forms/filter_tracks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/models/tracks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/sql/install.mysql.utf8.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/sql/uninstall.mysql.utf8.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/tables/banner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/tables/client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banner/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banner/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banners/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banners/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banners/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/banners/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/client/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/client/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/clients/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/clients/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/download/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/download/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/tracks/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/tracks/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_banners/views/tracks/view.raw.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/cache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/helpers/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/models/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/models/forms/filter_cache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/cache/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/cache/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/cache/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/purge/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/purge/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cache/views/purge/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/categories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/categories.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/controllers/categories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/controllers/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/helpers/association.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/helpers/categories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/helpers/html/categoriesadministrator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/categories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/fields/categoryedit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/fields/categoryparent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/fields/modal/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/forms/category.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/models/forms/filter_categories.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/tables/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/categories/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/edit_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/edit_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/modal_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/modal_extrafields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/modal_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/tmpl/modal_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_categories/views/category/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/checkin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/checkin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/models/checkin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/models/forms/filter_checkin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/views/checkin/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/views/checkin/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_checkin/views/checkin/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/cancel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/display.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/removeroot.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/save.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/sendtestmail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/application/store.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/component/cancel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/component/display.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controller/component/save.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controllers/application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/controllers/component.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/helper/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/model/application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/model/component.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/model/field/configcomponents.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/model/field/filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/model/form/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/models/application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/models/component.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_cookie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_ftp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_ftplogin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_locale.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_mail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_permissions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_proxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_seo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_session.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_site.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/application/tmpl/default_system.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/component/html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/component/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/component/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_config/view/component/tmpl/default_navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/contact.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/controllers/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/controllers/contacts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/helpers/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/helpers/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/helpers/html/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/contacts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/fields/modal/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/forms/contact.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/forms/fields/mail.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/models/forms/filter_contacts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/sql/install.mysql.utf8.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/sql/uninstall.mysql.utf8.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/tables/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/edit_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/edit_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/edit_params.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/modal_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/modal_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/tmpl/modal_params.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contact/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/tmpl/default_batch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contact/views/contacts/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/content.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/content.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/controllers/article.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/controllers/articles.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/controllers/featured.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/helpers/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/helpers/content.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/helpers/html/contentadministrator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/article.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/articles.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/feature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/featured.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/fields/modal/article.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/fields/voteradio.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/forms/article.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/forms/filter_articles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/models/forms/filter_featured.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/tables/featured.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/edit_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/edit_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/modal_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/modal_metadata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/tmpl/pagebreak.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/article/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/articles/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/featured/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/featured/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_content/views/featured/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/contenthistory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/contenthistory.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/controllers/history.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/controllers/preview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/helpers/contenthistory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/helpers/html/textdiff.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/models/compare.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/models/history.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/models/preview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/compare/tmpl/compare.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/compare/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/history/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/history/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/preview/tmpl/preview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_contenthistory/views/preview/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/cpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/cpanel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/views/cpanel/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/views/cpanel/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_cpanel/views/cpanel/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/assets/images/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/assets/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/controllers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/controllers/type.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/doska.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/helpers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/install.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/install.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/language/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/language/ru-RU/ru-RU.com_doska.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/language/ru-RU/ru-RU.com_doska.sys.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/models/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/models/test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/models/type.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/sql/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/sql/install.mysql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/sql/uninstall.mysql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/sql/updates/mysql/1.0.2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/sql/updates/mysql/1.0.4.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/tables/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/messages/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/new.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/controllers/field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/controllers/fields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/controllers/group.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/controllers/groups.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/fields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/fields.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/helpers/fields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/libraries/fieldslistplugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/libraries/fieldsplugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/fields.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/fields/fieldcontexts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/fields/fieldgroups.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/fields/section.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/fields/type.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/forms/field.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/forms/filter_fields.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/forms/filter_groups.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/forms/group.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/group.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/models/groups.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/tables/field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/tables/group.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/field/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/field/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/fields/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/fields/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/fields/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/fields/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/fields/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/group/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/group/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/groups/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/groups/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/groups/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_fields/views/groups/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controllers/filter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controllers/filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controllers/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controllers/indexer.json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/controllers/maps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/finder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/finder.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/finder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/html/finder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/adapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/driver/mysql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/driver/postgresql.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/driver/sqlsrv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/indexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/parser/html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/parser/rtf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/parser/txt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/query.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/stemmer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/stemmer/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/stemmer/porter_en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/stemmer/snowball.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/taxonomy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/indexer/token.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/helpers/language.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/fields/branches.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/fields/contentmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/fields/contenttypes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/fields/directories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/fields/searchfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/filter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/filters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/forms/filter.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/forms/filter_filters.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/forms/filter_index.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/forms/filter_maps.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/indexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/maps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/models/statistics.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/sql/install.mysql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/sql/install.postgresql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/sql/uninstall.mysql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/sql/uninstall.postgresql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/tables/filter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/tables/link.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/tables/map.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/filter/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/filter/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/filters/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/filters/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/index/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/index/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/indexer/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/indexer/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/maps/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/maps/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/statistics/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_finder/views/statistics/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/discover.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/install.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/controllers/updatesites.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/helpers/html/manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/helpers/html/updatesites.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/helpers/installer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/installer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/installer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/discover.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/extension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/fields/extensionstatus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/fields/folder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/fields/location.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/fields/type.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/forms/filter_discover.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/forms/filter_languages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/forms/filter_manage.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/forms/filter_update.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/forms/filter_updatesites.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/install.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/updatesites.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/models/warnings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/database/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/database/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/database/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/default/tmpl/default_ftp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/default/tmpl/default_message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/default/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/discover/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/discover/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/discover/tmpl/default_item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/discover/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/install/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/install/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/install/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/languages/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/languages/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/languages/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/manage/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/manage/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/manage/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/update/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/update/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/update/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/updatesites/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/updatesites/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/updatesites/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/warnings/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/warnings/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_installer/views/warnings/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/controllers/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/helpers/joomlaupdate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/helpers/select.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/joomlaupdate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/joomlaupdate.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/models/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/restore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/restore_finalisation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/complete.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default_nodownload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default_reinstall.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default_update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default_updatemefirst.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/tmpl/default_upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/default/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/update/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/update/tmpl/finaliseconfirm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/update/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/upload/tmpl/captive.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_joomlaupdate/views/upload/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/installed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/language.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/override.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/overrides.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/controllers/strings.json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/helpers/html/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/helpers/jsonresponse.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/helpers/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/helpers/multilangstatus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/languages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/forms/filter_installed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/forms/filter_languages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/forms/language.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/forms/override.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/installed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/language.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/languages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/override.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/overrides.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/models/strings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/installed/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/installed/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/installed/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/language/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/language/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/languages/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/languages/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/languages/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/multilangstatus/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/multilangstatus/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/override/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/override/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/overrides/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/overrides/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_languages/views/overrides/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/login.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/models/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/views/login/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_login/views/login/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/controllers/file.json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/controllers/file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/controllers/folder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/helpers/media.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/layouts/toolbar/deletemedia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/layouts/toolbar/newfolder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/layouts/toolbar/uploadmedia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/media.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/media.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/models/list.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/models/manager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/images/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/images/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/imageslist/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/imageslist/tmpl/default_folder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/imageslist/tmpl/default_image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/imageslist/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/media/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/media/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/media/tmpl/default_folders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/media/tmpl/default_navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/media/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_doc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_docs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_folder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_folders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_img.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_imgs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_up.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_video.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/details_videos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs_docs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs_folders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs_imgs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs_up.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/tmpl/thumbs_videos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_media/views/medialist/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/controllers/item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/controllers/items.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/controllers/menu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/controllers/menus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/helpers/associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/helpers/html/menus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/helpers/menus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/layouts/joomla/menu/edit_modules.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/layouts/joomla/searchtools/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/layouts/joomla/searchtools/default/bar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/menus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/menus.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/componentscategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/menuitembytype.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/menuordering.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/menuparent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/menupreset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/menutype.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/fields/modal/menu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/filter_items.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/filter_itemsadmin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/filter_menus.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item_alias.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item_component.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item_heading.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item_separator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/item_url.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_alias.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_component.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_container.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_heading.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_separator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/itemadmin_url.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/forms/menu.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/items.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/menu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/menus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/models/menutypes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/presets/joomla.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/presets/menu.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/presets/modern.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/tables/menu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit_container.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit_modules.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/edit_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/modal_associations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/tmpl/modal_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/item/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/tmpl/default_batch_body.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/tmpl/default_batch_footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/tmpl/modal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/items/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menu/tmpl/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menu/tmpl/edit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menu/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menu/view.xml.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menus/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menus/tmpl/default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menus/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menutypes/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_menus/views/menutypes/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/access.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/controllers/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/controllers/message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/controllers/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/helpers/html/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/helpers/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/messages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/fields/messagestates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/fields/usermessages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/forms/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/forms/filter_messages.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/forms/message.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/models/messages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/tables/message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/views/config/tmpl/default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/views/config/view.html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/administrator/components/com_messages/views/message/tmpl/default.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="doska.loc" />
+    <favorites_list name="XML">
+      <favorite_root url="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Oceanic)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.46517262">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="type.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/type.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="type.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="view.html.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="edit.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="666">
+                  <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ru-RU.com_doska.ini" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="10" column="120" lean-forward="false" selection-start-line="10" selection-start-column="120" selection-end-line="10" selection-end-column="120" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File Joomla" />
+        <option value="XML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>title</find>
+      <find>add</find>
+      <find>getRedirectToItemAppend</find>
+      <find>JViewLegacy</find>
+      <find>get</find>
+      <find>option</find>
+      <find>loadForm</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/messages/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/doska.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/controller.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/controllers/type.php" />
+        <option value="$PROJECT_DIR$/libraries/src/MVC/Controller/FormController.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/_tc/views/type/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/models/user.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/models/test.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.xml" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/models/type.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JoomlaConfiguration" enabled="true">
+    <joomlaPath>D:\OpenServer\domains\doska.loc</joomlaPath>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scratches" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doska.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doska.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doska.loc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="doska.loc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="doska.loc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="administrator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="doska.loc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="administrator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="doska.loc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="administrator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com_doska">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="doska.loc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="administrator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com_doska">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="XML&#10;XHTML" />
+    <property name="settings.editor.splitter.proportion" value="0.23679061" />
+    <property name="SearchEverywhereHistoryKey" value="loadForm&#9;null&#9;null" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\doska.loc\administrator\components\com_doska\models" />
+      <recent name="D:\OpenServer\domains\doska.loc\administrator\components\com_doska\views\types\tmpl" />
+      <recent name="D:\OpenServer\domains\doska.loc\administrator\components\com_doska\views\types" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Дмитрий\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79a37a09-fa9f-4a73-a4f2-08f08d299580" name="Default" comment="" />
+      <created>1529926243094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529926243094</updated>
+      <workItem from="1529926246917" duration="1162000" />
+      <workItem from="1529947921936" duration="5264000" />
+      <workItem from="1530013310074" duration="10653000" />
+      <workItem from="1530086745368" duration="11119000" />
+      <workItem from="1530133155496" duration="4181000" />
+      <workItem from="1530172290833" duration="9568000" />
+      <workItem from="1530273421209" duration="13193000" />
+      <workItem from="1530345545844" duration="4509000" />
+      <workItem from="1530364458028" duration="5701000" />
+      <workItem from="1530423028642" duration="1966000" />
+      <workItem from="1530432526046" duration="4957000" />
+      <workItem from="1530457716890" duration="976000" />
+      <workItem from="1530458723830" duration="3876000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77125000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13962065" sideWeight="0.4957537" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="5" y="468" width="1914" height="304" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19652265" sideWeight="0.49357602" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32655245" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25553215" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762313" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.506424" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14010416" sideWeight="0.4957537" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14010416" sideWeight="0.5042463" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/doska.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/doska.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/doska.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/curl/curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/includes/toolbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/_tc/controller.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/Router/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/joomla/application/web/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1525">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/joomla/controller/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/FormController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="453" column="46" lean-forward="false" selection-start-line="453" selection-start-column="23" selection-end-line="453" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/messages/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/_tc/views/type/view.html.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="75" lean-forward="true" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/ru-RU/ru-RU.com_doska.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/com_doska/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/doska.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/View/HtmlView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="391" column="20" lean-forward="false" selection-start-line="391" selection-start-column="17" selection-end-line="391" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/ListModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/ItemModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/BaseDatabaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson13/models/type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controllers/type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/AdminModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="1259" column="54" lean-forward="false" selection-start-line="1259" selection-start-column="48" selection-end-line="1259" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/FormModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="198" column="31" lean-forward="false" selection-start-line="198" selection-start-column="23" selection-end-line="198" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="120" lean-forward="false" selection-start-line="10" selection-start-column="120" selection-end-line="10" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_post">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_types">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

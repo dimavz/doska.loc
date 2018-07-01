@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="3.0" method="upgrade">
+
+<name>COM_DOSKA</name>
+<creationDate>2015-04-02</creationDate>
+<author>Viktor</author>
+<authorEmail>admin@amin.ru</authorEmail>
+<authorUrl>http://webformyself.com</authorUrl>
+<copyright>Copyright info</copyright>
+<license>License info</license>
+<version>1.0.0</version>
+<description>COM_DOSKA_XML_DESCRIPTION</description>
+
+
+<scriptfile>install.php</scriptfile>
+
+<install>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+	</sql>
+</install>
+
+<uninstall>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+	</sql>
+</uninstall>
+
+<update>
+	<schemas>
+		<schemapath type="mysql">sql/updates/mysql</schemapath>
+	</schemas>
+</update>
+
+<languages folder="site">
+	<language tag="ru-RU">language/ru-RU/ru-RU.com_doska.ini</language>
+</languages>
+
+<files folder="site">
+	
+	<folder>assets</folder>
+	<folder>controllers</folder>
+	<folder>helpers</folder>
+	<folder>language</folder>
+	<folder>models</folder>
+	<folder>tables</folder>
+	<folder>views</folder>
+	
+	<filename>controller.php</filename>
+	<filename>doska.php</filename>
+	<filename>index.html</filename>
+	
+</files>
+
+<media destination="com_doska" folder="media">
+	<folder>images</folder>
+	<filename>index.html</filename>
+</media>	
+
+<administration>
+	
+	<menu img="../media/com_doska/images/icon.png" link="option=com_doska">COM_DOSKA_MENU_NAME</menu>
+	
+	<submenu>
+		<menu view="messages">COM_DOSKA_MENU_MESSAGES</menu>
+		<menu view="categories">COM_DOSKA_MENU_CATEGORIES</menu>
+		<menu view="types">COM_DOSKA_MENU_TYPES</menu>
+	</submenu>
+	
+	<files folder="admin">
+		
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>sql</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		
+		<filename>controller.php</filename>
+		<filename>doska.php</filename>
+		<filename>index.html</filename>
+		<filename>access.xml</filename>
+		<filename>config.xml</filename>
+		
+	</files>
+	
+	<languages folder="admin">
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_doska.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_doska.sys.ini</language>
+	</languages>
+	
+</administration>
+	
+</extension>

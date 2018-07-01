@@ -1,0 +1,13 @@
+﻿.icon-doska{
+	background-image: url(../images/types_24x24.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+
+.icon-custom{
+	background-image: url(../images/types_24x24.png);
+	width: 18px !important;
+	height: 18px !important;
+}
+
+

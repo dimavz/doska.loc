@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="type_fields">
+        <field name='tel' type='tel' label='Телефон'></field>
+        <fieldset name="basic">
+            <field name='id' type='hidden'></field>
+            <field name='name' type='text' default='' label='COM_DOSKA_TYPE_FILED_TITLE_LABEL'
+                   description='COM_DOSKA_TYPE_FILED_TITLE_DESC' required='true'></field>
+            <field name='alias' type='text' default='' label='COM_DOSKA_TYPE_FILED_ALIAS_LABEL'
+                   description='COM_DOSKA_TYPE_FILED_ALIAS_DESC'></field>
+            <field name="state" type="list" default="1" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+                   class="chzn-single chzn-color-state">
+                <option value="0">JUNPUBLISHED</option>
+                <option value="1">JPUBLISHED</option>
+            </field>
+
+            <field name="modified_user_id" type="user"
+                   label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+                   class="readonly"
+                   readonly="false"
+                   filter="unset"/>
+        </fieldset>
+    </fields>
+</form>
