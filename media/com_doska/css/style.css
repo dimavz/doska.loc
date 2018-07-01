@@ -1,4 +1,11 @@
-﻿.icon-doska{
+﻿/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/roboto */
+@import "http://fonts.fontstorage.com/import/roboto.css";
+/*
+	Roboto, 100, 100 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 700, 700 italic, 900, 900 italic
+*/
+
+
+.icon-doska{
 	background-image: url(../images/types_24x24.png);
 	width: 24px !important;
 	height: 24px !important;
