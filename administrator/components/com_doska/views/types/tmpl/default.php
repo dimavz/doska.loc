@@ -6,40 +6,40 @@ defined("_JEXEC") or die();
 
     <table class="table table-striped table-hover">
         <thead>
-        <tr>
-            <td width="1%">
+            <th width="1%">
                 <?php echo JText::_('COM_DOSKA_NUM'); ?>
-            </td>
-            <td width="2%">
-                check
-            </td>
-            <td width="90%">
+            </th>
+            <th width="2%">
+                <?php echo JHtml::_('grid.checkall'); ?>
+            </th>
+            <th width="90%">
                 <?php echo JText::_('COM_DOSKA_TYPE_NAME'); ?>
-            </td>
-            <td width="5%">
+            </th>
+            <th width="5%">
                 <?php echo JText::_('JSTATUS'); ?>
-            </td>
-            <td width="2%">
+            </th>
+            <th width="2%">
                 <?php echo JText::_('COM_DOSKA_TYPE_ID'); ?>
-            </td>
-        </tr>
+            </th>
         </thead>
         <tbody>
         <?php if (!empty($this->items)) : ?>
             <?php $i = 1; ?>
-            <?php foreach ($this->items as $item) : ?>
+            <?php foreach ($this->items as $key=>$item) : ?>
                 <tr>
                     <td>
                         <?php echo $i;?>
                     </td>
                     <td>
+                        <?php echo JHtml::_('grid.id',$key,$item->id); ?>
                     </td>
                     <td>
                         <?php $link = JRoute::_('index.php?option=com_doska&task=type.edit&id=' . $item->id); ?>
-                        <a href="<?php echo $link; ?>"><?php echo $item->name; ?></a>
+<!--                        <a href="--><?php //echo $link; ?><!--">--><?php //echo $item->name; ?><!--</a>-->
+                        <?php echo JHtml::_('link',$link,$item->name); ?>
                     </td>
                     <td>
-                        <?php echo $item->state; ?>
+                        <?php echo JHtml::_('jgrid.published',$item->state,$key,'types.'); ?>
                     </td>
                     <td>
                         <?php echo $item->id; ?>
