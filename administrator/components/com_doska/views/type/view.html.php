@@ -17,6 +17,8 @@ class DoskaViewType extends JViewLegacy {
         $this->form = $this->get('Form'); // Обращение к методу модели по умолчанию getForm
 //        Метод вида get() является связующим методом между видом и моделью
 //        var_dump($this->form);
+        $this->item = $this->get('Item'); // Обращаемся к методу getItem модели
+//        print_r($this->item);
 
         $this->addToolBar();
         $this->setDocument();
@@ -28,7 +30,7 @@ class DoskaViewType extends JViewLegacy {
 
         $isnew = ($this->item->id == 0);
 
-            if(isnew){
+            if($isnew){
                 $title = JText::_("COM_DOSKA_ADD_TYPE_TITLE");
             }
             else{
@@ -50,5 +52,4 @@ class DoskaViewType extends JViewLegacy {
     }
 }
 ?>
-<!-- Закончил на времени 00:00 урок 13 -->
 
