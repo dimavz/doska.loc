@@ -53,7 +53,6 @@ class DoskaModelType extends JModelAdmin {
             $data['alias'] = JApplicationHelper::stringURLSafe($data['alias']);
         }
 
-
         if(parent::save($data)) {
             return TRUE;
         }

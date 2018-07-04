@@ -6,19 +6,22 @@ defined("_JEXEC") or die();
 
     <table class="table table-striped table-hover">
         <thead>
-            <th width="1%">
+            <th width="2%">
                 <?php echo JText::_('COM_DOSKA_NUM'); ?>
             </th>
             <th width="2%">
                 <?php echo JHtml::_('grid.checkall'); ?>
             </th>
-            <th width="90%">
+            <th width="58%">
                 <?php echo JText::_('COM_DOSKA_TYPE_NAME'); ?>
+            </th>
+            <th width="25%">
+                <?php echo JText::_('COM_DOSKA_TYPE_ALIAS'); ?>
             </th>
             <th width="5%">
                 <?php echo JText::_('JSTATUS'); ?>
             </th>
-            <th width="2%">
+            <th width="5%">
                 <?php echo JText::_('COM_DOSKA_TYPE_ID'); ?>
             </th>
         </thead>
@@ -37,6 +40,9 @@ defined("_JEXEC") or die();
                         <?php $link = JRoute::_('index.php?option=com_doska&task=type.edit&id=' . $item->id); ?>
 <!--                        <a href="--><?php //echo $link; ?><!--">--><?php //echo $item->name; ?><!--</a>-->
                         <?php echo JHtml::_('link',$link,$item->name); ?>
+                    </td>
+                    <td>
+                        <?php echo $item->alias; ?>
                     </td>
                     <td>
                         <?php echo JHtml::_('jgrid.published',$item->state,$key,'types.'); ?>
