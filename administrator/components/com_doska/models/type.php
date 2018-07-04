@@ -36,5 +36,28 @@ class DoskaModelType extends JModelAdmin {
 
         return $data;
     }
+
+    public function save ($data){
+//        print_r($data);
+//        exit();
+        if(!trim($data['name'])) {
+            $this->setError(JText::_('COM_DOSKA_WARNING_PROVIDE_VALID_NAME'));
+            return FALSE;
+        }
+
+        if(trim($data['alias']) == '') {
+            $data['alias'] = $data['name'];
+            $data['alias'] = JApplicationHelper::stringURLSafe($data['alias']);
+        }
+        else{
+            $data['alias'] = JApplicationHelper::stringURLSafe($data['alias']);
+        }
+
+
+        if(parent::save($data)) {
+            return TRUE;
+        }
+        return FALSE;
+    }
 }
 ?>
