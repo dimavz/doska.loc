@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="79a37a09-fa9f-4a73-a4f2-08f08d299580" name="Default" comment="Инициализация файлов">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php" afterPath="$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php" afterPath="$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_doska/tables/type.php" afterPath="$PROJECT_DIR$/administrator/components/com_doska/tables/type.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini" afterPath="$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configuration.php" afterPath="$PROJECT_DIR$/configuration.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,54 +38,34 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48168498">
+    <splitter split-orientation="horizontal" split-proportion="0.48969394">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="view.html.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="990">
-                  <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="types.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/types.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="default.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="471">
-                  <caret line="41" column="87" lean-forward="false" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="types.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+                <state relative-caret-position="63">
+                  <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="jgrid.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/libraries/cms/html/jgrid.php">
+          <file leaf-file-name="type.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/tables/type.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
-                  <caret line="157" column="27" lean-forward="true" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="36" />
+                <state relative-caret-position="748">
+                  <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="default.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -96,8 +78,8 @@
           <file leaf-file-name="ru-RU.com_doska.ini" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
                   <folding />
                 </state>
               </provider>
@@ -151,7 +133,6 @@
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/media/com_doska/css/style.css" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml" />
-        <option value="$PROJECT_DIR$/administrator/components/com_doska/tables/type.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/models/type.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php" />
@@ -159,9 +140,10 @@
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/test/tmpl/default.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/test/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini" />
-        <option value="$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_doska/tables/type.php" />
+        <option value="$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini" />
       </list>
     </option>
   </component>
@@ -221,6 +203,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scratches" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,7 +315,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="tables" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,31 +415,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scratches" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="XML&#10;XHTML" />
     <property name="settings.editor.splitter.proportion" value="0.23679061" />
     <property name="SearchEverywhereHistoryKey" value="loadForm&#9;null&#9;null" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
@@ -583,6 +566,12 @@
       <workItem from="1530607791452" duration="6994000" />
       <workItem from="1530645720606" duration="53000" />
       <workItem from="1530645804834" duration="7053000" />
+      <workItem from="1530688019375" duration="1209000" />
+      <workItem from="1530689246389" duration="83000" />
+      <workItem from="1530689342191" duration="173000" />
+      <workItem from="1530689526961" duration="454000" />
+      <workItem from="1530689993063" duration="493000" />
+      <workItem from="1530690497434" duration="5747000" />
     </task>
     <task id="LOCAL-00001" summary="Подключен шрифт Roboto к таблице стилей">
       <created>1530468845017</created>
@@ -595,7 +584,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116159000" />
+    <option name="totallyTimeSpent" value="124318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,10 +601,8 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369863" sideWeight="0.4957537" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="5" y="468" width="1914" height="304" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19652265" sideWeight="0.49357602" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264418" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12012645" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -627,6 +614,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -683,40 +672,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.xml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.xml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.xml" />
-    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson13/models/type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_post">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_types">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson13/models/type.php" />
+    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_post" />
+    <entry file="dbDummy://dbtable:/327ac45a/cec58ba5-ad62-4930-9e33-9052fc4afc6e/doska.jos_doska_types" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -725,179 +685,53 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.js" />
-    <entry file="file://$PROJECT_DIR$/media/com_doska/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Обучение/Web-разработка/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/joomla/edit/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/joomla/edit/title_alias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/behavior.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/formbehavior.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/layouts/edit/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/layouts/edit/title_alias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/com_doska/css/style.css" />
+    <entry file="file://G:/Обучение/Web-разработка/edit.php" />
+    <entry file="file://$PROJECT_DIR$/layouts/joomla/edit/global.php" />
+    <entry file="file://$PROJECT_DIR$/layouts/joomla/edit/title_alias.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/behavior.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/formbehavior.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/forms/type.xml" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/layouts/edit/global.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/layouts/edit/title_alias.php" />
     <entry file="file://E:/type.php" />
-    <entry file="file://$PROJECT_DIR$/libraries/src/Table/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="131" column="20" lean-forward="false" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/tables/type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="297" column="20" lean-forward="false" selection-start-line="297" selection-start-column="20" selection-end-line="297" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controllers/type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/AdminModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="1272" column="32" lean-forward="false" selection-start-line="1272" selection-start-column="28" selection-end-line="1272" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/FormController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="613" column="20" lean-forward="false" selection-start-line="613" selection-start-column="20" selection-end-line="613" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/FormModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="264" column="19" lean-forward="false" selection-start-line="264" selection-start-column="19" selection-end-line="264" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/ListModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/types/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/types/view.html.php">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controllers/type.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/FormController.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/FormModel.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/type.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/view.html.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/type/tmpl/edit.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controller.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/ListModel.php" />
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/types/tmpl/default.php" />
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/types/view.html.php" />
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/test/view.html.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/test/tmpl/default.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/joomla/model/base.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/BaseController.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/test/view.html.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/content.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/form.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/links.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/src/HTML/HTMLHelper.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/grid.php" />
+    <entry file="file://$PROJECT_DIR$/libraries/cms/html/jgrid.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/types.php" />
+    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson21/controllers/types.php" />
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson19/views/test/view.html.php">
+    <entry file="file://$PROJECT_DIR$/libraries/joomla/controller/base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/test/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -905,47 +739,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/joomla/model/base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/joomla/controller/base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/test/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/content.php">
+    <entry file="file://$PROJECT_DIR$/libraries/fof/table/table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -953,82 +751,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/form.php">
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="277">
+          <caret line="210" column="26" lean-forward="true" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/links.php">
+    <entry file="file://$PROJECT_DIR$/libraries/src/MVC/Model/AdminModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="1053" column="25" lean-forward="true" selection-start-line="1053" selection-start-column="25" selection-end-line="1053" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/HTML/HTMLHelper.php">
+    <entry file="file://$PROJECT_DIR$/libraries/src/Table/Table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/grid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="129" column="27" lean-forward="true" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/cms/html/jgrid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="157" column="27" lean-forward="true" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/models/types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Обучение/Web-разработка/Курсы по Joomla/Joomla WebForMySelf [Создание компонента для joomla]/disk 1/videokurs/part1/www/wwwlesson21/controllers/types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1382">
+          <caret line="1631" column="22" lean-forward="true" selection-start-line="1631" selection-start-column="22" selection-end-line="1631" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/controllers/types.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="63">
+          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/views/types/tmpl/default.php">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_doska/tables/type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="41" column="87" lean-forward="false" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
+        <state relative-caret-position="748">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/language/ru-RU/ru-RU.com_doska.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding />
         </state>
       </provider>
