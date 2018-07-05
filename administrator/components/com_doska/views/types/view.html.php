@@ -8,7 +8,7 @@ class DoskaViewTypes extends JViewLegacy
 
     public function display($tpl = null)
     {
-
+        $this->sidebar = DoskaHelper::addSubMenu('types');
         $this->addToolBar();
         $this->setDocument();
 
