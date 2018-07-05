@@ -12,20 +12,23 @@ defined("_JEXEC") or die();
     <div id="j-main-container" class="j-toggle-main j-toggle-transition span10">
         <table class="table table-striped table-hover">
             <thead>
-            <th width="2%">
+            <th width="3%">
                 <?php echo JText::_('COM_DOSKA_NUM'); ?>
             </th>
             <th width="2%">
                 <?php echo JHtml::_('grid.checkall'); ?>
             </th>
-            <th width="58%">
+            <th width="50%">
                 <?php echo JText::_('COM_DOSKA_CATEGORY_TITLE'); ?>
             </th>
-            <th width="25%">
+            <th width="35%">
                 <?php echo JText::_('COM_DOSKA_CATEGOR_ALIAS'); ?>
             </th>
             <th width="5%">
                 <?php echo JText::_('JSTATUS'); ?>
+            </th>
+            <th width="5%">
+                <?php echo JText::_('JGRID_HEADING_ORDERING'); ?>
             </th>
             <th width="5%">
                 <?php echo JText::_('COM_DOSKA_CATEGORY_ID'); ?>
@@ -53,6 +56,9 @@ defined("_JEXEC") or die();
                         </td>
                         <td>
                             <?php echo JHtml::_('jgrid.published', $item->state, $key, 'categories.'); ?>
+                        </td>
+                        <td>
+                            <?php echo "Сортировка" ?>
                         </td>
                         <td>
                             <?php echo $item->id; ?>

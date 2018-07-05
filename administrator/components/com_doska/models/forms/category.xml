@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-    <!--<fields name="type_fields">-->
+    <!--<fields name="category_fields">-->
     <fieldset name="basic">
         <field name='id' type='hidden'/>
-        <field name='parent_id' type='hidden'/>
         <field name='name' type='text' default='' label='COM_DOSKA_CATEGORY_FILED_TITLE_LABEL'
                description='COM_DOSKA_CATEGORY_FILED_TITLE_DESC' required='true'/>
         <field name='alias' type='text' default='' label='COM_DOSKA_CATEGORY_FILED_ALIAS_LABEL'
                description='COM_DOSKA_FILED_ALIAS_DESC'/>
+        <!--<field name='parentid' type='categoryparent' default="" label="COM_DOSKA_CATEGORY_PARENT" description="COM_DOSKA_CATEGORY_PARENT_DESC" filter="raw"/>-->
         <field name="state" type="list" default="1" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
                class="chzn-single chzn-color-state">
             <option value="0">JUNPUBLISHED</option>
@@ -15,4 +15,25 @@
         </field>
     </fieldset>
     <!--</fields>-->
+    <fields name="params">
+        <fieldset name="basic" label="COM_DOSKA_CATEGORY_PARAMS_BASIC">
+            <field name="show_category" type="list" label="COM_DOSKA_CATEGORY_FIELD_SHOW_CATEGORY_LABEL" description="COM_DOSKA__CATEGORYFIELD_SHOW_CATEGORY_DESC" default="" class="chzn-color-state" >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                    name="image"
+                    type="media"
+                    label="COM_DOSKA_FIELD_IMAGE_LABEL"
+                    description="COM_CATEGORIES_FIELD_IMAGE_DESC" />
+
+            <field
+                    name="image_alt"
+                    type="text"
+                    label="COM_DOSKA_FIELD_IMAGE_ALT_LABEL"
+                    description="COM_CATEGORIES_FIELD_IMAGE_ALT_DESC"
+                    size="20" />
+        </fieldset>
+    </fields>
 </form>

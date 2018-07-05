@@ -3,7 +3,8 @@ defined("_JEXEC") or die();
 
 class DoskaViewCategory extends JViewLegacy {
 
-    protected $form;
+    protected $form = null;
+    protected $item = null;
 
     public function display($tpl=null){
 
@@ -25,6 +26,11 @@ class DoskaViewCategory extends JViewLegacy {
     }
 
     protected function addToolBar() {
+
+        $title = "";
+
+        //Скрывает главное меню Joomla при добавлении или редактировании категории
+        JFactory::getApplication()->input->set('hidemainmenu', true);
 
         $isnew = ($this->item->id == 0);
 
