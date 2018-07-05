@@ -23,6 +23,23 @@ abstract class DoskaHelper
             $viewName =='types'
         );
 
+        if ($viewName == 'types'){
+            $doc = JFactory::getDocument();
+            $doc->addStyleDeclaration('.doska-myclass : {color: red; }');
+        }
+
+        $options[] = JHtml::_('select.option', '1', JText::_('JPUBLISHED'));
+		$options[] = JHtml::_('select.option', '0', JText::_('JUNPUBLISHED'));
+		$options[] = JHtml::_('select.option', '2', JText::_('JARCHIVED'));
+		$options[] = JHtml::_('select.option', '-2', JText::_('JTRASHED'));
+		$options[] = JHtml::_('select.option', '*', JText::_('JALL')) ;
+
+       JHtmlSidebar::addFilter(
+		    JText::_('JOPTION_SELECT_PUBLISHED'),
+		    'filter[state]',
+		    JHtml::_('select.options', $options, "value", "text")
+		);
+
         return JHtmlSidebar::render();
     }
 
