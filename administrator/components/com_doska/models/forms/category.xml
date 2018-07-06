@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-    <!--<fields name="category_fields">-->
-    <fieldset name="basic">
+    <fieldset>
         <field name='id' type='hidden'/>
         <field name='name' type='text' default='' label='COM_DOSKA_CATEGORY_FILED_TITLE_LABEL'
                description='COM_DOSKA_CATEGORY_FILED_TITLE_DESC' required='true'/>
@@ -14,7 +13,6 @@
             <option value="1">JPUBLISHED</option>
         </field>
     </fieldset>
-    <!--</fields>-->
     <fields name="params">
         <fieldset name="basic" label="COM_DOSKA_CATEGORY_PARAMS_BASIC">
             <field name="show_category" type="list" label="COM_DOSKA_CATEGORY_FIELD_SHOW_CATEGORY_LABEL" description="COM_DOSKA__CATEGORYFIELD_SHOW_CATEGORY_DESC" default="" class="chzn-color-state" >
