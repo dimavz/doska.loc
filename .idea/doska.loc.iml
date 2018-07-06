@@ -6,10 +6,6 @@
       <excludeFolder url="file://$MODULE_DIR$/bin" />
       <excludeFolder url="file://$MODULE_DIR$/cache" />
       <excludeFolder url="file://$MODULE_DIR$/cli" />
-      <excludeFolder url="file://$MODULE_DIR$/includes" />
-      <excludeFolder url="file://$MODULE_DIR$/modules" />
-      <excludeFolder url="file://$MODULE_DIR$/plugins" />
-      <excludeFolder url="file://$MODULE_DIR$/templates" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
