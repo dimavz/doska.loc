@@ -33,7 +33,8 @@ class DoskaModelCategory extends JModelAdmin {
         if(empty($data)) {
             $data = $this->getItem();
         }
-
+//        print_r($data);
+//        exit();
         return $data;
     }
 
@@ -52,6 +53,8 @@ class DoskaModelCategory extends JModelAdmin {
         else{
             $data['alias'] = JApplicationHelper::stringURLSafe($data['alias']);
         }
+
+//        $data['parent_id'] = $data['parentid'];
 
         if(parent::save($data)) {
             return TRUE;

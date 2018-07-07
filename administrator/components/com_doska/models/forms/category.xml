@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
     <!--<fields name="category_fields">-->
-    <fieldset>
+    <fieldset addfieldpath="/administrator/components/com_doska/models/fields">
         <field name='id' type='hidden'/>
         <field name='name' type='text' default='' label='COM_DOSKA_CATEGORY_FILED_TITLE_LABEL'
                description='COM_DOSKA_CATEGORY_FILED_TITLE_DESC' required='true'/>
         <field name='alias' type='text' default='' label='COM_DOSKA_CATEGORY_FILED_ALIAS_LABEL'
-               description='COM_DOSKA_FILED_ALIAS_DESC'/>
-        <!--<field name='parentid' type='categoryparent' default="" label="COM_DOSKA_CATEGORY_PARENT" description="COM_DOSKA_CATEGORY_PARENT_DESC" filter="raw"/>-->
+               description='COM_DOSKA_FILED_ALIAS_DESC' filter="raw"/>
+        <field name='parentid' type='categoryparent' default="0" label="COM_DOSKA_CATEGORY_PARENT" description="COM_DOSKA_CATEGORY_PARENT_DESC" filter="raw"/>
         <field name="state" type="list" default="1" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
                class="chzn-single chzn-color-state">
             <option value="0">JUNPUBLISHED</option>

@@ -14,9 +14,9 @@ $params = $this->form->getFieldsets('params');
     <div class="row-fluid">
         <div class="span9">
             <?php echo JLayoutHelper::render('joomla.edit.title_alias', $this); ?>
+            <?php echo $this->form->getField('parentid')->renderField();?>
         </div>
         <div class="span3">
-
             <?php //echo JHtml::_('bootstrap.startAccordion')?>
 
             <?php //echo JHtml::_('bootstrap.addSlide','myAccordian','Публикация','id')?>
@@ -49,13 +49,10 @@ $params = $this->form->getFieldsets('params');
             </fieldset>-->
             <?php //endforeach; ?>
             <?php //echo JHtml::_('sliders.end'); ?>
-
         </div>
-
         <div>
             <?php echo $this->form->getField('id')->renderField();?>
         </div>
-
     </div>
 
     <?php echo JHtml::_('bootstrap.endTab');?>
