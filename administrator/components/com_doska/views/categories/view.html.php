@@ -10,11 +10,6 @@ defined('_JEXEC') or die('Restricted Access');
 
 class DoskaViewCategories extends JViewLegacy
 {
-//    public function display($tpl = null)
-//    {
-//        echo 'Отработала функция display из вида';
-//    }
-
     protected $items;
 
     public function display($tpl = null)
