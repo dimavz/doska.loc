@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `jos_assets` (
   KEY `idx_parent_id` (`parent_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_assets: ~66 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_assets: ~64 rows (приблизительно)
 DELETE FROM `jos_assets`;
 /*!40000 ALTER TABLE `jos_assets` DISABLE KEYS */;
 INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
@@ -479,11 +479,14 @@ CREATE TABLE IF NOT EXISTS `jos_doska_categories` (
   `alias` varchar(255) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы doska.jos_doska_categories: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_doska_categories: ~2 rows (приблизительно)
 DELETE FROM `jos_doska_categories`;
 /*!40000 ALTER TABLE `jos_doska_categories` DISABLE KEYS */;
+INSERT INTO `jos_doska_categories` (`id`, `name`, `parent_id`, `alias`, `state`) VALUES
+	(2, 'Автомобили', 0, 'avtomobili', 1),
+	(3, 'Электроника', 0, 'elektronika', 1);
 /*!40000 ALTER TABLE `jos_doska_categories` ENABLE KEYS */;
 
 
@@ -698,9 +701,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1530688319}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1530879068}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1530688408,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1530856812,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -1808,14 +1811,11 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_session: ~4 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_session: ~1 rows (приблизительно)
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	('aviqkn3k15haciuravukao3cf1', 1, 0, '1530707339', 'joomla|s:1048:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo5MTtzOjU6InRva2VuIjtzOjMyOiJjZTYyRW5wNTdqQ0I0UHZua09Hc3JLYnVwRjlscXlUdyI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMwNzA0ODQxO3M6NDoibGFzdCI7aToxNTMwNzA3MzM4O3M6Mzoibm93IjtpOjE1MzA3MDczMzg7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjI6e3M6NToidHlwZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3JkZXJjb2wiO047fXM6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ0eXBlIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImRhdGEiO047czoyOiJpZCI7YTowOnt9fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiMTczIjt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 173, 'Admin'),
-	('k5v1anraqu0ip7mus04d1duqvft6j8n1', 1, 0, '1530644861', 'joomla|s:744:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozO3M6NToidG9rZW4iO3M6MzI6Inc5MnFubUF6TkRLMTNxM0RicjVjWkE5YTRVTjVoY0JYIjtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MzA2NDQ4NTc7czo0OiJsYXN0IjtpOjE1MzA2NDQ4NTc7czozOiJub3ciO2k6MTUzMDY0NDg1ODt9fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiIxNzMiO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 173, 'Admin'),
-	('t8fuk8jd9inlr4l5gqe4m2hdv0', 0, 1, '1530688339', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMDY4ODMxOTtzOjQ6Imxhc3QiO2k6MTUzMDY4ODMxOTtzOjM6Im5vdyI7aToxNTMwNjg4MzE5O31zOjU6InRva2VuIjtzOjMyOiJnN2tnQVFQTFdQNWZYdzhyREVPbTNIVlg2V3R0a0x3NiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, ''),
-	('ugvmod9stbqbd24sipt43cs2thkrpktm', 0, 1, '1530628563', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMDYyODU1OTtzOjQ6Imxhc3QiO2k6MTUzMDYyODU1OTtzOjM6Im5vdyI7aToxNTMwNjI4NTU5O31zOjU6InRva2VuIjtzOjMyOiJUb3VYV0QzUmwwb3d3eDVmUjF0SGhsbW1VeGlqVkRVMiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, '');
+	('0k09o2nfet6cch6f4ld34gdu56', 1, 0, '1530884108', 'joomla|s:1304:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMTE7czo1OiJ0b2tlbiI7czozMjoiZmVab1pUMDNXcUNpMFJpT0FIOXppRlVGNGRmVDRpbmwiO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMDg2NTk0MDtzOjQ6Imxhc3QiO2k6MTUzMDg4MzI2ODtzOjM6Im5vdyI7aToxNTMwODg0MTA4O319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiY29tX2Rvc2thIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoiY2F0ZWdvcnkiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MTp7aTowO2k6Mjt9czo0OiJkYXRhIjtOO319czoxMDoiY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJvcmRlcmNvbCI7Tjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjE3MyI7fXM6OToiY29tX21lZGlhIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJyZXR1cm5fdXJsIjtzOjExMjoiaW5kZXgucGhwP29wdGlvbj1jb21fbWVkaWEmdmlldz1pbWFnZXMmdG1wbD1jb21wb25lbnQmZmllbGRpZD1qZm9ybV9wYXJhbXNfaW1hZ2UmZV9uYW1lPSZhc3NldD1jb21fZG9za2EmYXV0aG9yPSI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
 
@@ -2038,7 +2038,7 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1530697185, ''),
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1530879088, ''),
 	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1530697205, ''),
 	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1530697225, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
@@ -2121,7 +2121,7 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-04 11:47:21', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-06 08:32:20', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
 
