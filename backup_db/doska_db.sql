@@ -1,16 +1,18 @@
 -- --------------------------------------------------------
 -- Хост:                         127.0.0.1
--- Версия сервера:               5.7.13 - MySQL Community Server (GPL)
--- ОС Сервера:                   Win64
--- HeidiSQL Версия:              9.3.0.4984
+-- Версия сервера:               5.7.16 - MySQL Community Server (GPL)
+-- Операционная система:         Win64
+-- HeidiSQL Версия:              9.4.0.5125
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Дамп структуры для таблица doska.jos_assets
+DROP TABLE IF EXISTS `jos_assets`;
 CREATE TABLE IF NOT EXISTS `jos_assets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
@@ -26,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `jos_assets` (
   KEY `idx_parent_id` (`parent_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_assets: ~66 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_assets: ~68 rows (приблизительно)
 DELETE FROM `jos_assets`;
 /*!40000 ALTER TABLE `jos_assets` DISABLE KEYS */;
 INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
@@ -100,8 +102,8 @@ INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `tit
 	(73, 1, 133, 134, 1, '#__doska_types.8', '#__doska_types.8', '{}');
 /*!40000 ALTER TABLE `jos_assets` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_associations
+DROP TABLE IF EXISTS `jos_associations`;
 CREATE TABLE IF NOT EXISTS `jos_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The context of the associated item.',
@@ -115,8 +117,8 @@ DELETE FROM `jos_associations`;
 /*!40000 ALTER TABLE `jos_associations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_associations` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_banners
+DROP TABLE IF EXISTS `jos_banners`;
 CREATE TABLE IF NOT EXISTS `jos_banners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL DEFAULT '0',
@@ -165,8 +167,8 @@ DELETE FROM `jos_banners`;
 /*!40000 ALTER TABLE `jos_banners` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_banners` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_banner_clients
+DROP TABLE IF EXISTS `jos_banner_clients`;
 CREATE TABLE IF NOT EXISTS `jos_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -192,8 +194,8 @@ DELETE FROM `jos_banner_clients`;
 /*!40000 ALTER TABLE `jos_banner_clients` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_banner_clients` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_banner_tracks
+DROP TABLE IF EXISTS `jos_banner_tracks`;
 CREATE TABLE IF NOT EXISTS `jos_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) unsigned NOT NULL,
@@ -210,8 +212,8 @@ DELETE FROM `jos_banner_tracks`;
 /*!40000 ALTER TABLE `jos_banner_tracks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_banner_tracks` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_categories
+DROP TABLE IF EXISTS `jos_categories`;
 CREATE TABLE IF NOT EXISTS `jos_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -262,8 +264,8 @@ INSERT INTO `jos_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `leve
 	(7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1);
 /*!40000 ALTER TABLE `jos_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_contact_details
+DROP TABLE IF EXISTS `jos_contact_details`;
 CREATE TABLE IF NOT EXISTS `jos_contact_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -324,8 +326,8 @@ DELETE FROM `jos_contact_details`;
 /*!40000 ALTER TABLE `jos_contact_details` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_contact_details` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_content
+DROP TABLE IF EXISTS `jos_content`;
 CREATE TABLE IF NOT EXISTS `jos_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -369,15 +371,15 @@ CREATE TABLE IF NOT EXISTS `jos_content` (
   KEY `idx_alias` (`alias`(191))
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_content: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_content: ~1 rows (приблизительно)
 DELETE FROM `jos_content`;
 /*!40000 ALTER TABLE `jos_content` DISABLE KEYS */;
 INSERT INTO `jos_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
 	(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 849, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 8, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
 /*!40000 ALTER TABLE `jos_content` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_contentitem_tag_map
+DROP TABLE IF EXISTS `jos_contentitem_tag_map`;
 CREATE TABLE IF NOT EXISTS `jos_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
@@ -391,15 +393,15 @@ CREATE TABLE IF NOT EXISTS `jos_contentitem_tag_map` (
   KEY `idx_core_content_id` (`core_content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
 
--- Дамп данных таблицы doska.jos_contentitem_tag_map: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_contentitem_tag_map: ~1 rows (приблизительно)
 DELETE FROM `jos_contentitem_tag_map`;
 /*!40000 ALTER TABLE `jos_contentitem_tag_map` DISABLE KEYS */;
 INSERT INTO `jos_contentitem_tag_map` (`type_alias`, `core_content_id`, `content_item_id`, `tag_id`, `tag_date`, `type_id`) VALUES
 	('com_content.article', 1, 1, 2, '2013-11-16 09:00:00', 1);
 /*!40000 ALTER TABLE `jos_contentitem_tag_map` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_content_frontpage
+DROP TABLE IF EXISTS `jos_content_frontpage`;
 CREATE TABLE IF NOT EXISTS `jos_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
@@ -411,8 +413,8 @@ DELETE FROM `jos_content_frontpage`;
 /*!40000 ALTER TABLE `jos_content_frontpage` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_content_frontpage` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_content_rating
+DROP TABLE IF EXISTS `jos_content_rating`;
 CREATE TABLE IF NOT EXISTS `jos_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `rating_sum` int(10) unsigned NOT NULL DEFAULT '0',
@@ -426,8 +428,8 @@ DELETE FROM `jos_content_rating`;
 /*!40000 ALTER TABLE `jos_content_rating` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_content_rating` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_content_types
+DROP TABLE IF EXISTS `jos_content_types`;
 CREATE TABLE IF NOT EXISTS `jos_content_types` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -460,8 +462,8 @@ INSERT INTO `jos_content_types` (`type_id`, `type_title`, `type_alias`, `table`,
 	(13, 'User Notes Category', 'com_users.category', '{"special":{"dbtable":"jos_categories","key":"id","type":"Category","prefix":"JTable","config":"array()"},"common":{"dbtable":"jos_ucm_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}', '', '{"common":{"core_content_item_id":"id","core_title":"title","core_state":"published","core_alias":"alias","core_created_time":"created_time","core_modified_time":"modified_time","core_body":"description", "core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"access", "core_params":"params", "core_featured":"null", "core_metadata":"metadata", "core_language":"language", "core_images":"null", "core_urls":"null", "core_version":"version", "core_ordering":"null", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"parent_id", "core_xreference":"null", "asset_id":"asset_id"}, "special":{"parent_id":"parent_id","lft":"lft","rgt":"rgt","level":"level","path":"path","extension":"extension","note":"note"}}', '', '{"formFile":"administrator\\/components\\/com_categories\\/models\\/forms\\/category.xml", "hideFields":["checked_out","checked_out_time","version","lft","rgt","level","path","extension"], "ignoreChanges":["modified_user_id", "modified_time", "checked_out", "checked_out_time", "version", "hits", "path"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"created_user_id","targetTable":"jos_users","targetColumn":"id","displayColumn":"name"}, {"sourceColumn":"access","targetTable":"jos_viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_user_id","targetTable":"jos_users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"parent_id","targetTable":"jos_categories","targetColumn":"id","displayColumn":"title"}]}');
 /*!40000 ALTER TABLE `jos_content_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_core_log_searches
+DROP TABLE IF EXISTS `jos_core_log_searches`;
 CREATE TABLE IF NOT EXISTS `jos_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
@@ -472,15 +474,15 @@ DELETE FROM `jos_core_log_searches`;
 /*!40000 ALTER TABLE `jos_core_log_searches` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_core_log_searches` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_doska_categories
+DROP TABLE IF EXISTS `jos_doska_categories`;
 CREATE TABLE IF NOT EXISTS `jos_doska_categories` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `parentid` int(5) NOT NULL DEFAULT '0',
   `alias` varchar(255) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '1',
-  `params` text,
+  `params` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -493,8 +495,8 @@ INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, 
 	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/shop-ad-books.jpg","image_alt":""}');
 /*!40000 ALTER TABLE `jos_doska_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_doska_post
+DROP TABLE IF EXISTS `jos_doska_post`;
 CREATE TABLE IF NOT EXISTS `jos_doska_post` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `introtext` text NOT NULL,
@@ -526,8 +528,8 @@ DELETE FROM `jos_doska_post`;
 /*!40000 ALTER TABLE `jos_doska_post` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_doska_post` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_doska_types
+DROP TABLE IF EXISTS `jos_doska_types`;
 CREATE TABLE IF NOT EXISTS `jos_doska_types` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -549,8 +551,8 @@ INSERT INTO `jos_doska_types` (`id`, `name`, `alias`, `state`, `asset_id`) VALUE
 	(8, 'Спрос', 'spros', 1, 73);
 /*!40000 ALTER TABLE `jos_doska_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_extensions
+DROP TABLE IF EXISTS `jos_extensions`;
 CREATE TABLE IF NOT EXISTS `jos_extensions` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Parent package ID for extensions installed as a package.',
@@ -707,9 +709,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1530966000}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1531035545}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1530942955,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1531035552,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -749,8 +751,8 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(10004, 0, 'COM_DOSKA', 'component', 'com_doska', '', 1, 1, 0, 0, '{"name":"COM_DOSKA","type":"component","creationDate":"2015-04-02","author":"Viktor","copyright":"Copyright info","authorEmail":"admin@amin.ru","authorUrl":"http:\\/\\/webformyself.com","version":"1.0.0","description":"COM_DOSKA_XML_DESCRIPTION","group":"","filename":"install"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 /*!40000 ALTER TABLE `jos_extensions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_fields
+DROP TABLE IF EXISTS `jos_fields`;
 CREATE TABLE IF NOT EXISTS `jos_fields` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -790,8 +792,8 @@ DELETE FROM `jos_fields`;
 /*!40000 ALTER TABLE `jos_fields` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_fields` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_fields_categories
+DROP TABLE IF EXISTS `jos_fields_categories`;
 CREATE TABLE IF NOT EXISTS `jos_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT '0',
   `category_id` int(11) NOT NULL DEFAULT '0',
@@ -803,8 +805,8 @@ DELETE FROM `jos_fields_categories`;
 /*!40000 ALTER TABLE `jos_fields_categories` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_fields_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_fields_groups
+DROP TABLE IF EXISTS `jos_fields_groups`;
 CREATE TABLE IF NOT EXISTS `jos_fields_groups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -837,8 +839,8 @@ DELETE FROM `jos_fields_groups`;
 /*!40000 ALTER TABLE `jos_fields_groups` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_fields_groups` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_fields_values
+DROP TABLE IF EXISTS `jos_fields_values`;
 CREATE TABLE IF NOT EXISTS `jos_fields_values` (
   `field_id` int(10) unsigned NOT NULL,
   `item_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
@@ -852,8 +854,8 @@ DELETE FROM `jos_fields_values`;
 /*!40000 ALTER TABLE `jos_fields_values` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_fields_values` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_filters
+DROP TABLE IF EXISTS `jos_finder_filters`;
 CREATE TABLE IF NOT EXISTS `jos_finder_filters` (
   `filter_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -877,8 +879,8 @@ DELETE FROM `jos_finder_filters`;
 /*!40000 ALTER TABLE `jos_finder_filters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_filters` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links
+DROP TABLE IF EXISTS `jos_finder_links`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) NOT NULL,
@@ -913,8 +915,8 @@ DELETE FROM `jos_finder_links`;
 /*!40000 ALTER TABLE `jos_finder_links` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms0
+DROP TABLE IF EXISTS `jos_finder_links_terms0`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms0` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -929,8 +931,8 @@ DELETE FROM `jos_finder_links_terms0`;
 /*!40000 ALTER TABLE `jos_finder_links_terms0` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms0` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms1
+DROP TABLE IF EXISTS `jos_finder_links_terms1`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms1` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -945,8 +947,8 @@ DELETE FROM `jos_finder_links_terms1`;
 /*!40000 ALTER TABLE `jos_finder_links_terms1` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms1` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms2
+DROP TABLE IF EXISTS `jos_finder_links_terms2`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms2` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -961,8 +963,8 @@ DELETE FROM `jos_finder_links_terms2`;
 /*!40000 ALTER TABLE `jos_finder_links_terms2` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms2` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms3
+DROP TABLE IF EXISTS `jos_finder_links_terms3`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms3` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -977,8 +979,8 @@ DELETE FROM `jos_finder_links_terms3`;
 /*!40000 ALTER TABLE `jos_finder_links_terms3` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms3` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms4
+DROP TABLE IF EXISTS `jos_finder_links_terms4`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms4` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -993,8 +995,8 @@ DELETE FROM `jos_finder_links_terms4`;
 /*!40000 ALTER TABLE `jos_finder_links_terms4` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms4` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms5
+DROP TABLE IF EXISTS `jos_finder_links_terms5`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms5` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1009,8 +1011,8 @@ DELETE FROM `jos_finder_links_terms5`;
 /*!40000 ALTER TABLE `jos_finder_links_terms5` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms5` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms6
+DROP TABLE IF EXISTS `jos_finder_links_terms6`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms6` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1025,8 +1027,8 @@ DELETE FROM `jos_finder_links_terms6`;
 /*!40000 ALTER TABLE `jos_finder_links_terms6` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms6` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms7
+DROP TABLE IF EXISTS `jos_finder_links_terms7`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms7` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1041,8 +1043,8 @@ DELETE FROM `jos_finder_links_terms7`;
 /*!40000 ALTER TABLE `jos_finder_links_terms7` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms7` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms8
+DROP TABLE IF EXISTS `jos_finder_links_terms8`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms8` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1057,8 +1059,8 @@ DELETE FROM `jos_finder_links_terms8`;
 /*!40000 ALTER TABLE `jos_finder_links_terms8` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms8` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_terms9
+DROP TABLE IF EXISTS `jos_finder_links_terms9`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms9` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1073,8 +1075,8 @@ DELETE FROM `jos_finder_links_terms9`;
 /*!40000 ALTER TABLE `jos_finder_links_terms9` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_terms9` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termsa
+DROP TABLE IF EXISTS `jos_finder_links_termsa`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsa` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1089,8 +1091,8 @@ DELETE FROM `jos_finder_links_termsa`;
 /*!40000 ALTER TABLE `jos_finder_links_termsa` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termsa` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termsb
+DROP TABLE IF EXISTS `jos_finder_links_termsb`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsb` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1105,8 +1107,8 @@ DELETE FROM `jos_finder_links_termsb`;
 /*!40000 ALTER TABLE `jos_finder_links_termsb` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termsb` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termsc
+DROP TABLE IF EXISTS `jos_finder_links_termsc`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsc` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1121,8 +1123,8 @@ DELETE FROM `jos_finder_links_termsc`;
 /*!40000 ALTER TABLE `jos_finder_links_termsc` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termsc` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termsd
+DROP TABLE IF EXISTS `jos_finder_links_termsd`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsd` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1137,8 +1139,8 @@ DELETE FROM `jos_finder_links_termsd`;
 /*!40000 ALTER TABLE `jos_finder_links_termsd` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termsd` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termse
+DROP TABLE IF EXISTS `jos_finder_links_termse`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termse` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1153,8 +1155,8 @@ DELETE FROM `jos_finder_links_termse`;
 /*!40000 ALTER TABLE `jos_finder_links_termse` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termse` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_links_termsf
+DROP TABLE IF EXISTS `jos_finder_links_termsf`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsf` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1169,8 +1171,8 @@ DELETE FROM `jos_finder_links_termsf`;
 /*!40000 ALTER TABLE `jos_finder_links_termsf` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_links_termsf` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_taxonomy
+DROP TABLE IF EXISTS `jos_finder_taxonomy`;
 CREATE TABLE IF NOT EXISTS `jos_finder_taxonomy` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1186,15 +1188,15 @@ CREATE TABLE IF NOT EXISTS `jos_finder_taxonomy` (
   KEY `idx_parent_published` (`parent_id`,`state`,`access`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Дамп данных таблицы doska.jos_finder_taxonomy: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_finder_taxonomy: ~1 rows (приблизительно)
 DELETE FROM `jos_finder_taxonomy`;
 /*!40000 ALTER TABLE `jos_finder_taxonomy` DISABLE KEYS */;
 INSERT INTO `jos_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `access`, `ordering`) VALUES
 	(1, 0, 'ROOT', 0, 0, 0);
 /*!40000 ALTER TABLE `jos_finder_taxonomy` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_taxonomy_map
+DROP TABLE IF EXISTS `jos_finder_taxonomy_map`;
 CREATE TABLE IF NOT EXISTS `jos_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
   `node_id` int(10) unsigned NOT NULL,
@@ -1208,8 +1210,8 @@ DELETE FROM `jos_finder_taxonomy_map`;
 /*!40000 ALTER TABLE `jos_finder_taxonomy_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_taxonomy_map` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_terms
+DROP TABLE IF EXISTS `jos_finder_terms`;
 CREATE TABLE IF NOT EXISTS `jos_finder_terms` (
   `term_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `term` varchar(75) NOT NULL,
@@ -1232,8 +1234,8 @@ DELETE FROM `jos_finder_terms`;
 /*!40000 ALTER TABLE `jos_finder_terms` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_terms` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_terms_common
+DROP TABLE IF EXISTS `jos_finder_terms_common`;
 CREATE TABLE IF NOT EXISTS `jos_finder_terms_common` (
   `term` varchar(75) NOT NULL,
   `language` varchar(3) NOT NULL,
@@ -1357,8 +1359,8 @@ INSERT INTO `jos_finder_terms_common` (`term`, `language`) VALUES
 	('yours', 'en');
 /*!40000 ALTER TABLE `jos_finder_terms_common` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_tokens
+DROP TABLE IF EXISTS `jos_finder_tokens`;
 CREATE TABLE IF NOT EXISTS `jos_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
@@ -1376,8 +1378,8 @@ DELETE FROM `jos_finder_tokens`;
 /*!40000 ALTER TABLE `jos_finder_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_tokens` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_tokens_aggregate
+DROP TABLE IF EXISTS `jos_finder_tokens_aggregate`;
 CREATE TABLE IF NOT EXISTS `jos_finder_tokens_aggregate` (
   `term_id` int(10) unsigned NOT NULL,
   `map_suffix` char(1) NOT NULL,
@@ -1399,8 +1401,8 @@ DELETE FROM `jos_finder_tokens_aggregate`;
 /*!40000 ALTER TABLE `jos_finder_tokens_aggregate` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_tokens_aggregate` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_finder_types
+DROP TABLE IF EXISTS `jos_finder_types`;
 CREATE TABLE IF NOT EXISTS `jos_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
@@ -1414,8 +1416,8 @@ DELETE FROM `jos_finder_types`;
 /*!40000 ALTER TABLE `jos_finder_types` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_finder_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_languages
+DROP TABLE IF EXISTS `jos_languages`;
 CREATE TABLE IF NOT EXISTS `jos_languages` (
   `lang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1446,8 +1448,8 @@ INSERT INTO `jos_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `title
 	(2, 63, 'ru-RU', 'Русский (Россия)', 'Russian (Russia)', 'ru', 'ru_ru', '', '', '', '', 0, 1, 1);
 /*!40000 ALTER TABLE `jos_languages` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_menu
+DROP TABLE IF EXISTS `jos_menu`;
 CREATE TABLE IF NOT EXISTS `jos_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of menu this item belongs to. FK to jos_menu_types.menutype',
@@ -1520,8 +1522,8 @@ INSERT INTO `jos_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `lin
 	(142, 'main', 'COM_DOSKA_MENU_TYPES', 'com-doska-menu-types', '', 'com-doska-menu-name/com-doska-menu-types', 'index.php?option=com_doska&view=types', 'component', 1, 139, 2, 10004, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 58, 59, 0, '', 1);
 /*!40000 ALTER TABLE `jos_menu` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_menu_types
+DROP TABLE IF EXISTS `jos_menu_types`;
 CREATE TABLE IF NOT EXISTS `jos_menu_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1541,8 +1543,8 @@ INSERT INTO `jos_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descriptio
 	(2, 0, 'usermenu', 'User Menu', 'A Menu for logged-in Users', 0);
 /*!40000 ALTER TABLE `jos_menu_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_messages
+DROP TABLE IF EXISTS `jos_messages`;
 CREATE TABLE IF NOT EXISTS `jos_messages` (
   `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_from` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1562,8 +1564,8 @@ DELETE FROM `jos_messages`;
 /*!40000 ALTER TABLE `jos_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_messages` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_messages_cfg
+DROP TABLE IF EXISTS `jos_messages_cfg`;
 CREATE TABLE IF NOT EXISTS `jos_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1576,8 +1578,8 @@ DELETE FROM `jos_messages_cfg`;
 /*!40000 ALTER TABLE `jos_messages_cfg` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_messages_cfg` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_modules
+DROP TABLE IF EXISTS `jos_modules`;
 CREATE TABLE IF NOT EXISTS `jos_modules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -1631,8 +1633,8 @@ INSERT INTO `jos_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orderi
 	(93, 60, 'Search', '', '', 0, 'position-0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_search', 1, 1, '{"label":"","width":"20","text":"","button":"0","button_pos":"right","imagebutton":"1","button_text":"","opensearch":"1","opensearch_title":"","set_itemid":"0","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 /*!40000 ALTER TABLE `jos_modules` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_modules_menu
+DROP TABLE IF EXISTS `jos_modules_menu`;
 CREATE TABLE IF NOT EXISTS `jos_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
@@ -1669,8 +1671,8 @@ INSERT INTO `jos_modules_menu` (`moduleid`, `menuid`) VALUES
 	(93, 0);
 /*!40000 ALTER TABLE `jos_modules_menu` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_newsfeeds
+DROP TABLE IF EXISTS `jos_newsfeeds`;
 CREATE TABLE IF NOT EXISTS `jos_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT '0',
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1717,8 +1719,8 @@ DELETE FROM `jos_newsfeeds`;
 /*!40000 ALTER TABLE `jos_newsfeeds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_newsfeeds` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_overrider
+DROP TABLE IF EXISTS `jos_overrider`;
 CREATE TABLE IF NOT EXISTS `jos_overrider` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `constant` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1732,8 +1734,8 @@ DELETE FROM `jos_overrider`;
 /*!40000 ALTER TABLE `jos_overrider` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_overrider` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_postinstall_messages
+DROP TABLE IF EXISTS `jos_postinstall_messages`;
 CREATE TABLE IF NOT EXISTS `jos_postinstall_messages` (
   `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to jos_extensions',
@@ -1764,8 +1766,8 @@ INSERT INTO `jos_postinstall_messages` (`postinstall_message_id`, `extension_id`
 	(6, 700, 'TPL_HATHOR_MESSAGE_POSTINSTALL_TITLE', 'TPL_HATHOR_MESSAGE_POSTINSTALL_BODY', 'TPL_HATHOR_MESSAGE_POSTINSTALL_ACTION', 'tpl_hathor', 1, 'action', 'admin://templates/hathor/postinstall/hathormessage.php', 'hathormessage_postinstall_action', 'admin://templates/hathor/postinstall/hathormessage.php', 'hathormessage_postinstall_condition', '3.7.0', 0);
 /*!40000 ALTER TABLE `jos_postinstall_messages` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_redirect_links
+DROP TABLE IF EXISTS `jos_redirect_links`;
 CREATE TABLE IF NOT EXISTS `jos_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `old_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1787,23 +1789,23 @@ DELETE FROM `jos_redirect_links`;
 /*!40000 ALTER TABLE `jos_redirect_links` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_redirect_links` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_schemas
+DROP TABLE IF EXISTS `jos_schemas`;
 CREATE TABLE IF NOT EXISTS `jos_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_schemas: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_schemas: ~1 rows (приблизительно)
 DELETE FROM `jos_schemas`;
 /*!40000 ALTER TABLE `jos_schemas` DISABLE KEYS */;
 INSERT INTO `jos_schemas` (`extension_id`, `version_id`) VALUES
 	(10004, '1.0.4');
 /*!40000 ALTER TABLE `jos_schemas` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_session
+DROP TABLE IF EXISTS `jos_session`;
 CREATE TABLE IF NOT EXISTS `jos_session` (
   `session_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` tinyint(3) unsigned DEFAULT NULL,
@@ -1817,15 +1819,16 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_session: ~1 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_session: ~2 rows (приблизительно)
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
+	('2viebeaq1tr6d1ekso4ht80cabms775f', 1, 0, '1531035627', 'joomla|s:1184:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozNDtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MzEwMzU1NDQ7czo0OiJsYXN0IjtpOjE1MzEwMzU2MjY7czozOiJub3ciO2k6MTUzMTAzNTYyNjt9czo1OiJ0b2tlbiI7czozMjoiSHNqcGE2eDJ4eFpnY3ZPalRjTTgwMkxGS0ZSOHdGN2YiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJjYXRlZ29yeSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJkYXRhIjtOO3M6MjoiaWQiO2E6MDp7fX19czoxMDoiY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJvcmRlcmNvbCI7Tjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjE3MyI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin'),
 	('qq7qgg1maou08rl1hh5tm93pp5', 1, 0, '1530971541', 'joomla|s:1416:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyNTM7czo1OiJ0b2tlbiI7czozMjoiMXh5cUdxUm5zd2h2OUh2dnRnTWJLS2NtWUZzUzVhenUiO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMDk2NjAwMztzOjQ6Imxhc3QiO2k6MTUzMDk3MTU0MTtzOjM6Im5vdyI7aToxNTMwOTcxNTQxO319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjI6e3M6OToiY29tX2Rvc2thIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoiY2F0ZWdvcnkiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MDp7fXM6NDoiZGF0YSI7Tjt9fXM6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3JkZXJjb2wiO047fX1zOjEzOiJjb21faW5zdGFsbGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6Im1lc3NhZ2UiO3M6MDoiIjtzOjE3OiJleHRlbnNpb25fbWVzc2FnZSI7czowOiIiO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiIxNzMiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fXM6OToiY29tX21lZGlhIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJyZXR1cm5fdXJsIjtzOjExMjoiaW5kZXgucGhwP29wdGlvbj1jb21fbWVkaWEmdmlldz1pbWFnZXMmdG1wbD1jb21wb25lbnQmZmllbGRpZD1qZm9ybV9wYXJhbXNfaW1hZ2UmZV9uYW1lPSZhc3NldD1jb21fZG9za2EmYXV0aG9yPSI7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 173, 'Admin');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_tags
+DROP TABLE IF EXISTS `jos_tags`;
 CREATE TABLE IF NOT EXISTS `jos_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1875,8 +1878,8 @@ INSERT INTO `jos_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title
 	(2, 1, 1, 2, 1, 'joomla', 'Joomla', 'joomla', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"tag_layout":"","tag_link_class":"label label-info","image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '', '', '{"author":"","robots":""}', 849, '2013-11-16 00:00:00', '', 0, '0000-00-00 00:00:00', '', '', 1, '*', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `jos_tags` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_template_styles
+DROP TABLE IF EXISTS `jos_template_styles`;
 CREATE TABLE IF NOT EXISTS `jos_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1899,8 +1902,8 @@ INSERT INTO `jos_template_styles` (`id`, `template`, `client_id`, `home`, `title
 	(8, 'isis', 1, '1', 'isis - Default', '{"templateColor":"","logoFile":""}');
 /*!40000 ALTER TABLE `jos_template_styles` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_ucm_base
+DROP TABLE IF EXISTS `jos_ucm_base`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
   `ucm_item_id` int(10) NOT NULL,
@@ -1912,15 +1915,15 @@ CREATE TABLE IF NOT EXISTS `jos_ucm_base` (
   KEY `idx_ucm_language_id` (`ucm_language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_ucm_base: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_ucm_base: ~1 rows (приблизительно)
 DELETE FROM `jos_ucm_base`;
 /*!40000 ALTER TABLE `jos_ucm_base` DISABLE KEYS */;
 INSERT INTO `jos_ucm_base` (`ucm_id`, `ucm_item_id`, `ucm_type_id`, `ucm_language_id`) VALUES
 	(1, 1, 1, 0);
 /*!40000 ALTER TABLE `jos_ucm_base` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_ucm_content
+DROP TABLE IF EXISTS `jos_ucm_content`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_content` (
   `core_content_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `core_type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
@@ -1969,15 +1972,15 @@ CREATE TABLE IF NOT EXISTS `jos_ucm_content` (
   KEY `idx_core_type_id` (`core_type_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Contains core content data in name spaced fields';
 
--- Дамп данных таблицы doska.jos_ucm_content: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_ucm_content: ~1 rows (приблизительно)
 DELETE FROM `jos_ucm_content`;
 /*!40000 ALTER TABLE `jos_ucm_content` DISABLE KEYS */;
 INSERT INTO `jos_ucm_content` (`core_content_id`, `core_type_alias`, `core_title`, `core_alias`, `core_body`, `core_state`, `core_checked_out_time`, `core_checked_out_user_id`, `core_access`, `core_params`, `core_featured`, `core_metadata`, `core_created_user_id`, `core_created_by_alias`, `core_created_time`, `core_modified_user_id`, `core_modified_time`, `core_language`, `core_publish_up`, `core_publish_down`, `core_content_item_id`, `asset_id`, `core_images`, `core_urls`, `core_hits`, `core_version`, `core_ordering`, `core_metakey`, `core_metadesc`, `core_catid`, `core_xreference`, `core_type_id`) VALUES
 	(1, 'com_content.article', 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', 1, '', 0, 1, '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 0, '{"robots":"","author":"","rights":"","xreference":""}', 849, '', '2013-11-16 00:00:00', 0, '0000-00-00 00:00:00', '*', '2013-11-16 00:00:00', '0000-00-00 00:00:00', 1, 62, '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', 0, 1, 0, '', '', 2, '', 1);
 /*!40000 ALTER TABLE `jos_ucm_content` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_ucm_history
+DROP TABLE IF EXISTS `jos_ucm_history`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ucm_item_id` int(10) unsigned NOT NULL,
@@ -2002,8 +2005,8 @@ INSERT INTO `jos_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `vers
 	(2, 1, 1, 'Initial content', '2013-11-16 00:00:00', 849, 4539, '4f6bf8f67e89553853c3b6e8ed0a6111daaa7a2f', '{"id":1,"asset_id":54,"title":"Getting Started","alias":"getting-started","introtext":"<p>It\'s easy to get started creating your website. Knowing some of the basics will help.<\\/p>\\r\\n<h3>What is a Content Management System?<\\/h3>\\r\\n<p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.<\\/p>\\r\\n<p>In this site, the content is stored in a <em>database<\\/em>. The look and feel are created by a <em>template<\\/em>. Joomla! brings together the template and your content to create web pages.<\\/p>\\r\\n<h3>Logging in<\\/h3>\\r\\n<p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.<\\/p>\\r\\n<h3>Creating an article<\\/h3>\\r\\n<p>Once you are logged-in, a new menu will be visible. To create a new article, click on the \\"Submit Article\\" link on that menu.<\\/p>\\r\\n<p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.<\\/p>\\r\\n<div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).<\\/div>\\r\\n<h3>Template, site settings, and modules<\\/h3>\\r\\n<p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the \\"Template Settings\\" in the user menu.\\u00a0<\\/p>\\r\\n<p>The boxes around the main content of the site are called modules. \\u00a0You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.<\\/p>\\r\\n<p>You can change some site settings such as the site name and description by clicking on the \\"Site Settings\\" link.<\\/p>\\r\\n<p>More advanced options for templates, site settings, modules, and more are available in the site administrator.<\\/p>\\r\\n<h3>Site and Administrator<\\/h3>\\r\\n<p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the \\"Site Administrator\\" link on the \\"User Menu\\" menu (visible once you login) or by adding \\/administrator to the end of your domain name. The same user name and password are used for both sites.<\\/p>\\r\\n<h3>Learn more<\\/h3>\\r\\n<p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href=\\"https:\\/\\/docs.joomla.org\\" target=\\"_blank\\">Joomla! documentation site<\\/a> and on the<a href=\\"https:\\/\\/forum.joomla.org\\/\\" target=\\"_blank\\"> Joomla! forums<\\/a>.<\\/p>","fulltext":"","state":1,"catid":"2","created":"2013-11-16 00:00:00","created_by":"849","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-11-16 00:00:00","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0);
 /*!40000 ALTER TABLE `jos_ucm_history` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_updates
+DROP TABLE IF EXISTS `jos_updates`;
 CREATE TABLE IF NOT EXISTS `jos_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
   `update_site_id` int(11) DEFAULT '0',
@@ -2020,15 +2023,17 @@ CREATE TABLE IF NOT EXISTS `jos_updates` (
   `infourl` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT '',
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
 
--- Дамп данных таблицы doska.jos_updates: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_updates: ~1 rows (приблизительно)
 DELETE FROM `jos_updates`;
 /*!40000 ALTER TABLE `jos_updates` DISABLE KEYS */;
+INSERT INTO `jos_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
+	(3, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.8.10', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', '');
 /*!40000 ALTER TABLE `jos_updates` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_update_sites
+DROP TABLE IF EXISTS `jos_update_sites`;
 CREATE TABLE IF NOT EXISTS `jos_update_sites` (
   `update_site_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
@@ -2044,13 +2049,13 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1530968622, ''),
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1531035546, ''),
 	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1530968642, ''),
 	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1530968662, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_update_sites_extensions
+DROP TABLE IF EXISTS `jos_update_sites_extensions`;
 CREATE TABLE IF NOT EXISTS `jos_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
@@ -2067,8 +2072,8 @@ INSERT INTO `jos_update_sites_extensions` (`update_site_id`, `extension_id`) VAL
 	(3, 28);
 /*!40000 ALTER TABLE `jos_update_sites_extensions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_usergroups
+DROP TABLE IF EXISTS `jos_usergroups`;
 CREATE TABLE IF NOT EXISTS `jos_usergroups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
@@ -2097,8 +2102,8 @@ INSERT INTO `jos_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 	(9, 1, 2, 3, 'Guest');
 /*!40000 ALTER TABLE `jos_usergroups` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_users
+DROP TABLE IF EXISTS `jos_users`;
 CREATE TABLE IF NOT EXISTS `jos_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2123,15 +2128,15 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
   KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=174 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_users: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_users: ~1 rows (приблизительно)
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-07 12:20:03', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-08 07:39:10', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_user_keys
+DROP TABLE IF EXISTS `jos_user_keys`;
 CREATE TABLE IF NOT EXISTS `jos_user_keys` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2152,8 +2157,8 @@ DELETE FROM `jos_user_keys`;
 /*!40000 ALTER TABLE `jos_user_keys` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_user_keys` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_user_notes
+DROP TABLE IF EXISTS `jos_user_notes`;
 CREATE TABLE IF NOT EXISTS `jos_user_notes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2180,8 +2185,8 @@ DELETE FROM `jos_user_notes`;
 /*!40000 ALTER TABLE `jos_user_notes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_user_notes` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_user_profiles
+DROP TABLE IF EXISTS `jos_user_profiles`;
 CREATE TABLE IF NOT EXISTS `jos_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2195,36 +2200,36 @@ DELETE FROM `jos_user_profiles`;
 /*!40000 ALTER TABLE `jos_user_profiles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `jos_user_profiles` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_user_usergroup_map
+DROP TABLE IF EXISTS `jos_user_usergroup_map`;
 CREATE TABLE IF NOT EXISTS `jos_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to jos_users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to jos_usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_user_usergroup_map: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_user_usergroup_map: ~1 rows (приблизительно)
 DELETE FROM `jos_user_usergroup_map`;
 /*!40000 ALTER TABLE `jos_user_usergroup_map` DISABLE KEYS */;
 INSERT INTO `jos_user_usergroup_map` (`user_id`, `group_id`) VALUES
 	(173, 8);
 /*!40000 ALTER TABLE `jos_user_usergroup_map` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_utf8_conversion
+DROP TABLE IF EXISTS `jos_utf8_conversion`;
 CREATE TABLE IF NOT EXISTS `jos_utf8_conversion` (
   `converted` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_utf8_conversion: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_utf8_conversion: ~1 rows (приблизительно)
 DELETE FROM `jos_utf8_conversion`;
 /*!40000 ALTER TABLE `jos_utf8_conversion` DISABLE KEYS */;
 INSERT INTO `jos_utf8_conversion` (`converted`) VALUES
 	(0);
 /*!40000 ALTER TABLE `jos_utf8_conversion` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица doska.jos_viewlevels
+DROP TABLE IF EXISTS `jos_viewlevels`;
 CREATE TABLE IF NOT EXISTS `jos_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2244,6 +2249,7 @@ INSERT INTO `jos_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 	(5, 'Guest', 1, '[9]'),
 	(6, 'Super Users', 4, '[8]');
 /*!40000 ALTER TABLE `jos_viewlevels` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
