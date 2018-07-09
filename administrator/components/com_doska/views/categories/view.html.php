@@ -14,35 +14,37 @@ class DoskaViewCategories extends JViewLegacy
 
     public function display($tpl = null)
     {
-
         $this->addToolBar();
         $this->sidebar = $this->addSubMenu('categories');
         $this->setDocument();
+        // Подключаем постраничную навигацию
+        $this->pagination    = $this->get('Pagination');
 
         $categories = $this->get('Items'); // Обращение к методу getItems() модели
 //
         $this->items = array();
 
-        foreach ($categories as $category){
-            if($category->parentid == 0){
-                $this->items[$category->id]['name'] =  $category->name;
-                $this->items[$category->id]['state'] =  $category->state;
-                $this->items[$category->id]['alias'] =  $category->alias;
-            }
-            else{
-                $this->items[$category->parentid]['next'][] = array(
-                    'id'=>$category->id,
-                    'name'=>$category->name,
-                    'state'=>$category->state,
-                    'alias'=>$category->alias
-                );
+        if(is_array($categories))
+        {
+            foreach ($categories as $category){
+                if($category->parentid == 0){
+                    $this->items[$category->id]['name'] =  $category->name;
+                    $this->items[$category->id]['state'] =  $category->state;
+                    $this->items[$category->id]['alias'] =  $category->alias;
+                }
+                else{
+                    $this->items[$category->parentid]['next'][] = array(
+                        'id'=>$category->id,
+                        'name'=>$category->name,
+                        'state'=>$category->state,
+                        'alias'=>$category->alias
+                    );
+                }
             }
         }
-        
 //        echo "<PRE>";
 //        print_r($this->items);
 //        echo "</PRE>";
-
         parent::display($tpl);
     }
 

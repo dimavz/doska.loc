@@ -20,6 +20,7 @@ class DoskaViewType extends JViewLegacy {
         $this->item = $this->get('Item'); // Обращаемся к методу getItem модели
 //        print_r($this->item);
 
+
         $this->addToolBar();
         $this->setDocument();
 

@@ -15,6 +15,9 @@ class DoskaViewTypes extends JViewLegacy
         $this->items = $this->get('Items'); // Обращение к методу getItems модели
 //        var_dump($this->items);
 
+        // Подключаем постраничную навигацию
+        $this->pagination    = $this->get('Pagination');
+
         parent::display($tpl);
     }
 

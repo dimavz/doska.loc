@@ -62,6 +62,20 @@ defined("_JEXEC") or die();
                 <?php endforeach; ?>
             <?php endif; ?>
             </tbody>
+            <tfoot>
+            <tr>
+                <td colspan='5'>
+                    <div style="float:left"><?php echo $this->pagination->getListFooter();?></div>
+                    <div style="float:right">Показать элементов на странице - <?php echo $this->pagination->getLimitBox();?></div>
+
+                    <div style="clear:both"></div>
+                    <?php echo $this->pagination->getPagesCounter();?>
+                    <?php //echo $this->pagination->getPagesLinks();?>
+                    <?php //echo $this->pagination->getPaginationLinks();?>
+                    <?php //print_r($this->pagination->getPaginationPages());?>
+                </td>
+            </tr>
+            </tfoot>
         </table>
 
         <input type="hidden" name="task" value=""/>

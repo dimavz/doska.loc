@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS `#__doska_categories`(
 `parent_id` int(5) NOT NULL DEFAULT '0',
 `alias` varchar(255) NOT NULL,
 `state` tinyint(1) NOT NULL DEFAULT '1',
+`params` TEXT NULL,
 PRIMARY KEY (`id`)
 )ENGINE=InnoDb DEFAULT CHARSET=utf8;
 

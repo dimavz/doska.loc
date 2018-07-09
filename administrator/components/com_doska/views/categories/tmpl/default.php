@@ -38,8 +38,8 @@ defined("_JEXEC") or die();
             <?php if (!empty($this->items)) : ?>
                 <?php $i = 1; ?>
                 <?php foreach ($this->items as $id => $category) : ?>
-                    <?php if($category['name']):?>
-                        <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $id);?>
+                    <?php if ($category['name']): ?>
+                        <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $id); ?>
 
                         <tr>
                             <td><?php echo $i; ?></td>
@@ -47,7 +47,7 @@ defined("_JEXEC") or die();
                                 <?php echo JHtml::_('grid.id', $i, $id); ?>
                             </td>
                             <td>
-                                <strong><?php echo JHtml::_('link',$link,$category['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?></strong>
+                                <strong><?php echo JHtml::_('link', $link, $category['name'], array('title' => JText::_('COM_DOSKA_EDIT_CATEGORY'))) ?></strong>
                             </td>
 
                             <td>
@@ -65,19 +65,19 @@ defined("_JEXEC") or die();
                                 <?php echo $id; ?>
                             </td>
                         </tr>
-                        <?php $i++;?>
-                    <?php endif;?>
-                    <? if(is_array($category['next'])) :?>
-                        <?php $k = " -- ";?>
-                        <?php foreach($category['next'] as $sub): ?>
-                            <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $sub['id']);?>
+                        <?php $i++; ?>
+                    <?php endif; ?>
+                    <? if (is_array($category['next'])) : ?>
+                        <?php $pref = " -- "; ?>
+                        <?php foreach ($category['next'] as $sub): ?>
+                            <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $sub['id']); ?>
                             <tr>
                                 <td><?php echo $i; ?></td>
                                 <td>
                                     <?php echo JHtml::_('grid.id', $i, $sub['id']); ?>
                                 </td>
                                 <td>
-                                    <?php echo JHtml::_('link',$link,$k.$sub['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?>
+                                    <?php echo JHtml::_('link', $link, $pref . $sub['name'], array('title' => JText::_('COM_DOSKA_EDIT_CATEGORY'))) ?>
                                 </td>
 
                                 <td>
@@ -95,12 +95,28 @@ defined("_JEXEC") or die();
                                     <?php echo $sub['id']; ?>
                                 </td>
                             </tr>
-                            <?php $i++;?>
-                        <?php endforeach;?>
-                    <?php endif;?>
+                            <?php $i++; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
+
+
             </tbody>
+            <tfoot>
+            <tr>
+                <td colspan='5'>
+                    <div style="float:left"><?php echo $this->pagination->getListFooter();?></div>
+                    <div style="float:right">Показать элементов на странице - <?php echo $this->pagination->getLimitBox();?></div>
+
+                    <div style="clear:both"></div>
+                    <?php echo $this->pagination->getPagesCounter();?>
+                    <?php //echo $this->pagination->getPagesLinks();?>
+                    <?php //echo $this->pagination->getPaginationLinks();?>
+                    <?php //print_r($this->pagination->getPaginationPages());?>
+                </td>
+            </tr>
+            </tfoot>
         </table>
 
         <input type="hidden" name="task" value=""/>
