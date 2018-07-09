@@ -49,13 +49,10 @@ class JFormFieldCategoryparent extends JFormFieldList
                     }
                 }
                 foreach ($rows as $row) {
-                    if (($row->value != $edit_id && $row->parentid != $this->parent)&& $row->parentid == 0) {
-
+                    if (($row->value != $edit_id && $row->parentid != $this->parent) && $row->parentid == 0) {
                         array_push($options, $row);
-
                     }
                 }
-
             }
             return $options;
         } else {
