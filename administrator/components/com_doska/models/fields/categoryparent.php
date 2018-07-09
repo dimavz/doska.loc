@@ -8,6 +8,11 @@ class JFormFieldCategoryparent extends JFormFieldList
     protected $type = 'Categoryparent';
     protected function getOptions()
     {
+        //Получаем id редактируемой категории
+        $edit_id = null;
+        $input = jFactory::getApplication()->input;
+        $edit_id = $input->get('id');
+//
         $rows = array();
         $options = array();
 
@@ -33,14 +38,28 @@ class JFormFieldCategoryparent extends JFormFieldList
 
         array_push($options,$parent);
 
-        if(!empty($rows)){
-            foreach ($rows as $row)
-            {
-                if($row->parentid == 0){
-                    array_push($options,$row);
+        if ($edit_id != null){
+            if(!empty($rows)){
+                foreach ($rows as $row)
+                {
+                    if($row->parentid == 0 && $row->value != $edit_id ){
+                        array_push($options,$row);
+                    }
                 }
             }
+            return $options;
         }
-        return $options;
+        else
+        {
+            if(!empty($rows)){
+                foreach ($rows as $row)
+                {
+                    if($row->parentid == 0 ){
+                        array_push($options,$row);
+                    }
+                }
+            }
+            return $options;
+        }
     }
 }
