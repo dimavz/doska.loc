@@ -42,9 +42,16 @@ class DoskaViewCategories extends JViewLegacy
                 }
             }
         }
-//        echo "<PRE>";
-//        print_r($this->items);
-//        echo "</PRE>";
+
+        $app = JFactory::getApplication();
+        $key = 'com_doska.categories.my_list.my_params';
+        $value = "data12234556";
+        $app->setUserState($key, $value);
+
+        echo "<PRE>";
+        print_r($app->getUserState($key));
+        echo "</PRE>";
+
         parent::display($tpl);
     }
 
