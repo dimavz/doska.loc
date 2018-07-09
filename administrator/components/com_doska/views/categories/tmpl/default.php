@@ -37,34 +37,67 @@ defined("_JEXEC") or die();
             <tbody>
             <?php if (!empty($this->items)) : ?>
                 <?php $i = 1; ?>
-                <?php foreach ($this->items as $key => $item) : ?>
-                    <tr>
-                        <td>
-                            <?php echo $i; ?>
-                        </td>
-                        <td>
-                            <?php echo JHtml::_('grid.id', $key, $item->id); ?>
-                        </td>
-                        <td>
-                            <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $item->id); ?>
-                            <!--                        <a href="--><?php //echo $link; ?><!--">-->
-                            <?php //echo $item->name; ?><!--</a>-->
-                            <?php echo JHtml::_('link', $link, $item->name); ?>
-                        </td>
-                        <td>
-                            <?php echo $item->alias; ?>
-                        </td>
-                        <td>
-                            <?php echo JHtml::_('jgrid.published', $item->state, $key, 'categories.'); ?>
-                        </td>
-                        <td>
-                            <?php echo "Сортировка" ?>
-                        </td>
-                        <td>
-                            <?php echo $item->id; ?>
-                        </td>
-                    </tr>
-                    <?php $i++; ?>
+                <?php foreach ($this->items as $id => $category) : ?>
+                    <?php if($category['name']):?>
+                        <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $id);?>
+
+                        <tr>
+                            <td><?php echo $i; ?></td>
+                            <td>
+                                <?php echo JHtml::_('grid.id', $i, $id); ?>
+                            </td>
+                            <td>
+                                <strong><?php echo JHtml::_('link',$link,$category['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?></strong>
+                            </td>
+
+                            <td>
+                                <?php echo $category['alias']; ?>
+                            </td>
+
+                            <td>
+                                <?php echo JHtml::_('jgrid.published', $category['state'], $i, 'categories.'); ?>
+                            </td>
+
+                            <td>
+
+                            </td>
+                            <td align="center">
+                                <?php echo $id; ?>
+                            </td>
+                        </tr>
+                        <?php $i++;?>
+                    <?php endif;?>
+                    <? if(is_array($category['next'])) :?>
+                        <?php $k = " -- ";?>
+                        <?php foreach($category['next'] as $sub): ?>
+                            <?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $sub['id']);?>
+                            <tr>
+                                <td><?php echo $i; ?></td>
+                                <td>
+                                    <?php echo JHtml::_('grid.id', $i, $sub['id']); ?>
+                                </td>
+                                <td>
+                                    <?php echo JHtml::_('link',$link,$k.$sub['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?>
+                                </td>
+
+                                <td>
+                                    <?php echo $sub['alias']; ?>
+                                </td>
+
+                                <td>
+                                    <?php echo JHtml::_('jgrid.published', $sub['state'], $i, 'categories.'); ?>
+                                </td>
+
+                                <td>
+
+                                </td>
+                                <td align="center">
+                                    <?php echo $sub['id']; ?>
+                                </td>
+                            </tr>
+                            <?php $i++;?>
+                        <?php endforeach;?>
+                    <?php endif;?>
                 <?php endforeach; ?>
             <?php endif; ?>
             </tbody>
