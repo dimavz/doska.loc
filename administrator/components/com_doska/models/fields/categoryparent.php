@@ -36,7 +36,7 @@ class JFormFieldCategoryparent extends JFormFieldList
         if(!empty($rows)){
             foreach ($rows as $row)
             {
-                if($row->parent_id == 0){
+                if($row->parentid == 0){
                     array_push($options,$row);
                 }
             }
