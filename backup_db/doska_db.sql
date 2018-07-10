@@ -494,28 +494,29 @@ CREATE TABLE IF NOT EXISTS `jos_doska_categories` (
   `parentid` int(5) NOT NULL DEFAULT '0',
   `alias` varchar(255) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '1',
-  `params` text,
+  `params` text NOT NULL,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы doska.jos_doska_categories: ~3 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_doska_categories: ~14 rows (приблизительно)
 DELETE FROM `jos_doska_categories`;
 /*!40000 ALTER TABLE `jos_doska_categories` DISABLE KEYS */;
-INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, `params`) VALUES
-	(2, 'Автомобили', 6, 'avtomobili3', 1, '{"show_category":"1","image":"","image_alt":""}'),
-	(3, 'Электроника', 0, 'elektronika', 1, '{"show_category":"1","image":"images\\/powered_by.png","image_alt":" \\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f222"}'),
-	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/osmbanner1.png","image_alt":""}'),
-	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 1, '{"show_category":"1","image":"","image_alt":""}'),
-	(6, 'Транспорт', 0, 'transport', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(7, 'Мотоциклы', 6, 'mototsikly', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(8, 'Велосипеды', 6, 'velosipedy', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(9, 'Спорт', 0, 'sport', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(10, 'Туризм', 9, 'turizm', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(11, 'Спорт инвентарь', 9, 'sport-inventar', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(12, 'Рыбалка', 9, 'rybalka', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(13, 'Охота', 9, 'okhota', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(14, 'Тренажёры', 9, 'trenazhjory', 1, '{"show_category":"0","image":"","image_alt":""}'),
-	(15, 'Компьютеры', 3, 'kompyutery', 1, '{"show_category":"0","image":"","image_alt":""}');
+INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, `params`, `ordering`) VALUES
+	(2, 'Автомобили', 6, 'avtomobili3', 0, '{"show_category":"1","image":"","image_alt":""}', 0),
+	(3, 'Электроника', 0, 'elektronika', 1, '{"show_category":"1","image":"images\\/powered_by.png","image_alt":" \\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f222"}', 0),
+	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/osmbanner1.png","image_alt":""}', 0),
+	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 1, '{"show_category":"1","image":"","image_alt":""}', 0),
+	(6, 'Транспорт', 0, 'transport', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(7, 'Мотоциклы', 6, 'mototsikly', 0, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(8, 'Велосипеды', 6, 'velosipedy', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(9, 'Спорт', 0, 'sport', 0, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(10, 'Туризм', 9, 'turizm', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(11, 'Спорт инвентарь', 9, 'sport-inventar', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(12, 'Рыбалка', 9, 'rybalka', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(13, 'Охота', 9, 'okhota', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(14, 'Тренажёры', 9, 'trenazhjory', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
+	(15, 'Компьютеры', 3, 'kompyutery', 1, '{"show_category":"0","image":"","image_alt":""}', 0);
 /*!40000 ALTER TABLE `jos_doska_categories` ENABLE KEYS */;
 
 
@@ -735,9 +736,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1531138312}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1531224583}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1531115842,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1531202112,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -1887,12 +1888,13 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_session: ~1 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_session: ~2 rows (приблизительно)
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	('4l5pv2ka2opeq993ns2a97lff3', 1, 0, '1531147247', 'joomla|s:1140:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMTtzOjU6InRva2VuIjtzOjMyOiI1dHpIU2p6MUdRUTRpUWd4b0ZkeTBkeGJzTTZud0tSbCI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMxMTQ2MTMxO3M6NDoibGFzdCI7aToxNTMxMTQ3MjM0O3M6Mzoibm93IjtpOjE1MzExNDcyNDc7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoib3JkZXJjb2wiO047czo2OiJmaWx0ZXIiO2E6MTp7czo1OiJzdGF0ZSI7czowOiIiO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo3OiJteV9saXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjk6Im15X3BhcmFtcyI7czoxMjoiZGF0YTEyMjM0NTU2Ijt9fX1zOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJsaXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxpbWl0IjtpOjEwO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiMTczIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin'),
-	('b0mb0dstrujj9ifcvd9au0v284', 1, 1, '1531116583', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMTExNjU4MztzOjQ6Imxhc3QiO2k6MTUzMTExNjU4MztzOjM6Im5vdyI7aToxNTMxMTE2NTgzO31zOjU6InRva2VuIjtzOjMyOiJHd25uYU1LUGtFcVllT0ZuY3VVdjY0aVBSVEhkc0ZwdyI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, '');
+	('b0mb0dstrujj9ifcvd9au0v284', 1, 1, '1531116583', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMTExNjU4MztzOjQ6Imxhc3QiO2k6MTUzMTExNjU4MztzOjM6Im5vdyI7aToxNTMxMTE2NTgzO31zOjU6InRva2VuIjtzOjMyOiJHd25uYU1LUGtFcVllT0ZuY3VVdjY0aVBSVEhkc0ZwdyI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, ''),
+	('kebmt8vkqpej439rn42s25fis3', 1, 1, '1531224603', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6ImxjWjVzcnlYZUJZVjdKdHIyWFNhSU5RMTUxUTNkUFZpIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
+	('m7ar0choe3r5uefdno7g9d91o5', 1, 0, '1531234635', 'joomla|s:1100:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2NztzOjU6InRva2VuIjtzOjMyOiJjdEo0Z2doSUdzNGZLTGtnT3B0OGxMNmxUOXFlZHQ1TiI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMxMjMxMzIxO3M6NDoibGFzdCI7aToxNTMxMjM0NjMwO3M6Mzoibm93IjtpOjE1MzEyMzQ2MzU7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoib3JkZXJjb2wiO3M6ODoib3JkZXJpbmciO3M6NjoiZmlsdGVyIjthOjE6e3M6NToic3RhdGUiO3M6MDoiIjt9czo5OiJvcmRlcmRpcm4iO3M6MzoiYXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJsaXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxpbWl0IjtpOjIwO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiMTczIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
 
@@ -2122,7 +2124,7 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1531139467, ''),
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1531224603, ''),
 	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1531139487, ''),
 	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1531139507, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
@@ -2208,7 +2210,7 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-09 14:22:11', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-10 14:02:01', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
 
