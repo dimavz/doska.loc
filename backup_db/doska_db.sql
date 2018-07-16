@@ -25,80 +25,85 @@ CREATE TABLE IF NOT EXISTS `jos_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_assets: ~64 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_assets: ~73 rows (приблизительно)
 DELETE FROM `jos_assets`;
 /*!40000 ALTER TABLE `jos_assets` DISABLE KEYS */;
 INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-	(1, 0, 0, 135, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+	(1, 0, 0, 145, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 	(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 	(3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
 	(4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 	(5, 1, 9, 10, 1, 'com_checkin', 'com_checkin', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 	(6, 1, 11, 12, 1, 'com_config', 'com_config', '{}'),
 	(7, 1, 13, 16, 1, 'com_contact', 'com_contact', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-	(8, 1, 17, 22, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.edit":{"4":1},"core.edit.state":{"5":1}}'),
-	(9, 1, 23, 24, 1, 'com_cpanel', 'com_cpanel', '{}'),
-	(10, 1, 25, 26, 1, 'com_installer', 'com_installer', '{"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
-	(11, 1, 27, 30, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1}}'),
-	(12, 1, 31, 32, 1, 'com_login', 'com_login', '{}'),
-	(13, 1, 33, 34, 1, 'com_mailto', 'com_mailto', '{}'),
-	(14, 1, 35, 36, 1, 'com_massmail', 'com_massmail', '{}'),
-	(15, 1, 37, 38, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
-	(16, 1, 39, 40, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1}}'),
-	(17, 1, 41, 42, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-	(18, 1, 43, 88, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1}}'),
-	(19, 1, 89, 92, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-	(20, 1, 93, 94, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1}}'),
-	(21, 1, 95, 96, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1}}'),
-	(22, 1, 97, 98, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-	(23, 1, 99, 100, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1}}'),
-	(24, 1, 101, 104, 1, 'com_users', 'com_users', '{"core.admin":{"7":1}}'),
-	(26, 1, 105, 106, 1, 'com_wrapper', 'com_wrapper', '{}'),
+	(8, 1, 17, 32, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.edit":{"4":1},"core.edit.state":{"5":1}}'),
+	(9, 1, 33, 34, 1, 'com_cpanel', 'com_cpanel', '{}'),
+	(10, 1, 35, 36, 1, 'com_installer', 'com_installer', '{"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
+	(11, 1, 37, 40, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1}}'),
+	(12, 1, 41, 42, 1, 'com_login', 'com_login', '{}'),
+	(13, 1, 43, 44, 1, 'com_mailto', 'com_mailto', '{}'),
+	(14, 1, 45, 46, 1, 'com_massmail', 'com_massmail', '{}'),
+	(15, 1, 47, 48, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
+	(16, 1, 49, 50, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1}}'),
+	(17, 1, 51, 52, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
+	(18, 1, 53, 98, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1}}'),
+	(19, 1, 99, 102, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+	(20, 1, 103, 104, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1}}'),
+	(21, 1, 105, 106, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1}}'),
+	(22, 1, 107, 108, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+	(23, 1, 109, 110, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1}}'),
+	(24, 1, 111, 114, 1, 'com_users', 'com_users', '{"core.admin":{"7":1}}'),
+	(26, 1, 115, 116, 1, 'com_wrapper', 'com_wrapper', '{}'),
 	(27, 8, 18, 21, 2, 'com_content.category.2', 'Uncategorised', '{}'),
 	(28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{}'),
 	(29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{}'),
-	(30, 19, 90, 91, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
-	(32, 24, 102, 103, 2, 'com_users.category.7', 'Uncategorised', '{}'),
-	(33, 1, 107, 108, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-	(34, 1, 109, 110, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
-	(35, 1, 111, 112, 1, 'com_tags', 'com_tags', '{}'),
-	(36, 1, 113, 114, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-	(37, 1, 115, 116, 1, 'com_ajax', 'com_ajax', '{}'),
-	(38, 1, 117, 118, 1, 'com_postinstall', 'com_postinstall', '{}'),
-	(39, 18, 44, 45, 2, 'com_modules.module.1', 'Main Menu', '{}'),
-	(40, 18, 46, 47, 2, 'com_modules.module.2', 'Login', '{}'),
-	(41, 18, 48, 49, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
-	(42, 18, 50, 51, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
-	(43, 18, 52, 53, 2, 'com_modules.module.8', 'Toolbar', '{}'),
-	(44, 18, 54, 55, 2, 'com_modules.module.9', 'Quick Icons', '{}'),
-	(45, 18, 56, 57, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
-	(46, 18, 58, 59, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
-	(47, 18, 60, 61, 2, 'com_modules.module.13', 'Admin Submenu', '{}'),
-	(48, 18, 62, 63, 2, 'com_modules.module.14', 'User Status', '{}'),
-	(49, 18, 64, 65, 2, 'com_modules.module.15', 'Title', '{}'),
-	(50, 18, 66, 67, 2, 'com_modules.module.16', 'Login Form', '{}'),
-	(51, 18, 68, 69, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
-	(52, 18, 70, 71, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
-	(53, 18, 72, 73, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
-	(54, 18, 74, 75, 2, 'com_modules.module.87', 'Popular Tags', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(55, 18, 76, 77, 2, 'com_modules.module.88', 'Site Information', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(56, 18, 78, 79, 2, 'com_modules.module.89', 'Release News', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(57, 18, 80, 81, 2, 'com_modules.module.90', 'Latest Articles', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(58, 18, 82, 83, 2, 'com_modules.module.91', 'User Menu', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(59, 18, 84, 85, 2, 'com_modules.module.92', 'Image Module', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(60, 18, 86, 87, 2, 'com_modules.module.93', 'Search', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(30, 19, 100, 101, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
+	(32, 24, 112, 113, 2, 'com_users.category.7', 'Uncategorised', '{}'),
+	(33, 1, 117, 118, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+	(34, 1, 119, 120, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
+	(35, 1, 121, 122, 1, 'com_tags', 'com_tags', '{}'),
+	(36, 1, 123, 124, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+	(37, 1, 125, 126, 1, 'com_ajax', 'com_ajax', '{}'),
+	(38, 1, 127, 128, 1, 'com_postinstall', 'com_postinstall', '{}'),
+	(39, 18, 54, 55, 2, 'com_modules.module.1', 'Main Menu', '{}'),
+	(40, 18, 56, 57, 2, 'com_modules.module.2', 'Login', '{}'),
+	(41, 18, 58, 59, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
+	(42, 18, 60, 61, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
+	(43, 18, 62, 63, 2, 'com_modules.module.8', 'Toolbar', '{}'),
+	(44, 18, 64, 65, 2, 'com_modules.module.9', 'Quick Icons', '{}'),
+	(45, 18, 66, 67, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
+	(46, 18, 68, 69, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
+	(47, 18, 70, 71, 2, 'com_modules.module.13', 'Admin Submenu', '{}'),
+	(48, 18, 72, 73, 2, 'com_modules.module.14', 'User Status', '{}'),
+	(49, 18, 74, 75, 2, 'com_modules.module.15', 'Title', '{}'),
+	(50, 18, 76, 77, 2, 'com_modules.module.16', 'Login Form', '{}'),
+	(51, 18, 78, 79, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
+	(52, 18, 80, 81, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
+	(53, 18, 82, 83, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
+	(54, 18, 84, 85, 2, 'com_modules.module.87', 'Popular Tags', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(55, 18, 86, 87, 2, 'com_modules.module.88', 'Site Information', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(56, 18, 88, 89, 2, 'com_modules.module.89', 'Release News', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(57, 18, 90, 91, 2, 'com_modules.module.90', 'Latest Articles', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(58, 18, 92, 93, 2, 'com_modules.module.91', 'User Menu', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(59, 18, 94, 95, 2, 'com_modules.module.92', 'Image Module', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
+	(60, 18, 96, 97, 2, 'com_modules.module.93', 'Search', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 	(61, 27, 19, 20, 3, 'com_content.article.1', 'Getting Started', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
-	(62, 1, 119, 120, 1, 'jos_ucm_content.1', 'jos_ucm_content.1', '{}'),
-	(63, 11, 28, 29, 2, 'com_languages.language.2', 'Русский (Россия)', '{}'),
-	(65, 1, 121, 122, 1, 'com_doska', 'COM_DOSKA', '{}'),
-	(68, 1, 123, 124, 1, '#__doska_types.3', '#__doska_types.3', '{}'),
-	(69, 1, 125, 126, 1, '#__doska_types.4', '#__doska_types.4', '{}'),
-	(70, 1, 127, 128, 1, '#__doska_types.5', '#__doska_types.5', '{}'),
-	(71, 1, 129, 130, 1, '#__doska_types.6', '#__doska_types.6', '{}'),
-	(72, 1, 131, 132, 1, '#__doska_types.7', '#__doska_types.7', '{}'),
-	(73, 1, 133, 134, 1, '#__doska_types.8', '#__doska_types.8', '{}');
+	(62, 1, 129, 130, 1, 'jos_ucm_content.1', 'jos_ucm_content.1', '{}'),
+	(63, 11, 38, 39, 2, 'com_languages.language.2', 'Русский (Россия)', '{}'),
+	(65, 1, 131, 132, 1, 'com_doska', 'COM_DOSKA', '{}'),
+	(68, 1, 133, 134, 1, '#__doska_types.3', '#__doska_types.3', '{}'),
+	(69, 1, 135, 136, 1, '#__doska_types.4', '#__doska_types.4', '{}'),
+	(70, 1, 137, 138, 1, '#__doska_types.5', '#__doska_types.5', '{}'),
+	(71, 1, 139, 140, 1, '#__doska_types.6', '#__doska_types.6', '{}'),
+	(72, 1, 141, 142, 1, '#__doska_types.7', '#__doska_types.7', '{}'),
+	(73, 1, 143, 144, 1, '#__doska_types.8', '#__doska_types.8', '{}'),
+	(74, 8, 22, 23, 2, 'com_content.category.8', 'Новости', '{}'),
+	(75, 8, 24, 25, 2, 'com_content.category.9', 'Партнёры', '{}'),
+	(76, 8, 26, 27, 2, 'com_content.category.10', 'Собаки', '{}'),
+	(77, 8, 28, 29, 2, 'com_content.category.11', 'Кошки', '{}'),
+	(78, 8, 30, 31, 2, 'com_content.category.12', 'Попугаи', '{}');
 /*!40000 ALTER TABLE `jos_assets` ENABLE KEYS */;
 
 
@@ -254,18 +259,23 @@ CREATE TABLE IF NOT EXISTS `jos_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`(100)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_categories: ~6 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_categories: ~11 rows (приблизительно)
 DELETE FROM `jos_categories`;
 /*!40000 ALTER TABLE `jos_categories` DISABLE KEYS */;
 INSERT INTO `jos_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`, `version`) VALUES
-	(1, 0, 0, 0, 11, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '{}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
+	(1, 0, 0, 0, 21, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '{}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 	(2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 	(3, 28, 1, 3, 4, 1, 'uncategorised', 'com_banners', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 	(4, 29, 1, 5, 6, 1, 'uncategorised', 'com_contact', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
 	(5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
-	(7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1);
+	(7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 42, '2011-01-01 00:00:01', 0, '0000-00-00 00:00:00', 0, '*', 1),
+	(8, 74, 1, 11, 12, 1, 'novosti', 'com_content', 'Новости', 'novosti', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"","image_alt":""}', '', '', '{"author":"","robots":""}', 173, '2018-07-16 12:35:07', 0, '2018-07-16 12:35:07', 0, '*', 1),
+	(9, 75, 1, 13, 14, 1, 'partnjory', 'com_content', 'Партнёры', 'partnjory', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"","image_alt":""}', '', '', '{"author":"","robots":""}', 173, '2018-07-16 12:35:21', 0, '2018-07-16 12:35:21', 0, '*', 1),
+	(10, 76, 1, 15, 16, 1, 'sobaki', 'com_content', 'Собаки', 'sobaki', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"","image_alt":""}', '', '', '{"author":"","robots":""}', 173, '2018-07-16 12:36:02', 0, '2018-07-16 12:36:02', 0, '*', 1),
+	(11, 77, 1, 17, 18, 1, 'koshki', 'com_content', 'Кошки', 'koshki', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"","image_alt":""}', '', '', '{"author":"","robots":""}', 173, '2018-07-16 12:36:14', 0, '2018-07-16 12:36:14', 0, '*', 1),
+	(12, 78, 1, 19, 20, 1, 'popugai', 'com_content', 'Попугаи', 'popugai', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":"","image_alt":""}', '', '', '{"author":"","robots":""}', 173, '2018-07-16 12:36:25', 0, '2018-07-16 12:36:25', 0, '*', 1);
 /*!40000 ALTER TABLE `jos_categories` ENABLE KEYS */;
 
 
@@ -381,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `jos_content` (
 DELETE FROM `jos_content`;
 /*!40000 ALTER TABLE `jos_content` DISABLE KEYS */;
 INSERT INTO `jos_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-	(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 849, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 8, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+	(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 849, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 9, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
 /*!40000 ALTER TABLE `jos_content` ENABLE KEYS */;
 
 
@@ -504,19 +514,19 @@ DELETE FROM `jos_doska_categories`;
 /*!40000 ALTER TABLE `jos_doska_categories` DISABLE KEYS */;
 INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, `params`, `ordering`) VALUES
 	(2, 'Автомобили', 6, 'avtomobili3', 0, '{"show_category":"1","image":"","image_alt":""}', 0),
-	(3, 'Электроника', 0, 'elektronika', 1, '{"show_category":"1","image":"images\\/powered_by.png","image_alt":" \\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f222"}', 0),
-	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/osmbanner1.png","image_alt":""}', 0),
-	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 1, '{"show_category":"1","image":"","image_alt":""}', 0),
-	(6, 'Транспорт', 0, 'transport', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(7, 'Мотоциклы', 6, 'mototsikly', 0, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(8, 'Велосипеды', 6, 'velosipedy', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(9, 'Спорт', 0, 'sport', 0, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(10, 'Туризм', 9, 'turizm', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(11, 'Спорт инвентарь', 9, 'sport-inventar', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(12, 'Рыбалка', 9, 'rybalka', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(13, 'Охота', 9, 'okhota', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(14, 'Тренажёры', 9, 'trenazhjory', 1, '{"show_category":"0","image":"","image_alt":""}', 0),
-	(15, 'Компьютеры', 3, 'kompyutery', 1, '{"show_category":"0","image":"","image_alt":""}', 0);
+	(3, 'Электроника', 0, 'elektronika', 1, '{"show_category":"1","image":"images\\/powered_by.png","image_alt":" \\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f222"}', 3),
+	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/osmbanner1.png","image_alt":""}', 2),
+	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 1, '{"show_category":"1","image":"","image_alt":""}', 2),
+	(6, 'Транспорт', 0, 'transport', 1, '{"show_category":"0","image":"","image_alt":""}', 11),
+	(7, 'Мотоциклы', 6, 'mototsikly', 0, '{"show_category":"0","image":"","image_alt":""}', 1),
+	(8, 'Велосипеды', 6, 'velosipedy', 1, '{"show_category":"0","image":"","image_alt":""}', 2),
+	(9, 'Спорт', 0, 'sport', 0, '{"show_category":"0","image":"","image_alt":""}', 10),
+	(10, 'Туризм', 9, 'turizm', 1, '{"show_category":"0","image":"","image_alt":""}', 4),
+	(11, 'Спорт инвентарь', 9, 'sport-inventar', 1, '{"show_category":"0","image":"","image_alt":""}', 5),
+	(12, 'Рыбалка', 9, 'rybalka', 1, '{"show_category":"0","image":"","image_alt":""}', 6),
+	(13, 'Охота', 9, 'okhota', 1, '{"show_category":"0","image":"","image_alt":""}', 7),
+	(14, 'Тренажёры', 9, 'trenazhjory', 1, '{"show_category":"0","image":"","image_alt":""}', 8),
+	(15, 'Компьютеры', 3, 'kompyutery', 1, '{"show_category":"0","image":"","image_alt":""}', 1);
 /*!40000 ALTER TABLE `jos_doska_categories` ENABLE KEYS */;
 
 
@@ -736,9 +746,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1531224583}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1531742207}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1531202112,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1531742433,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -1888,13 +1898,14 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_session: ~2 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_session: ~4 rows (приблизительно)
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
 	('b0mb0dstrujj9ifcvd9au0v284', 1, 1, '1531116583', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMTExNjU4MztzOjQ6Imxhc3QiO2k6MTUzMTExNjU4MztzOjM6Im5vdyI7aToxNTMxMTE2NTgzO31zOjU6InRva2VuIjtzOjMyOiJHd25uYU1LUGtFcVllT0ZuY3VVdjY0aVBSVEhkc0ZwdyI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, ''),
 	('kebmt8vkqpej439rn42s25fis3', 1, 1, '1531224603', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6ImxjWjVzcnlYZUJZVjdKdHIyWFNhSU5RMTUxUTNkUFZpIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
-	('m7ar0choe3r5uefdno7g9d91o5', 1, 0, '1531234635', 'joomla|s:1100:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2NztzOjU6InRva2VuIjtzOjMyOiJjdEo0Z2doSUdzNGZLTGtnT3B0OGxMNmxUOXFlZHQ1TiI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMxMjMxMzIxO3M6NDoibGFzdCI7aToxNTMxMjM0NjMwO3M6Mzoibm93IjtpOjE1MzEyMzQ2MzU7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoib3JkZXJjb2wiO3M6ODoib3JkZXJpbmciO3M6NjoiZmlsdGVyIjthOjE6e3M6NToic3RhdGUiO3M6MDoiIjt9czo5OiJvcmRlcmRpcm4iO3M6MzoiYXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJsaXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxpbWl0IjtpOjIwO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiMTczIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin');
+	('l8ubc2l6bhq92onlr0j2b70f15', 1, 0, '1531749737', 'joomla|s:1168:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo4NjtzOjU6InRva2VuIjtzOjMyOiIxcDk4ZEZ4M2JIVlNHbzVzNTBHOEQzQjRTZktIUU9vWSI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMxNzQ3ODQ0O3M6NDoibGFzdCI7aToxNTMxNzQ5NzM0O3M6Mzoibm93IjtpOjE1MzE3NDk3Mzc7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoib3JkZXJjb2wiO3M6MjoiaWQiO3M6NjoiZmlsdGVyIjthOjE6e3M6NToic3RhdGUiO3M6MDoiIjt9czo5OiJvcmRlcmRpcm4iO3M6NDoiZGVzYyI7czoxMDoibGltaXRzdGFydCI7aTowO319czo2OiJnbG9iYWwiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoibGlzdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJsaW1pdCI7aToyMDt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjE3MyI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 173, 'Admin'),
+	('t8fuk8jd9inlr4l5gqe4m2hdv0', 0, 1, '1531742227', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMTc0MjIwNDtzOjQ6Imxhc3QiO2k6MTUzMTc0MjIwNDtzOjM6Im5vdyI7aToxNTMxNzQyMjA0O31zOjU6InRva2VuIjtzOjMyOiJWMnptNHpMSnFaMUozRFRCN0ZiendiZHcyTEprTmluOSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, '');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
 
@@ -2070,14 +2081,19 @@ CREATE TABLE IF NOT EXISTS `jos_ucm_history` (
   PRIMARY KEY (`version_id`),
   KEY `idx_ucm_item_id` (`ucm_type_id`,`ucm_item_id`),
   KEY `idx_save_date` (`save_date`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_ucm_history: ~2 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_ucm_history: ~7 rows (приблизительно)
 DELETE FROM `jos_ucm_history`;
 /*!40000 ALTER TABLE `jos_ucm_history` DISABLE KEYS */;
 INSERT INTO `jos_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
 	(1, 2, 10, 'Initial content', '2013-11-16 00:00:00', 849, 558, 'be28228b479aa67bad3dc1db2975232a033d5f0f', '{"id":2,"parent_id":"1","lft":"1","rgt":2,"level":1,"path":"joomla","title":"Joomla","alias":"joomla","note":"","description":null,"published":1,"checked_out":"0","checked_out_time":"0000-00-00 00:00:00","access":1,"params":null,"metadesc":null,"metakey":null,"metadata":null,"created_user_id":"849","created_time":"2013-11-16 00:00:00","created_by_alias":"","modified_user_id":"0","modified_time":"0000-00-00 00:00:00","images":null,"urls":null,"hits":"0","language":"*","version":"1","publish_up":"0000-00-00 00:00:00","publish_down":"0000-00-00 00:00:00"}', 0),
-	(2, 1, 1, 'Initial content', '2013-11-16 00:00:00', 849, 4539, '4f6bf8f67e89553853c3b6e8ed0a6111daaa7a2f', '{"id":1,"asset_id":54,"title":"Getting Started","alias":"getting-started","introtext":"<p>It\'s easy to get started creating your website. Knowing some of the basics will help.<\\/p>\\r\\n<h3>What is a Content Management System?<\\/h3>\\r\\n<p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.<\\/p>\\r\\n<p>In this site, the content is stored in a <em>database<\\/em>. The look and feel are created by a <em>template<\\/em>. Joomla! brings together the template and your content to create web pages.<\\/p>\\r\\n<h3>Logging in<\\/h3>\\r\\n<p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.<\\/p>\\r\\n<h3>Creating an article<\\/h3>\\r\\n<p>Once you are logged-in, a new menu will be visible. To create a new article, click on the \\"Submit Article\\" link on that menu.<\\/p>\\r\\n<p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.<\\/p>\\r\\n<div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).<\\/div>\\r\\n<h3>Template, site settings, and modules<\\/h3>\\r\\n<p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the \\"Template Settings\\" in the user menu.\\u00a0<\\/p>\\r\\n<p>The boxes around the main content of the site are called modules. \\u00a0You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.<\\/p>\\r\\n<p>You can change some site settings such as the site name and description by clicking on the \\"Site Settings\\" link.<\\/p>\\r\\n<p>More advanced options for templates, site settings, modules, and more are available in the site administrator.<\\/p>\\r\\n<h3>Site and Administrator<\\/h3>\\r\\n<p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the \\"Site Administrator\\" link on the \\"User Menu\\" menu (visible once you login) or by adding \\/administrator to the end of your domain name. The same user name and password are used for both sites.<\\/p>\\r\\n<h3>Learn more<\\/h3>\\r\\n<p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href=\\"https:\\/\\/docs.joomla.org\\" target=\\"_blank\\">Joomla! documentation site<\\/a> and on the<a href=\\"https:\\/\\/forum.joomla.org\\/\\" target=\\"_blank\\"> Joomla! forums<\\/a>.<\\/p>","fulltext":"","state":1,"catid":"2","created":"2013-11-16 00:00:00","created_by":"849","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-11-16 00:00:00","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0);
+	(2, 1, 1, 'Initial content', '2013-11-16 00:00:00', 849, 4539, '4f6bf8f67e89553853c3b6e8ed0a6111daaa7a2f', '{"id":1,"asset_id":54,"title":"Getting Started","alias":"getting-started","introtext":"<p>It\'s easy to get started creating your website. Knowing some of the basics will help.<\\/p>\\r\\n<h3>What is a Content Management System?<\\/h3>\\r\\n<p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.<\\/p>\\r\\n<p>In this site, the content is stored in a <em>database<\\/em>. The look and feel are created by a <em>template<\\/em>. Joomla! brings together the template and your content to create web pages.<\\/p>\\r\\n<h3>Logging in<\\/h3>\\r\\n<p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.<\\/p>\\r\\n<h3>Creating an article<\\/h3>\\r\\n<p>Once you are logged-in, a new menu will be visible. To create a new article, click on the \\"Submit Article\\" link on that menu.<\\/p>\\r\\n<p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.<\\/p>\\r\\n<div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).<\\/div>\\r\\n<h3>Template, site settings, and modules<\\/h3>\\r\\n<p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the \\"Template Settings\\" in the user menu.\\u00a0<\\/p>\\r\\n<p>The boxes around the main content of the site are called modules. \\u00a0You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.<\\/p>\\r\\n<p>You can change some site settings such as the site name and description by clicking on the \\"Site Settings\\" link.<\\/p>\\r\\n<p>More advanced options for templates, site settings, modules, and more are available in the site administrator.<\\/p>\\r\\n<h3>Site and Administrator<\\/h3>\\r\\n<p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the \\"Site Administrator\\" link on the \\"User Menu\\" menu (visible once you login) or by adding \\/administrator to the end of your domain name. The same user name and password are used for both sites.<\\/p>\\r\\n<h3>Learn more<\\/h3>\\r\\n<p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href=\\"https:\\/\\/docs.joomla.org\\" target=\\"_blank\\">Joomla! documentation site<\\/a> and on the<a href=\\"https:\\/\\/forum.joomla.org\\/\\" target=\\"_blank\\"> Joomla! forums<\\/a>.<\\/p>","fulltext":"","state":1,"catid":"2","created":"2013-11-16 00:00:00","created_by":"849","created_by_alias":"","modified":"","modified_by":null,"checked_out":null,"checked_out_time":null,"publish_up":"2013-11-16 00:00:00","publish_down":"0000-00-00 00:00:00","images":"{\\"image_intro\\":\\"\\",\\"float_intro\\":\\"\\",\\"image_intro_alt\\":\\"\\",\\"image_intro_caption\\":\\"\\",\\"image_fulltext\\":\\"\\",\\"float_fulltext\\":\\"\\",\\"image_fulltext_alt\\":\\"\\",\\"image_fulltext_caption\\":\\"\\"}","urls":"{\\"urla\\":false,\\"urlatext\\":\\"\\",\\"targeta\\":\\"\\",\\"urlb\\":false,\\"urlbtext\\":\\"\\",\\"targetb\\":\\"\\",\\"urlc\\":false,\\"urlctext\\":\\"\\",\\"targetc\\":\\"\\"}","attribs":"{\\"show_title\\":\\"\\",\\"link_titles\\":\\"\\",\\"show_tags\\":\\"\\",\\"show_intro\\":\\"\\",\\"info_block_position\\":\\"\\",\\"show_category\\":\\"\\",\\"link_category\\":\\"\\",\\"show_parent_category\\":\\"\\",\\"link_parent_category\\":\\"\\",\\"show_author\\":\\"\\",\\"link_author\\":\\"\\",\\"show_create_date\\":\\"\\",\\"show_modify_date\\":\\"\\",\\"show_publish_date\\":\\"\\",\\"show_item_navigation\\":\\"\\",\\"show_icons\\":\\"\\",\\"show_print_icon\\":\\"\\",\\"show_email_icon\\":\\"\\",\\"show_vote\\":\\"\\",\\"show_hits\\":\\"\\",\\"show_noauth\\":\\"\\",\\"urls_position\\":\\"\\",\\"alternative_readmore\\":\\"\\",\\"article_layout\\":\\"\\",\\"show_publishing_options\\":\\"\\",\\"show_article_options\\":\\"\\",\\"show_urls_images_backend\\":\\"\\",\\"show_urls_images_frontend\\":\\"\\"}","version":1,"ordering":null,"metakey":"","metadesc":"","access":"1","hits":null,"metadata":"{\\"robots\\":\\"\\",\\"author\\":\\"\\",\\"rights\\":\\"\\",\\"xreference\\":\\"\\"}","featured":"0","language":"*","xreference":""}', 0),
+	(3, 8, 5, '', '2018-07-16 12:35:07', 173, 586, 'c92b958f4f72594cb05f89a211c17294ee9e0576', '{"id":8,"asset_id":74,"parent_id":"1","lft":"11","rgt":12,"level":1,"path":null,"extension":"com_content","title":"\\u041d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438","alias":"novosti","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\",\\"image_alt\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"173","created_time":"2018-07-16 12:35:07","modified_user_id":null,"modified_time":"2018-07-16 12:35:07","hits":"0","language":"*","version":null}', 0),
+	(4, 9, 5, '', '2018-07-16 12:35:21', 173, 594, '07d6603dd31571bc198748875c03b7dc567b65da', '{"id":9,"asset_id":75,"parent_id":"1","lft":"13","rgt":14,"level":1,"path":null,"extension":"com_content","title":"\\u041f\\u0430\\u0440\\u0442\\u043d\\u0451\\u0440\\u044b","alias":"partnjory","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\",\\"image_alt\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"173","created_time":"2018-07-16 12:35:21","modified_user_id":null,"modified_time":"2018-07-16 12:35:21","hits":"0","language":"*","version":null}', 0),
+	(5, 10, 5, '', '2018-07-16 12:36:02', 173, 580, 'b0a032ef9106cf84a1bd2f1203e12e9dffe253e0', '{"id":10,"asset_id":76,"parent_id":"1","lft":"15","rgt":16,"level":1,"path":null,"extension":"com_content","title":"\\u0421\\u043e\\u0431\\u0430\\u043a\\u0438","alias":"sobaki","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\",\\"image_alt\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"173","created_time":"2018-07-16 12:36:02","modified_user_id":null,"modified_time":"2018-07-16 12:36:02","hits":"0","language":"*","version":null}', 0),
+	(6, 11, 5, '', '2018-07-16 12:36:14', 173, 574, 'f040988416d3a3daf65feb6503bb9c4219cefd7a', '{"id":11,"asset_id":77,"parent_id":"1","lft":"17","rgt":18,"level":1,"path":null,"extension":"com_content","title":"\\u041a\\u043e\\u0448\\u043a\\u0438","alias":"koshki","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\",\\"image_alt\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"173","created_time":"2018-07-16 12:36:14","modified_user_id":null,"modified_time":"2018-07-16 12:36:14","hits":"0","language":"*","version":null}', 0),
+	(7, 12, 5, '', '2018-07-16 12:36:25', 173, 587, '0408834d0a6b501a380025505313e75398edfad3', '{"id":12,"asset_id":78,"parent_id":"1","lft":"19","rgt":20,"level":1,"path":null,"extension":"com_content","title":"\\u041f\\u043e\\u043f\\u0443\\u0433\\u0430\\u0438","alias":"popugai","note":"","description":"","published":"1","checked_out":null,"checked_out_time":null,"access":"1","params":"{\\"category_layout\\":\\"\\",\\"image\\":\\"\\",\\"image_alt\\":\\"\\"}","metadesc":"","metakey":"","metadata":"{\\"author\\":\\"\\",\\"robots\\":\\"\\"}","created_user_id":"173","created_time":"2018-07-16 12:36:25","modified_user_id":null,"modified_time":"2018-07-16 12:36:25","hits":"0","language":"*","version":null}', 0);
 /*!40000 ALTER TABLE `jos_ucm_history` ENABLE KEYS */;
 
 
@@ -2124,7 +2140,7 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1531224603, ''),
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1531742227, ''),
 	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1531139487, ''),
 	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1531139507, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
@@ -2210,7 +2226,7 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-10 14:02:01', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-16 13:30:44', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
 
