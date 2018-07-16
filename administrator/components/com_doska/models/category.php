@@ -115,27 +115,27 @@ class DoskaModelCategory extends JModelAdmin {
 				}
 
 				// Remember to reorder within position and client_id
-				$condition = $this->getReorderConditions($this->table);
-				$found = false;
-
-				foreach ($conditions as $cond)
-				{
-					if ($cond[1] == $condition)
-					{
-						$found = true;
-						break;
-					}
-				}
-
-				if (!$found)
-				{
-					$key = $this->table->getKeyName();
-					$conditions[] = array($this->table->$key, $condition);
-				}
+//				$condition = $this->getReorderConditions($this->table);
+//				$found = false;
+//
+//				foreach ($conditions as $cond)
+//				{
+//					if ($cond[1] == $condition)
+//					{
+//						$found = true;
+//						break;
+//					}
+//				}
+//
+//				if (!$found)
+//				{
+//					$key = $this->table->getKeyName();
+//					$conditions[] = array($this->table->$key, $condition);
+//				}
 			}
 		}
 
-		// Execute reorder for each category.
+		 // Execute reorder for each category.
 //		foreach ($conditions as $cond)
 //		{
 //			$this->table->load($cond[0]);

@@ -1,53 +1,63 @@
 <?php
-defined("_JEXEC") or die();
+
+defined('_JEXEC') or die('Restricted Access');
+
+JHtml::_('behavior.tooltip');
+JHtml::_('formbehavior.chosen', 'select');
+
+
 ?>
-<form action="<?php echo JRoute::_("index.php?option=com_doska&view=categories"); ?>" method="post" name="adminForm"
-      id="adminForm">
-    <!-- Боковая панель навигации -->
-	<?php if (!empty($this->sidebar)): ?>
-        <div id="j-sidebar-container" class="j-sidebar-container j-toggle-transition j-sidebar-visible span2">
+
+<form action="<?php echo JRoute::_('index.php?option=com_doska&view=categories'); ?>" method="post" name="adminForm" id="adminForm">
+
+	<?php if (!empty($this->sidebar)) : ?>
+        <div id="j-sidebar-container" class="span2">
 			<?php echo $this->sidebar; ?>
         </div>
-	<?php endif; ?>
-    <div id="j-main-container" class="j-toggle-main j-toggle-transition span10">
+	<?php endif;?>
+    <div id="j-main-container" class="span10">
+
         <table class="table table-striped table-hover">
             <thead>
-            <th width="3%">
-				<?php echo JText::_('COM_DOSKA_NUM'); ?>
-            </th>
+            <th width="1%"><?php echo JText::_('COM_DOSKA_NUM'); ?></th>
             <th width="2%">
 				<?php echo JHtml::_('grid.checkall'); ?>
             </th>
-            <th width="50%">
-				<?php echo JHtml::_('grid.sort', 'COM_DOSKA_CATEGORY_TITLE', 'name', $this->listDirn, $this->listOrder); ?>
-				<?php //echo JText::_('COM_DOSKA_CATEGORY_TITLE'); ?>
+            <th width="90%">
+				<?php echo JHtml::_('grid.sort','COM_DOSKA_CATEGORIES_NAME','name',$this->listDirn,$this->listOrder);?>
             </th>
-            <th width="35%">
-				<?php echo JHtml::_('grid.sort', 'COM_DOSKA_CATEGOR_ALIAS', 'alias', $this->listDirn, $this->listOrder); ?>
-				<?php //echo JText::_('COM_DOSKA_CATEGOR_ALIAS'); ?>
+
+            <th width="10%">
+				<?php echo JHtml::_('grid.sort','JSTATUS','status',$this->listDirn,$this->listOrder);?>
             </th>
-            <th width="5%">
-				<?php echo JHtml::_('grid.sort', 'JSTATUS', 'state', $this->listDirn, $this->listOrder); ?>
-				<?php //echo JText::_('JSTATUS'); ?>
+
+            <th width="3%">
+
+
+				<?php echo JHtml::_('grid.sort','JGRID_HEADING_ORDERING','ordering',$this->listDirn,$this->listOrder);?>
+				<?php if($this->saveOrder) :?>
+					<?php echo JHtml::_('grid.order',$this->categories,'filesave.png','categories.saveorder');?>
+				<?php endif;?>
+
             </th>
-            <th width="5%">
-				<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ORDERING', 'ordering', $this->listDirn, $this->listOrder); ?>
-				<?php //echo JText::_('JGRID_HEADING_ORDERING'); ?>
-				<?php if ($this->saveOrder): ?>
-					<?php echo JHtml::_('grid.order', $rows = $this->categories, $task = 'categories.saveorder'); ?>
-				<?php endif; ?>
-            </th>
-            <th width="5%">
-				<?php echo JHtml::_('grid.sort', 'COM_DOSKA_CATEGORY_ID', 'id', $this->listDirn, $this->listOrder); ?>
-				<?php //echo JText::_('COM_DOSKA_CATEGORY_ID'); ?>
+            <th width="2%">
+				<?php echo JHtml::_('grid.sort','COM_DOSKA_CATEGORY_ID','id',$this->listDirn,$this->listOrder);?>
             </th>
             </thead>
+
+
+
             <tbody>
+
 			<?php if (!empty($this->items)) : ?>
-				<?php $i = 1; ?>
-				<?php foreach ($this->items as $id => $category) : ?>
-					<?php if ($category['name']): ?>
-						<?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $id); ?>
+
+				<?php $i = 0;?>
+				<?php foreach($this->items as $id=>$cat):?>
+
+
+
+					<?php if($cat['name']):?>
+						<?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $id);?>
 
                         <tr>
                             <td><?php echo $i; ?></td>
@@ -55,43 +65,49 @@ defined("_JEXEC") or die();
 								<?php echo JHtml::_('grid.id', $i, $id); ?>
                             </td>
                             <td>
-                                <strong><?php echo JHtml::_('link', $link, $category['name'], array('title' => JText::_('COM_DOSKA_EDIT_CATEGORY'))) ?></strong>
+
+                                <strong><?php echo JHtml::_('link',$link,$cat['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?></strong>
                             </td>
 
                             <td>
-								<?php echo $category['alias']; ?>
+								<?php echo JHtml::_('jgrid.published', $cat['state'], $i, 'categories.'); ?>
                             </td>
 
                             <td>
-								<?php echo JHtml::_('jgrid.published', $category['state'], $i, 'categories.'); ?>
+
+								<?php if($this->saveOrder) :?>
+									<?php if($this->listDirn = 'asc') :?>
+                                        <span><?php echo $this->pagination->orderUpIcon($i,true,'categories.orderup','JLIB_HTML_MOVE_UP',$this->saveOrder)?></span>
+                                        <span><?php echo $this->pagination->orderDownIcon($i,$this->pagination->total,true,'categories.orderdown','JLIB_HTML_MOVE_DOWN',$this->saveOrder)?></span>
+									<?php elseif($this->listDirn = 'desc') :?>
+
+                                        <span><?php echo $this->pagination->orderUpIcon($i,true,'categories.orderdown','JLIB_HTML_MOVE_UP',$this->saveOrder)?></span>
+                                        <span><?php echo $this->pagination->orderDownIcon($i,$this->pagination->total,true,'categories.orderup','JLIB_HTML_MOVE_DOWN',$this->saveOrder)?></span>
+
+									<?php endif;?>
+								<?php endif;?>
+
+								<?php $disabled = $this->saveOrder ? '' : 'disabled="disabled"'?>
+                                <input type="text" name="order[]" value="<?php echo $cat['ordering']?>" <?php echo $disabled;?>/>
                             </td>
 
-                            <td>
-								<?php $disabled = $this->saveOrder ? '' : 'disabled="disabled"' ?>
-                                <input type="text" name="order[]" value="<?php echo $category['ordering']; ?>"
-                                       style="width: 100px" <?php echo $disabled; ?>/>
-                            </td>
                             <td align="center">
 								<?php echo $id; ?>
                             </td>
                         </tr>
-						<?php $i++; ?>
-					<?php endif; ?>
-					<? if (is_array($category['next'])) : ?>
-						<?php $pref = " -- "; ?>
-						<?php foreach ($category['next'] as $sub): ?>
-							<?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $sub['id']); ?>
+						<?php $i++;?>
+					<?php endif;?>
+					<? if(is_array($cat['next'])) :?>
+						<?php $k = "--";?>
+						<?php foreach($cat['next'] as $sub): ?>
+							<?php $link = JRoute::_('index.php?option=com_doska&task=category.edit&id=' . $sub['id']);?>
                             <tr>
                                 <td><?php echo $i; ?></td>
                                 <td>
 									<?php echo JHtml::_('grid.id', $i, $sub['id']); ?>
                                 </td>
                                 <td>
-									<?php echo JHtml::_('link', $link, $pref . $sub['name'], array('title' => JText::_('COM_DOSKA_EDIT_CATEGORY'))) ?>
-                                </td>
-
-                                <td>
-									<?php echo $sub['alias']; ?>
+									<?php echo JHtml::_('link',$link,$k.$sub['name'],array('title'=>JText::_('COM_DOSKA_EDIT_CATEGORY')))  ?>
                                 </td>
 
                                 <td>
@@ -99,30 +115,48 @@ defined("_JEXEC") or die();
                                 </td>
 
                                 <td>
-                                    <input type="text" name="order[]" value="<?php echo $sub['ordering']; ?>"
-                                           style="width: 100px" <?php echo $disabled; ?>/>
+
+									<?php if($this->saveOrder) :?>
+										<?php if($this->listDirn = 'asc') :?>
+                                            <span><?php echo $this->pagination->orderUpIcon($i,true,'categories.orderup','JLIB_HTML_MOVE_UP',$this->saveOrder)?></span>
+                                            <span><?php echo $this->pagination->orderDownIcon($i,$this->pagination->total,true,'categories.orderdown','JLIB_HTML_MOVE_DOWN',$this->saveOrder)?></span>
+										<?php elseif($this->listDirn = 'desc') :?>
+
+                                            <span><?php echo $this->pagination->orderUpIcon($i,true,'categories.orderdown','JLIB_HTML_MOVE_UP',$this->saveOrder)?></span>
+                                            <span><?php echo $this->pagination->orderDownIcon($i,$this->pagination->total,true,'categories.orderup','JLIB_HTML_MOVE_DOWN',$this->saveOrder)?></span>
+
+										<?php endif;?>
+									<?php endif;?>
+
+									<?php $disabled = $this->saveOrder ? '' : 'disabled="disabled"'?>
+                                    <input type="text" name="order[]" value="<?php echo $sub['ordering']?>" <?php echo $disabled;?>/>
                                 </td>
+
                                 <td align="center">
 									<?php echo $sub['id']; ?>
                                 </td>
                             </tr>
-							<?php $i++; ?>
-						<?php endforeach; ?>
-					<?php endif; ?>
-				<?php endforeach; ?>
-			<?php endif; ?>
+							<?php $i++;?>
+						<?php endforeach;?>
 
+					<?php endif;?>
+
+
+
+
+				<?php endforeach;?>
+			<?php endif;?>
 
             </tbody>
+
             <tfoot>
             <tr>
                 <td colspan='5'>
-                    <div style="float:left"><?php echo $this->pagination->getListFooter(); ?></div>
-                    <div style="float:right">Показать элементов на странице
-                        - <?php echo $this->pagination->getLimitBox(); ?></div>
+                    <div style="float:left"><?php echo $this->pagination->getListFooter();?></div>
+                    <div style="float:right">Показать - <?php echo $this->pagination->getLimitBox();?></div>
 
                     <div style="clear:both"></div>
-					<?php echo $this->pagination->getPagesCounter(); ?>
+					<?php //echo $this->pagination->getPagesCounter();?>
 					<?php //echo $this->pagination->getPagesLinks();?>
 					<?php //echo $this->pagination->getPaginationLinks();?>
 					<?php //print_r($this->pagination->getPaginationPages());?>
@@ -131,15 +165,19 @@ defined("_JEXEC") or die();
             </tfoot>
         </table>
 
-        <input type="hidden" name="task" value=""/>
-        <input type="hidden" name="boxchecked" value="0"/>
-        <input type="hidden" name="filter_order" value="<?php echo $this->listOrder ?>"/>
-        <input type="hidden" name="filter_order_Dir" value="<?php echo $this->listDirn ?>"/>
-		<?php echo JHtml::_('form.token'); ?>
+
     </div>
+
+    <input type="hidden" name="task" value="" />
+    <input type="hidden" name="boxchecked" value="0" />
+
+    <input type="hidden" name="filter_order" value="<?php echo $this->listOrder?>" />
+    <input type="hidden" name="filter_order_Dir" value="<?php echo $this->listDirn?>" />
+
+
+
+	<?php echo JHtml::_('form.token'); ?>
 </form>
-
-
 
 
 

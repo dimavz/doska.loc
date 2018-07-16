@@ -17,7 +17,6 @@ class DoskaViewCategories extends JViewLegacy
     protected $listOrder; // Хранит поле по которому производиться сортировка
     protected $listDirn;
     protected $saveOrder;
-
     protected $categories;
 
     public function display($tpl = null)
