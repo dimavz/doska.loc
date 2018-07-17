@@ -98,7 +98,7 @@ class DoskaViewCategories extends JViewLegacy
         JToolbarHelper::publish('categories.publish', 'JTOOLBAR_PUBLISH', TRUE);
         JToolbarHelper::unpublish('categories.unpublish', 'JTOOLBAR_UNPUBLISH', TRUE);
 
-        JToolbarHelper::deleteList(JText::_('COM_DOSKA_MANEGER_CATEGORIES_DELETE_MSG'), 'categories.delete');
+        JToolbarHelper::deleteList('COM_DOSKA_MANEGER_CATEGORIES_DELETE_MSG', 'categories.delete','JTOOLBAR_DELETE');
 
         JToolbarHelper::preferences('com_doska');
     }
