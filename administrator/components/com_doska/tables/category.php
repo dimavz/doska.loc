@@ -19,8 +19,26 @@ class DoskaTableCategory extends JTable
         }
 
         foreach ($pks as $pk) {
+        	if($state == 0)
+	        {
+		        if($this->load(array('parentid'=>$pk,'state'=>'1')))
+		        {
+//			        JFactory::getApplication()->enqueueMessage('COM_DOSKA_MESSAGE_PUBLISH_CATEGORY', 'notice');
+//			        return FALSE;
+
+			        throw new RuntimeException(JText::_('COM_DOSKA_MESSAGE_PUBLISH_CATEGORY_IS_PARENT'));
+		        }
+	        }
+
             if (!$this->load($pk)) {
                 throw new RuntimeException(JText::_('COM_DOSKA_TABLE_ERROR_TYPE'));
+            }
+
+            if($state == 1){
+	            if($this->load(array('id'=>$this->parentid, 'state'=>0), FALSE))
+	            {
+		            throw new RuntimeException(JText::_('COM_DOSKA_MESSAGE_NOT_PUBLISH_CATEGORY_IS_PARENT'));
+	            }
             }
 
             $this->state = $state;
