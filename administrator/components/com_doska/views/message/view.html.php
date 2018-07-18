@@ -26,9 +26,9 @@ class DoskaViewMessage extends JViewLegacy
 		
 		
 		$this->addToolBar();
-		$this->setDocument();
-		
+
 		parent::display($tpl);
+		$this->setDocument();
 		
 		
 	}
@@ -78,5 +78,6 @@ class DoskaViewMessage extends JViewLegacy
 	{
 		$document = JFactory::getDocument();
 		$document->addStyleSheet(JUri::root(TRUE)."/media/com_doska/css/style.css");
+		$document->addScript(JUri::root(TRUE)."/administrator/components/com_doska/views/message/title.js");
 	}
 }

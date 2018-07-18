@@ -4,7 +4,7 @@
 		<field name="id" type="hidden" default=""/>
 		<field name="id_user" type="hidden" default=""/>
 	
-		<field name="title" type="text" default="" label="COM_DOSKA_MESSAGE_TITLE" description="COM_DOSKA_MESSAGE_TITLE_DESCRIPTION" filter="raw" class="inputbox validate-name" required="true"/>
+		<field name="title" type="text" default="" label="COM_DOSKA_MESSAGE_TITLE" description="COM_DOSKA_MESSAGE_TITLE_DESCRIPTION" filter="raw" class="validate-title" required="true"/>
 		<field name="alias" type="text" default="" label="COM_DOSKA_MESSAGE_ALIAS" description="COM_DOSKA_MESSAGE_ALIAS_DESCRIPTION" filter="raw"/>
 		<field name="text" type="editor"  label="COM_DOSKA_MESSAGE_TEXT" description="COM_DOSKA_MESSAGE_TEXT_DESCRIPTION" filter="raw" buttons="true"/>
 		<field name="state" type="list" label="JSTATUS"
@@ -30,7 +30,7 @@
 </fields>	
 
 	<fieldset name="mesinfo">
-		<field name="price" type="text" default="" label="COM_DOSKA_MESSAGE_PRICE" description="COM_DOSKA_MESSAGE_PRICE_DESCRIPTION" filter="raw"/>
+		<field name="price" type="text" default="" label="COM_DOSKA_MESSAGE_PRICE" description="COM_DOSKA_MESSAGE_PRICE_DESCRIPTION" class="validate-numeric" filter="raw"/>
 		<field name="town" type="text" default="" label="COM_DOSKA_MESSAGE_TOWN" description="COM_DOSKA_MESSAGE_TOWN_DESCRIPTION" filter="raw" required="true"/>
 		<field name="id_categories" type="doskacat" default="" label="COM_DOSKA_CATEGORY" description="COM_DOSKA_CATEGORY_DESCRIPTION" filter="raw"/>
 		<field name="id_types" type="doskatype" default="" label="COM_DOSKA_TYPE" description="COM_DOSKA_TYPE" filter="raw"/>
