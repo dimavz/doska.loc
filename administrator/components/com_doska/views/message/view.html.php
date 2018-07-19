@@ -7,6 +7,7 @@ class DoskaViewMessage extends JViewLegacy
 {
 	protected $form;
 	protected $item;
+	protected $script;
 	
 	
 	
@@ -15,7 +16,8 @@ class DoskaViewMessage extends JViewLegacy
 		
 		$this->form	= $this->get('Form');
 		$this->item = $this->get('Item');
-		
+		$this->script = $this->get('Script');
+
 
 		if (count($errors = $this->get('Errors')))
 		{
@@ -79,5 +81,7 @@ class DoskaViewMessage extends JViewLegacy
 		$document = JFactory::getDocument();
 		$document->addStyleSheet(JUri::root(TRUE)."/media/com_doska/css/style.css");
 		$document->addScript(JUri::root(TRUE)."/administrator/components/com_doska/views/message/title.js");
+		$document->addScript(JUri::root(TRUE).$this->script);
+		JText::script('COM_DOSKA_MESSAGE_ERROR_UNACCEPTABLE');
 	}
 }

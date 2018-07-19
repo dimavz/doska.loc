@@ -39,4 +39,9 @@ class DoskaModelMessage extends JModelAdmin {
 
 		return $data;
 	}
+
+	public function getScript()
+	{
+		return '/administrator/components/com_doska/models/forms/button.js';
+	}
 }
