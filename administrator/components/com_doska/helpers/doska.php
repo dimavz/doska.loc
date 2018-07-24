@@ -43,4 +43,38 @@ abstract class DoskaHelper
         return JHtmlSidebar::render();
     }
 
+    public static function confirm_mes($value,$i,$prefix='',$can=false,$img1='tick.png',$img0='publish_x.png')
+    {
+	    echo $confirm;
+	    if(is_object($value)) {
+		    $value = $value->confirm;
+	    }
+
+
+	    $class = "class='btn btn-micro hasTooltip ";
+
+	    if(!$can) {
+		    $class .= "disabled";
+	    }
+	    $class .= "'";
+
+	    $img = $value ? $img1 : $img0;
+
+	    $task = $value ? 'unconfirm' : 'confirm';
+
+	    $alt = $value ? JText::_('COM_DOSKA_UNCONFIRM') : JText::_('COM_DOSKA_CONFIRM');
+
+	    $action = $value ? JText::_('COM_DOSKA_ACTION_UNCONFIRM') : JText::_('COM_DOSKA_ACTION_CONFIRM');
+
+	    $html = '<a '.$class;//<a class="....."
+	    //cb3
+	    if($can) {
+		    $html .= ' onclick="return listItemTask(\'cb'.$i.'\',\''.$prefix.$task.'\')" title="'.$action.'"';
+	    }
+
+	    $html .= '>'.JHtml::_('image','admin/'.$img,$alt,NULL,true).'</a>';
+
+	    return $html;
+
+    }
 }

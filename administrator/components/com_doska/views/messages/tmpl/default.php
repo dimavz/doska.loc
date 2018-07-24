@@ -5,13 +5,14 @@ defined('_JEXEC') or die('Restricted Access');
 JHtml::_('behavior.tooltip');
 
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_doska&view=messages'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_doska&view=messages'); ?>" method="post" name="adminForm"
+      id="adminForm">
 
-	<?php if (!empty( $this->sidebar)) : ?>
+	<?php if (!empty($this->sidebar)) : ?>
         <div id="j-sidebar-container" class="span2">
 			<?php echo $this->sidebar; ?>
         </div>
-	<?php endif;?>
+	<?php endif; ?>
 
     <div id="j-main-container" class="span10">
         <table class="table table-striped table-hover">
@@ -73,15 +74,15 @@ JHtml::_('behavior.tooltip');
             <tbody>
 
 			<?php if (!empty($this->items)) : ?>
-				<?php foreach($this->items as $key =>$val) :?>
-					<?php $link = JRoute::_('index.php?option=com_doska&task=message.edit&id=' . $val->id);?>
+				<?php foreach ($this->items as $key => $val) : ?>
+					<?php $link = JRoute::_('index.php?option=com_doska&task=message.edit&id=' . $val->id); ?>
                     <tr>
                         <td><?php echo $this->pagination->getRowOffset($key); ?></td>
                         <td>
 							<?php echo JHtml::_('grid.id', $key, $val->id); ?>
                         </td>
                         <td>
-							<?php echo JHtml::_('link',$link,$val->title,array('title'=>JText::_('COM_DOSKA_EDIT_MESSAGE')))  ?>
+							<?php echo JHtml::_('link', $link, $val->title, array('title' => JText::_('COM_DOSKA_EDIT_MESSAGE'))) ?>
                         </td>
 
                         <td>
@@ -106,7 +107,7 @@ JHtml::_('behavior.tooltip');
                         </td>
 
                         <td>
-
+							<?php echo DoskaHelper::confirm_mes($val->confirm,$key, 'messages.', true );?>
                         </td>
 
                         <td>
@@ -117,8 +118,8 @@ JHtml::_('behavior.tooltip');
 							<?php echo $val->id; ?>
                         </td>
                     </tr>
-				<?php endforeach;?>
-			<?php endif;?>
+				<?php endforeach; ?>
+			<?php endif; ?>
             </tbody>
 
 
@@ -126,11 +127,11 @@ JHtml::_('behavior.tooltip');
 
 
         <div>
-            <input type="hidden" name="task" value="" />
-            <input type="hidden" name="boxchecked" value="0" />
+            <input type="hidden" name="task" value=""/>
+            <input type="hidden" name="boxchecked" value="0"/>
 
-            <input type="hidden" name="filter_order" value="<?php echo $this->listOrder?>" />
-            <input type="hidden" name="filter_order_Dir" value="<?php echo $this->listDirn?>" />
+            <input type="hidden" name="filter_order" value="<?php echo $this->listOrder ?>"/>
+            <input type="hidden" name="filter_order_Dir" value="<?php echo $this->listDirn ?>"/>
 
 			<?php echo JHtml::_('form.token'); ?>
         </div>

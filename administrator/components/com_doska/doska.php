@@ -2,6 +2,7 @@
 defined('_JEXEC') or die('Restricted Access');
 
 $controller = JControllerLegacy::getInstance('Doska');//DoskaController
+$controller->registerTask('unconfirm', 'confirm');
 // $controller->registerTask('hello','h'); // регистрация задачи в контроллере
 
 //Регистрация класса DoskaHelper

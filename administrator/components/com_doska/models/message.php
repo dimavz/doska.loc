@@ -88,8 +88,13 @@ class DoskaModelMessage extends JModelAdmin
 
 		foreach ($data['images'] as $k => $img)
 		{
+			if (empty($img))
+			{
+				continue;
+			}
 			$path  = JPATH_SITE . '/';
-			$image = new JImage($path . $img);
+
+			$image = new JImage($path.$img);
 
 			$thumbs = $image->generateThumbs(array('250x250', '350x350'), 2);
 
@@ -99,15 +104,14 @@ class DoskaModelMessage extends JModelAdmin
 
 			if ($thumbs && is_array($thumbs))
 			{
-				$type = JImage::getImageFileProperties($path . $img)->type;
+				$type = JImage::getImageFileProperties($path.$img)->type;
 
 				if ($type)
 				{
-					$file1 = $thumbs[0]->toFile($path . 'images/thumbs/' . basename($img), $type);
-					if ($file1)
+					$file = $thumbs[0]->toFile($path . 'images/thumbs/' . basename($img), $type);
+					if ($file)
 					{
 						$thumbs[0]->destroy();
-						$thumbs[1]->destroy();
 						$image->destroy();
 					}
 				}

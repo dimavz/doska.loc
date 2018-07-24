@@ -29,6 +29,10 @@ $input = $app->input;
 				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
                 <fieldset class="form-vertical">
 					<?php echo $this->form->renderFieldset('mesinfo');?>
+<!--					--><?php //echo $this->form->getControlGroup('mesinfo'); ?>
+<!--					--><?php //foreach ($this->form->getGroup('mesinfo') as $field) : ?>
+<!--						--><?php //echo $field->getControlGroup(); ?>
+<!--					--><?php //endforeach; ?>
                 </fieldset>
             </div>
         </div>
