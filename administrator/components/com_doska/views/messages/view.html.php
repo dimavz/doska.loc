@@ -16,6 +16,8 @@ class DoskaViewMessages extends JViewLegacy
 	protected $sidebar;
 	protected $listOrder;
 	protected $listDirn;
+	public $filterForm;
+	protected $activeFilters;
 
     public function display($tpl = null)
     {
@@ -42,8 +44,16 @@ class DoskaViewMessages extends JViewLegacy
 		    $app->enqueueMessage(implode('<br />', $errors), 'error');
 		    return false;
 	    }
+	    $this->filterForm = $this->get('FilterForm'); // getFilterForm();
+//	    echo "<PRE>";
+//	    print_r($this->filterForm );
+//	    echo "</PRE>";
+
+	    $this->activeFilters = $this->get('ActiveFilters'); // getActiveFilters
+
 
         parent::display($tpl);
+	    return TRUE;
     }
 
 

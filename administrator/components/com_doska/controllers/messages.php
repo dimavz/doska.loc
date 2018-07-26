@@ -22,10 +22,35 @@ class DoskaControllerMessages extends JControllerAdmin
 
 		$value = JArrayHelper::getValue($data, $task, 0, 'int');
 
-		echo $value;
-
+		//		echo $value;
 		//print_r(JFactory::getApplication()->input);
-		exit();
+		//		exit();
+
+		if ($cid){
+			$model = $this->getModel();
+
+			JArrayHelper::toInteger($cid);
+
+			try{
+				$model->confirm($cid[0],$value);
+
+				if($value == 1){
+					$text = 'COM_DOSKA_MESSAGE_CONFIRMED';
+				}
+				elseif ($value == 0)
+				{
+					$text = 'COM_DOSKA_MESSAGE_UNCONFIRMED';
+				}
+
+				$this->setMessage(JText::_($text));
+			}
+			catch (RuntimeException $e)
+			{
+				$this->setMessage($e->getMessage(),'error');
+			}
+		}
+
+		$this->setRedirect(JRoute::_('index.php?option='.$this->option.'&view='.$this->view_list, false));
 
 	}
 }

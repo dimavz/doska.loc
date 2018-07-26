@@ -14,14 +14,16 @@ class DoskaTableMessage extends JTable
 	{
 		$pattern = '#<hr\s+id=("|\')system-readmore("|\')\s*\/*>#i';
 
-		$podr = preg_match($pattern,$array['text']);
+		$podr = preg_match($pattern, $array['text']);
 
-		if($podr == 0) {
+		if ($podr == 0)
+		{
 			$this->introtext = $array['text'];
-			$this->fulltext = '';
+			$this->fulltext  = '';
 		}
-		elseif($podr == 1) {
-			list($this->introtext,$this->fulltext) = preg_split($pattern,$array['text'],2);
+		elseif ($podr == 1)
+		{
+			list($this->introtext, $this->fulltext) = preg_split($pattern, $array['text'], 2);
 		}
 
 		if (isset($array['params']) && is_array($array['params']))
@@ -32,10 +34,11 @@ class DoskaTableMessage extends JTable
 			$array['params'] = (string) $parameter;
 		}
 
-		if (is_array($array['images'])) {
+		if (is_array($array['images']))
+		{
 			$registry = new Registry;
 			$registry->loadArray($array['images']);
-			$array['images'] = (string)$registry;
+			$array['images'] = (string) $registry;
 		}
 
 		return parent::bind($array, $ignore);
@@ -43,7 +46,8 @@ class DoskaTableMessage extends JTable
 
 	public function load($pk = null, $reset = true)
 	{
-		if (parent::load($pk, $reset)) {
+		if (parent::load($pk, $reset))
+		{
 
 			$registry = new Registry;
 			$registry->loadString($this->images);
@@ -52,33 +56,64 @@ class DoskaTableMessage extends JTable
 			$params_reg = new Registry;
 			$params_reg->loadString($this->params);
 			$this->params = $params_reg;
-			return TRUE;
-		} else {
-			return FALSE;
+
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 
-	public function publish($pks = null, $state = 1, $userId = 0) {
+	public function publish($pks = null, $state = 1, $userId = 0)
+	{
 
 		JArrayHelper::toInteger($pks);
-		$state = (int)$state;
+		$state = (int) $state;
 
-		if(empty($pks)) {
+		if (empty($pks))
+		{
 			throw new RuntimeException(JText::_('JLIB_DATABASE_ERROR_NO_ROWS_SELECTED'));
 		}
 
-		foreach($pks as $pk) {
-			if(!$this->load($pk)) {
+		foreach ($pks as $pk)
+		{
+			if (!$this->load($pk))
+			{
 				throw new RuntimeException(JText::_('COM_DOSKA_TABLE_ERROR_TYPE'));
 			}
 			$this->state = $state;
 
-			if(!$this->store()) {
+			if (!$this->store())
+			{
 				throw new RuntimeException(JText::_('COM_DOSKA_TABLE_ERROR_TYPE_STORE'));
 			}
 		}
 
 		return true;
 
+	}
+
+	public function confirm($cid, $value =0)
+	{
+		if (empty($cid))
+		{
+			throw new RuntimeException(JText::_('COM_DOSKA_MESSAGE_CONFIRM_NO_ID'));
+		}
+
+		if(!isset($this->confirm))
+		{
+			throw new RuntimeException(JText::_('COM_DOSKA_MESSAGE_CONFIRM_NO_DATA'));
+		}
+//		print_r($this);
+//		exit();
+		$this->confirm = $value;
+
+		if(!$this->store())
+		{
+			throw new RuntimeException(JText::_('COM_DOSKA_MESSAGE_CONFIRM_ERROR_SAVE_DB'));
+		}
+
+		return TRUE;
 	}
 }

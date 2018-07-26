@@ -3,6 +3,7 @@
 defined('_JEXEC') or die('Restricted Access');
 
 JHtml::_('behavior.tooltip');
+JHtml::_('formbehavior.chosen', 'select');
 
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_doska&view=messages'); ?>" method="post" name="adminForm"
@@ -15,6 +16,8 @@ JHtml::_('behavior.tooltip');
 	<?php endif; ?>
 
     <div id="j-main-container" class="span10">
+
+        <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view'=>$this)) ?>
         <table class="table table-striped table-hover">
 
             <thead>

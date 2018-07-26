@@ -139,4 +139,27 @@ class DoskaModelMessage extends JModelAdmin
 
 		return false;
 	}
+
+	public  function confirm($cid, $value)
+	{
+		$table = $this->getTable();
+
+//		echo $cid."|".$value;
+//		exit();
+
+		if($table->load($cid))
+		{
+			if(!$table->confirm($cid,$value))
+			{
+				$this->setError($table->getError());
+				return FALSE;
+			}
+		}
+		else{
+			$this->setError($table->getError());
+			return FALSE;
+		}
+		$this->cleanCache();
+		return TRUE;
+	}
 }
