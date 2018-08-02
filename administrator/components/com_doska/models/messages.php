@@ -15,7 +15,8 @@ class DoskaModelMessages extends JModelList {
 				'type',
 				'town',
 				'price',
-				'state'
+				'state',
+				'confirm'
 			);
 		}
  
@@ -47,8 +48,52 @@ class DoskaModelMessages extends JModelList {
 		/*echo "<pre>";
 		 print_r($this->state);
 		 echo "</pre>";*/
-       
-	    
+
+		$search = $this->getState('filter.search');
+
+		if (!empty($search))
+		{
+			$like = $db->quote('%' . $search . '%');
+			$query->where('title LIKE ' . $like);
+		}
+
+		$category = $this->getState('filter.category');
+		if(!empty($category)) {
+			$query->where('p.id_categories = '.(int)$category);
+		}
+
+		$confirm = $this->getState('filter.confirm');
+		if(is_numeric($confirm)) {
+			$query->where('p.confirm = "'.(int)$confirm.'"');
+		}
+
+		$type = $this->getState('filter.type');
+		if(!empty($type)) {
+			$query->where('p.id_types = '.(int)$type);
+		}
+
+		$town = $this->getState('filter.town');
+		if(!empty($town)) {
+			$query->where('p.town ='.'"'.$town.'"');
+		}
+
+		$author = $this->getState('filter.author');
+		if(!empty($author)) {
+			$query->where('p.id_user = '.(int)$author);
+		}
+
+		// Фильтруем по состоянию.
+		$published = $this->getState('filter.state');
+
+		if (is_numeric($published))
+		{
+			$query->where('p.state = ' . (int) $published);
+		}
+		elseif (!$published)
+		{
+			$query->where('(p.state = 0 OR p.state = 1)');
+		}
+
 		$orderCol  = $db->escape($this->state->get('list.ordering', 'id'));
 		$orderDirn = $db->escape($this->state->get('list.direction', 'asc'));
 		$query->order($orderCol . ' ' . $orderDirn);
@@ -59,6 +104,20 @@ class DoskaModelMessages extends JModelList {
 	protected function populateState($ordering = null, $direction = null)
 	{
 		parent::populateState('id', 'desc');
+	}
+
+	protected function getStoreId($id = '')
+	{
+		// Compile the store id.
+		$id .= ':' . $this->getState('filter.search');
+		$id .= ':' . $this->getState('filter.category');
+		$id .= ':' . $this->getState('filter.state');
+		$id .= ':' . $this->getState('filter.type');
+		$id .= ':' . $this->getState('filter.author');
+		$id .= ':' . $this->getState('filter.town');
+		$id .= ':' . $this->getState('filter.confirm');
+
+		return parent::getStoreId($id);
 	}
 	
 }

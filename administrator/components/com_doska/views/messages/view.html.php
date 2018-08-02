@@ -18,14 +18,13 @@ class DoskaViewMessages extends JViewLegacy
 	protected $listDirn;
 	public $filterForm;
 	protected $activeFilters;
+	protected $canDo;
 
     public function display($tpl = null)
     {
 	    $app = JFactory::getApplication();
 
 	    $this->sidebar = $this->addSubMenu('messages');
-        $this->addToolBar();
-        $this->setDocument();
 
         $this->items = $this->get('Items'); // Обращение к методу getItems модели
 
@@ -50,7 +49,13 @@ class DoskaViewMessages extends JViewLegacy
 //	    echo "</PRE>";
 
 	    $this->activeFilters = $this->get('ActiveFilters'); // getActiveFilters
+	    $this->canDo = DoskaHelper::getActions();
 
+//	    print_r($this->canDo);
+//	    echo "Значение 1 = ".$this->canDo->get('core.create.messages');
+
+	    $this->addToolBar();
+	    $this->setDocument();
 
         parent::display($tpl);
 	    return TRUE;
@@ -62,23 +67,33 @@ class DoskaViewMessages extends JViewLegacy
 
         JToolbarHelper::title(JText::_("COM_DOSKA_MANEGER_MESSAGES"), 'doska');
 
-        JToolbarHelper::addNew('message.add', JText::_('COM_DOSKA_MANEGER_MESSAGE_ADD'));
-        JToolbarHelper::editList('message.edit');
+	    if($this->canDo->get('core.create.messages') || $this->canDo->get('core.create')) {
+		    JToolBarHelper::addNew('message.add',JText::_('COM_DOSKA_MANEGER_MESSAGES_ADD'));
+	    }
 
-        JToolbarHelper::divider();
-
-        JToolbarHelper::publish('messages.publish', 'JTOOLBAR_PUBLISH', TRUE);
-        JToolbarHelper::unpublish('messages.unpublish', 'JTOOLBAR_UNPUBLISH', TRUE);
-
-        //JToolbarHelper::cancel();
+	    if ($this->canDo->get('core.edit')|| $this->canDo->get('core.edit.own')) {
+		    JToolBarHelper::editList('message.edit');
+	    }
 
 
-        /*JToolbarHelper::custom('type.create','doskabutton','doskabutton_hover',JText::_('COM_DOSKA_MANEGER_TYPES_CUSTOM'),FALSE);*/
-	    JToolBarHelper::archiveList('messages.archive');
-	    JToolBarHelper::trash('messages.trash');
-	    JToolbarHelper::deleteList(JText::_('COM_DOSKA_MANEGER_MESSAGES_DELETE_MSG'), 'messages.delete','JTOOLBAR_EMPTY_TRASH');
-        JToolbarHelper::preferences('com_doska');
 
+	    if ($this->canDo->get('core.edit.state') || $this->canDo->get('core.edit.state.own')) {
+		    JToolBarHelper::divider();
+		    JToolbarHelper::publish('messages.publish', 'JTOOLBAR_PUBLISH', true);
+		    JToolbarHelper::unpublish('messages.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		    JToolBarHelper::archiveList('messages.archive');
+		    JToolBarHelper::trash('messages.trash');
+	    }
+
+
+
+	    if ($this->canDo->get('core.delete')) {
+		    JToolBarHelper::deleteList('', 'messages.delete', 'JTOOLBAR_EMPTY_TRASH');
+	    }
+
+	    if ($this->canDo->get('core.admin')) {
+		    JToolBarHelper::preferences('com_doska');
+	    }
     }
 
     protected function setDocument()

@@ -1,6 +1,11 @@
 <?php
 defined('_JEXEC') or die('Restricted Access');
 
+if (!JFactory::getUser()->authorise('core.manage', 'com_doska'))
+{
+	throw new Exception(JText::_('JERROR_ALERTNOAUTHOR'));
+}
+
 $controller = JControllerLegacy::getInstance('Doska');//DoskaController
 $controller->registerTask('unconfirm', 'confirm');
 // $controller->registerTask('hello','h'); // регистрация задачи в контроллере

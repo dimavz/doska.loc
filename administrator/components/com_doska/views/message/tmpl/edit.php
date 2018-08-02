@@ -69,6 +69,10 @@ $input = $app->input;
 
 		<?php echo $this->form->getField('id')->renderField();?>
 
+	    <?php echo JHtml::_('bootstrap.addTab', 'myTab', 'permissions', JText::_('COM_DOSKA_FIELDSET_RULES', true)); ?>
+	    <?php echo $this->form->getInput('rules'); ?>
+	    <?php echo $this->form->getInput('asset_id'); ?>
+
 		<?php echo JHtml::_('bootstrap.endTabSet'); ?>
     </div>
     <input type="hidden" name="task" value="message.edit" />

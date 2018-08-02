@@ -92,9 +92,9 @@ class DoskaModelMessage extends JModelAdmin
 			{
 				continue;
 			}
-			$path  = JPATH_SITE . '/';
+			$path = JPATH_SITE . '/';
 
-			$image = new JImage($path.$img);
+			$image = new JImage($path . $img);
 
 			$thumbs = $image->generateThumbs(array('250x250', '350x350'), 2);
 
@@ -104,7 +104,7 @@ class DoskaModelMessage extends JModelAdmin
 
 			if ($thumbs && is_array($thumbs))
 			{
-				$type = JImage::getImageFileProperties($path.$img)->type;
+				$type = JImage::getImageFileProperties($path . $img)->type;
 
 				if ($type)
 				{
@@ -140,26 +140,69 @@ class DoskaModelMessage extends JModelAdmin
 		return false;
 	}
 
-	public  function confirm($cid, $value)
+	public function confirm($cid, $value)
 	{
+		if(!parent::canEditState(JArrayHelper::toObject($value)))
+		{
+			throw new RuntimeException(JFactory::getApplication()->enqueueMessage(JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'),'warning'));
+			return false;
+		}
 		$table = $this->getTable();
 
 //		echo $cid."|".$value;
 //		exit();
 
-		if($table->load($cid))
+		if ($table->load($cid))
 		{
-			if(!$table->confirm($cid,$value))
+			if (!$table->confirm($cid, $value))
 			{
 				$this->setError($table->getError());
-				return FALSE;
+
+				return false;
 			}
 		}
-		else{
+		else
+		{
 			$this->setError($table->getError());
-			return FALSE;
+
+			return false;
 		}
 		$this->cleanCache();
-		return TRUE;
+
+		return true;
+	}
+
+	protected function canEditState($record)
+	{
+		$user      = \JFactory::getUser();
+		$userId    = $user->get('id');
+		$messageId = (int) $record->id ? $record->id : 0;
+
+		if (!$messageId)
+		{
+			return parent::canEditState($record);
+		}
+
+		if ($user->authorise('core.edit.state', 'com_doska'))
+		{
+			return true;
+		}
+		if ($user->authorise('core.edit.state.own', 'com_doska'))
+		{
+			$message = $this->getItem($messageId);
+			if (empty($message))
+			{
+				return false;
+			}
+
+			$id_author = $message->id_user;
+
+			if ($userId == $id_author)
+			{
+				return true;
+			}
+		}
+		throw new RuntimeException(JFactory::getApplication()->enqueueMessage(JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'),'warning'));
+		return false;
 	}
 }

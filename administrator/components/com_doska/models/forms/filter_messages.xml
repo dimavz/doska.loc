@@ -72,7 +72,7 @@
                 label="COM_DOSKA_CONFIRM_FILTER_MESSAGE"
                 default="" onchange="this.form.submit();"
         >
-            <option value="">JOPTION_SELECT_PUBLISHED</option>
+            <option value="">COM_DOSKA_CONIRMED_PUBLISHED</option>
             <option value="1">COM_DOSKA_CONIRMED_MESSAGE</option>
             <option value="0">COM_DOSKA_UNCONIRMED_MESSAGE</option>
 

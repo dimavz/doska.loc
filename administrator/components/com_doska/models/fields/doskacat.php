@@ -36,9 +36,12 @@ class JFormFieldDoskacat extends JFormFieldGroupedList
 		}
 		$arr = array();
 
-		foreach ($parent as $option)
+		if(!empty($parent))
 		{
-			array_push($arr, $option);
+			foreach ($parent as $option)
+			{
+				array_push($arr, $option);
+			}
 		}
 
 		if ($rows)

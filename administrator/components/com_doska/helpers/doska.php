@@ -77,4 +77,30 @@ abstract class DoskaHelper
 	    return $html;
 
     }
+
+	public static function getActions($messageId = 0) {
+
+		$result = new JObject();
+
+		if(empty($messageId)) {
+			$assetName = 'com_doska';
+		}
+		elseif($messageId) {
+			$assetName = 'com_doska.message.'.$messageId;//com_doska.message.ID
+		}
+		//$actions = JAccess::getActions('com_doska','component');
+
+		$path  = JPATH_ADMINISTRATOR.'/components/com_doska/access.xml';
+		$actions = JAccess::getActionsFromFile($path,"/access/section[@name='component']/");
+
+		/*echo "<pre>";
+		print_r($actions);
+		echo "</pre>";*/
+
+		foreach($actions as $action) {
+			$result->set($action->name,JFactory::getUser()->authorise($action->name,$assetName));
+		}
+
+		return $result;
+	}
 }

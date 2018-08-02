@@ -128,4 +128,18 @@
             </field>
         </fieldset>
     </fields>
+
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset" />
+        <field name="rules"
+               type="rules"
+               label="JFIELD_RULES_LABEL"
+               translate_label="false"
+               filter="rules"
+               validate="rules"
+               class="inputbox"
+               component="com_doska"
+               section="message"
+        />
+    </fieldset>
 </form>

@@ -51,18 +51,18 @@ class JFormFieldListmes extends JFormFieldList {
 		
 		try
 		{
-			$row = $db->loadObjectList();
+			$rows = $db->loadObjectList();
 		}
 		catch (RuntimeException $e)
 		{
 			JFactory::getApplication()->unqueueMessage($e->getMessage,'error');
 		}
 		
-		if ($row)
+		if ($rows)
 		{
-			for($i = 0;$i<count($row);$i++)
+			for($i = 0;$i<count($rows);$i++)
 			{
-				array_push($options,$row[$i]);
+				array_push($options,$rows[$i]);
 			}
 		}
 		

@@ -17,7 +17,7 @@ JHtml::_('formbehavior.chosen', 'select');
 
     <div id="j-main-container" class="span10">
 
-        <?php echo JLayoutHelper::render('joomla.searchtools.default', array('view'=>$this)) ?>
+		<?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this)) ?>
         <table class="table table-striped table-hover">
 
             <thead>
@@ -78,14 +78,31 @@ JHtml::_('formbehavior.chosen', 'select');
 
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $key => $val) : ?>
-					<?php $link = JRoute::_('index.php?option=com_doska&task=message.edit&id=' . $val->id); ?>
+					<?php
+
+                    $canEdit = $this->canDo->get('core.edit')|| ($this->canDo->get('core.edit.own')&& JFactory::getUser()->get('id')==$val->id_user);
+					if ($canEdit)
+					{
+						$link = JRoute::_('index.php?option=com_doska&task=message.edit&id=' . $val->id);
+					}
+					?>
                     <tr>
                         <td><?php echo $this->pagination->getRowOffset($key); ?></td>
                         <td>
 							<?php echo JHtml::_('grid.id', $key, $val->id); ?>
                         </td>
                         <td>
-							<?php echo JHtml::_('link', $link, $val->title, array('title' => JText::_('COM_DOSKA_EDIT_MESSAGE'))) ?>
+							<?php
+							if ($canEdit)
+							{
+								echo JHtml::_('link', $link, $val->title, array('title' => JText::_('COM_DOSKA_EDIT_MESSAGE')));
+                            }
+                            else
+                            {
+	                            echo $val->title;
+                            }
+
+							?>
                         </td>
 
                         <td>
@@ -106,11 +123,14 @@ JHtml::_('formbehavior.chosen', 'select');
                         </td>
 
                         <td>
+                            <?php $canChange = $this->canDo->get('core.edit.state')|| ($this->canDo->get('core.edit.state.own') && JFactory::getUser()->get('id')==$val->id_user); ?>
 							<?php echo JHtml::_('jgrid.published', $val->state, $key, 'messages.', $canChange, 'cb', $val->publish_up, $val->publish_down); ?>
                         </td>
 
                         <td>
-							<?php echo DoskaHelper::confirm_mes($val->confirm,$key, 'messages.', true );?>
+							<?php
+							$canModerate = $this->canDo->get('core.edit.state');
+                            echo DoskaHelper::confirm_mes($val->confirm, $key, 'messages.', $canModerate); ?>
                         </td>
 
                         <td>

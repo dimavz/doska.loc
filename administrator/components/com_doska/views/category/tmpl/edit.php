@@ -59,6 +59,11 @@ $params = $this->form->getFieldsets('params');
 
     <?php echo JLayoutHelper::render('joomla.edit.params',$this)?>
 
+    <?php echo JHtml::_('bootstrap.addTab', 'myTab', 'permissions', JText::_('COM_DOSKA_FIELDSET_RULES', true)); ?>
+				<?php echo $this->form->getInput('rules'); ?>
+				<?php echo $this->form->getInput('asset_id'); ?>
+
+
     <?php echo JHtml::_('bootstrap.endTabSet');?>
 
     <input type="hidden" name="task" value="category.edit"/>
