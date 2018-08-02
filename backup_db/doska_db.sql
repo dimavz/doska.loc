@@ -25,13 +25,13 @@ CREATE TABLE IF NOT EXISTS `jos_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_assets: ~73 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_assets: ~76 rows (приблизительно)
 DELETE FROM `jos_assets`;
 /*!40000 ALTER TABLE `jos_assets` DISABLE KEYS */;
 INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-	(1, 0, 0, 145, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+	(1, 0, 0, 151, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1,"3":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 	(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 	(3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
 	(4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
@@ -92,7 +92,7 @@ INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `tit
 	(61, 27, 19, 20, 3, 'com_content.article.1', 'Getting Started', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 	(62, 1, 129, 130, 1, 'jos_ucm_content.1', 'jos_ucm_content.1', '{}'),
 	(63, 11, 38, 39, 2, 'com_languages.language.2', 'Русский (Россия)', '{}'),
-	(65, 1, 131, 132, 1, 'com_doska', 'COM_DOSKA', '{}'),
+	(65, 1, 131, 132, 1, 'com_doska', 'COM_DOSKA', '{"core.manage":{"3":1},"core.create.messages":{"3":1},"core.create":{"3":0},"core.edit.state.own":{"3":1},"core.edit.state":{"3":0},"core.edit":{"3":0}}'),
 	(68, 1, 133, 134, 1, '#__doska_types.3', '#__doska_types.3', '{}'),
 	(69, 1, 135, 136, 1, '#__doska_types.4', '#__doska_types.4', '{}'),
 	(70, 1, 137, 138, 1, '#__doska_types.5', '#__doska_types.5', '{}'),
@@ -103,7 +103,10 @@ INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `tit
 	(75, 8, 24, 25, 2, 'com_content.category.9', 'Партнёры', '{}'),
 	(76, 8, 26, 27, 2, 'com_content.category.10', 'Собаки', '{}'),
 	(77, 8, 28, 29, 2, 'com_content.category.11', 'Кошки', '{}'),
-	(78, 8, 30, 31, 2, 'com_content.category.12', 'Попугаи', '{}');
+	(78, 8, 30, 31, 2, 'com_content.category.12', 'Попугаи', '{}'),
+	(79, 1, 145, 146, 1, '#__doska_post.1', '#__doska_post.1', '{}'),
+	(80, 1, 147, 148, 1, '#__doska_post.2', '#__doska_post.2', '{}'),
+	(81, 1, 149, 150, 1, '#__doska_post.3', '#__doska_post.3', '{}');
 /*!40000 ALTER TABLE `jos_assets` ENABLE KEYS */;
 
 
@@ -391,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `jos_content` (
 DELETE FROM `jos_content`;
 /*!40000 ALTER TABLE `jos_content` DISABLE KEYS */;
 INSERT INTO `jos_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-	(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 849, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 9, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
+	(1, 61, 'Getting Started', 'getting-started', '<p>It\'s easy to get started creating your website. Knowing some of the basics will help.</p><h3>What is a Content Management System?</h3><p>A content management system is software that allows you to create and manage webpages easily by separating the creation of your content from the mechanics required to present it on the web.</p><p>In this site, the content is stored in a <em>database</em>. The look and feel are created by a <em>template</em>. Joomla! brings together the template and your content to create web pages.</p><h3>Logging in</h3><p>To login to your site use the user name and password that were created as part of the installation process. Once logged-in you will be able to create and edit articles and modify some settings.</p><h3>Creating an article</h3><p>Once you are logged-in, a new menu will be visible. To create a new article, click on the "Submit Article" link on that menu.</p><p>The new article interface gives you a lot of options, but all you need to do is add a title and put something in the content area. To make it easy to find, set the state to published.</p><div>You can edit an existing article by clicking on the edit icon (this only displays to users who have the right to edit).</div><h3>Template, site settings, and modules</h3><p>The look and feel of your site is controlled by a template. You can change the site name, background colour, highlights colour and more by editing the template settings. Click the "Template Settings" in the user menu.</p><p>The boxes around the main content of the site are called modules. You can modify modules on the current page by moving your cursor to the module and clicking the edit link. Always be sure to save and close any module you edit.</p><p>You can change some site settings such as the site name and description by clicking on the "Site Settings" link.</p><p>More advanced options for templates, site settings, modules, and more are available in the site administrator.</p><h3>Site and Administrator</h3><p>Your site actually has two separate sites. The site (also called the front end) is what visitors to your site will see. The administrator (also called the back end) is only used by people managing your site. You can access the administrator by clicking the "Site Administrator" link on the "User Menu" menu (visible once you login) or by adding /administrator to the end of your domain name. The same user name and password are used for both sites.</p><h3>Learn more</h3><p>There is much more to learn about how to use Joomla! to create the website you envision. You can learn much more at the <a href="https://docs.joomla.org/" target="_blank">Joomla! documentation site</a> and on the<a href="https://forum.joomla.org/" target="_blank"> Joomla! forums</a>.</p>', '', 1, 2, '2013-11-16 00:00:00', 849, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2013-11-16 00:00:00', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, '', '', 1, 10, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
 /*!40000 ALTER TABLE `jos_content` ENABLE KEYS */;
 
 
@@ -513,19 +516,19 @@ CREATE TABLE IF NOT EXISTS `jos_doska_categories` (
 DELETE FROM `jos_doska_categories`;
 /*!40000 ALTER TABLE `jos_doska_categories` DISABLE KEYS */;
 INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, `params`, `ordering`) VALUES
-	(2, 'Автомобили', 6, 'avtomobili3', 0, '{"show_category":"1","image":"","image_alt":""}', 0),
+	(2, 'Автомобили', 6, 'avtomobili3', 1, '{"show_category":"1","image":"","image_alt":""}', 1),
 	(3, 'Электроника', 0, 'elektronika', 1, '{"show_category":"1","image":"images\\/powered_by.png","image_alt":" \\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u044f222"}', 3),
 	(4, 'Телевизоры', 3, 'televizory', 1, '{"show_category":"1","image":"images\\/banners\\/osmbanner1.png","image_alt":""}', 2),
-	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 0, '{"show_category":"1","image":"","image_alt":""}', 2),
+	(5, 'Музыкальные центры', 3, 'muzykalnye-tsentry', 1, '{"show_category":"1","image":"","image_alt":""}', 2),
 	(6, 'Транспорт', 0, 'transport', 1, '{"show_category":"0","image":"","image_alt":""}', 11),
-	(7, 'Мотоциклы', 6, 'mototsikly', 0, '{"show_category":"0","image":"","image_alt":""}', 1),
+	(7, 'Мотоциклы', 6, 'mototsikly', 1, '{"show_category":"0","image":"","image_alt":""}', 1),
 	(8, 'Велосипеды', 6, 'velosipedy', 1, '{"show_category":"0","image":"","image_alt":""}', 2),
 	(9, 'Спорт', 0, 'sport', 1, '{"show_category":"0","image":"","image_alt":""}', 10),
 	(11, 'Спорт инвентарь', 9, 'sport-inventar', 1, '{"show_category":"0","image":"","image_alt":""}', 5),
 	(12, 'Рыбалка', 9, 'rybalka', 1, '{"show_category":"0","image":"","image_alt":""}', 6),
 	(13, 'Охота', 9, 'okhota', 1, '{"show_category":"0","image":"","image_alt":""}', 7),
 	(14, 'Тренажёры', 9, 'trenazhjory', 1, '{"show_category":"0","image":"","image_alt":""}', 8),
-	(15, 'Компьютеры', 3, 'kompyutery', 0, '{"show_category":"0","image":"","image_alt":""}', 1);
+	(15, 'Компьютеры', 3, 'kompyutery', 1, '{"show_category":"1","image":"images\\/avto1.jpg","image_alt":""}', 1);
 /*!40000 ALTER TABLE `jos_doska_categories` ENABLE KEYS */;
 
 
@@ -554,15 +557,18 @@ CREATE TABLE IF NOT EXISTS `jos_doska_post` (
   `modified` datetime NOT NULL,
   `alias` varchar(255) NOT NULL,
   `state` tinyint(1) NOT NULL DEFAULT '1',
+  `params` text NOT NULL,
+  `asset_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы doska.jos_doska_post: ~1 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_doska_post: ~3 rows (приблизительно)
 DELETE FROM `jos_doska_post`;
 /*!40000 ALTER TABLE `jos_doska_post` DISABLE KEYS */;
-INSERT INTO `jos_doska_post` (`id`, `introtext`, `fulltext`, `title`, `text`, `id_user`, `id_categories`, `id_types`, `town`, `images`, `confirm`, `price`, `created`, `publish_up`, `publish_down`, `ordering`, `hits`, `metadesc`, `metakey`, `modified`, `alias`, `state`) VALUES
-	(1, '', '', 'Автомобиль', '', 173, 4, 3, 'Минск', '{"img":"images\\/avto1.jpg","mini1":"images\\/avto2.jpg","mini2":"images\\/avto3.jpg","mini3":"images\\/avto4.jpg"}', '0', 36, '2018-07-23 11:59:39', '2018-07-23 11:59:39', '2018-07-30 11:59:39', 0, 0, '', '', '0000-00-00 00:00:00', 'avtomobil', 1),
-	(2, '', '', 'Стул резной', '<p>Продам резной стул</p>', 173, 11, 3, 'Москва', '', '0', 50, '2018-07-23 12:04:06', '2018-07-23 12:04:06', '2018-07-30 12:04:06', 0, 0, '', '', '0000-00-00 00:00:00', 'stul-reznoj', 1);
+INSERT INTO `jos_doska_post` (`id`, `introtext`, `fulltext`, `title`, `text`, `id_user`, `id_categories`, `id_types`, `town`, `images`, `confirm`, `price`, `created`, `publish_up`, `publish_down`, `ordering`, `hits`, `metadesc`, `metakey`, `modified`, `alias`, `state`, `params`, `asset_id`) VALUES
+	(1, '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n', '\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 'Пежо', '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n<hr id="system-readmore" />\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 173, 4, 4, 'Минск', '{"img":"images\\/avto1.jpg","mini1":"images\\/avto2.jpg","mini2":"images\\/avto3.jpg","mini3":"images\\/avto4.jpg"}', '1', 36, '2018-07-23 11:59:39', '2018-07-23 11:59:39', '2018-08-07 12:35:56', 0, 0, 'продажа машины', 'машины', '0000-00-00 00:00:00', 'avtomobil', 1, '{"show_category":"","show_type":"","show_town":"1"}', 79),
+	(2, '', '', 'Телевизор LG', '', 173, 7, 3, 'Могилёв', '{"img":"","mini1":"","mini2":"","mini3":""}', '1', 350, '2018-07-25 08:34:55', '2018-07-25 08:34:55', '2018-08-01 08:34:55', 0, 0, '', '', '0000-00-00 00:00:00', 'televizor-lg', 1, '{"show_category":"","show_type":"","show_town":""}', 80),
+	(3, '', '', 'Объявление пользователя User', '', 174, 7, 3, 'Киев', '{"img":"","mini1":"","mini2":"","mini3":""}', '0', 35, '2018-08-02 07:26:37', '2018-08-02 07:26:37', '2018-08-09 07:26:37', 0, 0, '', '', '0000-00-00 00:00:00', 'ob-yavlenie-polzovatelya-user', 1, '{"show_category":"","show_type":"","show_town":""}', 81);
 /*!40000 ALTER TABLE `jos_doska_post` ENABLE KEYS */;
 
 
@@ -654,7 +660,7 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(33, 0, 'com_fields', 'component', 'com_fields', '', 1, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(34, 0, 'com_associations', 'component', 'com_associations', '', 1, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(102, 0, 'phputf8', 'library', 'phputf8', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(103, 0, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '', '{"mediaversion":"eefff83ab271c9f6b3d932a70d4f12fe"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(103, 0, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '', '{"mediaversion":"451a9c5dee8266038eade610ea26eb64"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(104, 0, 'IDNA Convert', 'library', 'idna_convert', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(105, 0, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(106, 0, 'PHPass', 'library', 'phpass', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -748,9 +754,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1532353157}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1533211254}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1532345441,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1533191832,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -787,7 +793,7 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(10000, 10002, 'Russian', 'language', 'ru-RU', '', 0, 1, 0, 0, '{"name":"Russian","type":"language","creationDate":"2017-11-07","author":"Russian Translation Team","copyright":"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.","authorEmail":"smart@joomlaportal.ru","authorUrl":"www.joomlaportal.ru","version":"3.8.2.1","description":"Russian language pack (site) for Joomla! 3.8.2","group":"","filename":"install"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10001, 10002, 'ru-RU', 'language', 'ru-RU', '', 1, 1, 0, 0, '{"name":"\\u0420\\u0443\\u0441\\u0441\\u043a\\u0438\\u0439 (ru-RU)","type":"language","creationDate":"2017-11-07","author":"Russian Translation Team","copyright":"Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.","authorEmail":"smart@joomlaportal.ru","authorUrl":"www.joomlaportal.ru","version":"3.8.2.1","description":"Russian language pack (administrator) for Joomla! 3.8.2","group":"","filename":"install"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10002, 0, 'Russian (ru-RU) Language Pack', 'package', 'pkg_ru-RU', '', 0, 1, 1, 0, '{"name":"Russian (ru-RU) Language Pack","type":"package","creationDate":"2017-11-07","author":"Russian Translation Team","copyright":"Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.","authorEmail":"smart@joomlaportal.ru","authorUrl":"www.joomlaportal.ru","version":"3.8.2.1","description":"Joomla 3.8 Russian Language Package","group":"","filename":"pkg_ru-RU"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10004, 0, 'COM_DOSKA', 'component', 'com_doska', '', 1, 1, 0, 0, '{"name":"COM_DOSKA","type":"component","creationDate":"2015-04-02","author":"Viktor","copyright":"Copyright info","authorEmail":"admin@amin.ru","authorUrl":"http:\\/\\/webformyself.com","version":"1.0.0","description":"COM_DOSKA_XML_DESCRIPTION","group":"","filename":"install"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+	(10004, 0, 'COM_DOSKA', 'component', 'com_doska', '', 1, 1, 0, 0, '{"name":"COM_DOSKA","type":"component","creationDate":"2015-04-02","author":"Viktor","copyright":"Copyright info","authorEmail":"admin@amin.ru","authorUrl":"http:\\/\\/webformyself.com","version":"1.0.0","description":"COM_DOSKA_XML_DESCRIPTION","group":"","filename":"install"}', '{"show_category":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 /*!40000 ALTER TABLE `jos_extensions` ENABLE KEYS */;
 
 
@@ -1900,12 +1906,13 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_session: ~2 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_session: ~3 rows (приблизительно)
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	('noms0e4st0r5s0ig2ve0v2dkc5', 1, 1, '1532353177', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6IjU1Z0RKcHVVT3piVmFXdzVjeGVzZ2VEbHltSjl2WEhaIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
-	('t9ls5kgl5p3o4bdpun0qb6ai32', 1, 0, '1532357512', 'joomla|s:1352:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2NDtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MzIzNTMxNjk7czo0OiJsYXN0IjtpOjE1MzIzNTc1MTE7czozOiJub3ciO2k6MTUzMjM1NzUxMjt9czo1OiJ0b2tlbiI7czozMjoiS3pIS01zVWlJelZob3BtYktLaTI4eGN0alJoVFZpU0oiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJtZXNzYWdlIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjE6e2k6MDtpOjE7fXM6NDoiZGF0YSI7Tjt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiIxNzMiO31zOjk6ImNvbV9tZWRpYSI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoicmV0dXJuX3VybCI7czoxMTI6ImluZGV4LnBocD9vcHRpb249Y29tX21lZGlhJnZpZXc9aW1hZ2VzJnRtcGw9Y29tcG9uZW50JmZpZWxkaWQ9amZvcm1faW1hZ2VzX21pbmkzJmVfbmFtZT0mYXNzZXQ9Y29tX2Rvc2thJmF1dGhvcj0iO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 173, 'Admin');
+	('d9r1i1agfm6jmj3jlf4bd82i33', 1, 1, '1533046821', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUzMzA0NjgyMTtzOjQ6Imxhc3QiO2k6MTUzMzA0NjgyMTtzOjM6Im5vdyI7aToxNTMzMDQ2ODIxO31zOjU6InRva2VuIjtzOjMyOiI5S1dPSTVMMERRajZOTmdpbGpGckhCWUtoanNjelZMNSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, ''),
+	('ju4rtihpkspgv1n6igdgaqael2', 1, 0, '1533221290', 'joomla|s:1076:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTozMTtzOjU6InRva2VuIjtzOjMyOiJzcVZieEM5dzhOUjZIMlBHS2MyS3hialRBYlpUSmNNUSI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTMzMjIwMTgzO3M6NDoibGFzdCI7aToxNTMzMjIxMjM5O3M6Mzoibm93IjtpOjE1MzMyMjEyODk7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjE6e2k6MDtpOjI7fXM6NDoiZGF0YSI7Tjt9czo4OiJjYXRlZ29yeSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319czoxMDoiY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJvcmRlcmNvbCI7Tjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjE3MyI7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 173, 'Admin'),
+	('r3nj12qvdnmfms0fnld29s5954', 1, 1, '1533221259', 'joomla|s:736:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyO3M6NToidG9rZW4iO3M6MzI6ImxYTG8yY2RINm96amgxbmp6NE9EMkoxRGJYSFhPSExYIjtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MzMyMjEyNTk7czo0OiJsYXN0IjtpOjE1MzMyMjEyNTk7czozOiJub3ciO2k6MTUzMzIyMTI1OTt9fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 0, '');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
 
@@ -2140,9 +2147,9 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1532353177, ''),
-	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1532353194, ''),
-	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1532353214, '');
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1533191940, ''),
+	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1533191961, ''),
+	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1533191981, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
 
 
@@ -2220,13 +2227,14 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=174 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Дамп данных таблицы doska.jos_users: ~0 rows (приблизительно)
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-07-23 13:39:32', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-08-02 14:29:43', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0),
+	(174, 'User', 'user', 'user@mail.ru', '$2y$10$BZWBG53.4h.fvFWhC0usQe6ucb1k1huBBBkB3YEBEjwNmsVier5Hi', 0, 0, '2018-08-01 06:51:52', '2018-08-02 11:39:34', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
 
@@ -2306,11 +2314,13 @@ CREATE TABLE IF NOT EXISTS `jos_user_usergroup_map` (
   PRIMARY KEY (`user_id`,`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы doska.jos_user_usergroup_map: ~0 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_user_usergroup_map: ~3 rows (приблизительно)
 DELETE FROM `jos_user_usergroup_map`;
 /*!40000 ALTER TABLE `jos_user_usergroup_map` DISABLE KEYS */;
 INSERT INTO `jos_user_usergroup_map` (`user_id`, `group_id`) VALUES
-	(173, 8);
+	(173, 8),
+	(174, 2),
+	(174, 3);
 /*!40000 ALTER TABLE `jos_user_usergroup_map` ENABLE KEYS */;
 
 
