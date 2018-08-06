@@ -19,7 +19,8 @@ class DoskaControllerMessage extends JControllerForm
 	{
 		$user = \JFactory::getUser();
 
-		return $user->authorise('core.create.messages', $this->option) || parent::allowAdd($data);
+		return ($user->authorise('core.create', $this->option.'.category.'.$data['id_categories'])
+			|| $user->authorise('core.create.messages', $this->option.'.category.'.$data['id_categories']));
 	}
 
 	protected function allowEdit($data = array(), $key = 'id')

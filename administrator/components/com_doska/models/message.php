@@ -27,6 +27,7 @@ class DoskaModelMessage extends JModelAdmin
 		return JTable::getInstance($type, $prefix, $config);
 	}
 
+
 	protected function loadFormData()
 	{
 		$data = JFactory::getApplication()->getUserState(
@@ -69,6 +70,8 @@ class DoskaModelMessage extends JModelAdmin
 	{
 		$data['id_user'] = JFactory::getUser()->id;
 
+		$config = JComponentHelper::getParams('com_doska');
+
 		if (!trim($data['title']))
 		{
 			$this->setError(JText::_('COM_DOSKA_WARNING_PROVIDE_VALID_NAME'));
@@ -108,7 +111,7 @@ class DoskaModelMessage extends JModelAdmin
 
 				if ($type)
 				{
-					$file = $thumbs[0]->toFile($path . 'images/thumbs/' . basename($img), $type);
+					$file = $thumbs[0]->toFile($path . $config->get('img_path').'/'.$config->get('img_thumb').'/'. basename($img), $type);
 					if ($file)
 					{
 						$thumbs[0]->destroy();
@@ -117,12 +120,7 @@ class DoskaModelMessage extends JModelAdmin
 				}
 //				print_r($type);
 			}
-
-//			print_r($result);
-//			break;
-
-//			$thumb = $image->createThumbs(array('250x250','350x350'),2,$path.'images/thumbs/');
-
+			$data['images'][$k] = basename($img);
 		}
 		$registry = new Registry();
 		$registry->loadArray($data['images']);
@@ -204,5 +202,25 @@ class DoskaModelMessage extends JModelAdmin
 		}
 		throw new RuntimeException(JFactory::getApplication()->enqueueMessage(JText::_('JLIB_APPLICATION_ERROR_EDITSTATE_NOT_PERMITTED'),'warning'));
 		return false;
+	}
+
+	public function getItem($pk = null) {
+		if($item = parent::getItem($pk)) {
+
+
+			$registry = new Registry;
+			$registry->loadString($item->images);
+
+			$config = JComponentHelper::getParams('com_doska');
+
+
+			$item->images = $registry->toArray();
+
+			//DIR.'/'.name.jpg
+			foreach($item->images as $k=>$img) {
+				$item->images[$k] = $config->get('img_path').'/'.$img;
+			}
+			return $item;
+		}
 	}
 }

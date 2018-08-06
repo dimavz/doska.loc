@@ -7,6 +7,10 @@ JHtml::_('behavior.tooltip');
 
 $app = JFactory::getApplication();
 $input = $app->input;
+
+
+//print_r($this);
+//exit();
 ?>
 
 <form action="<?php echo JRoute::_('index.php?option=com_doska&layout=edit&id=' . (int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
@@ -64,7 +68,7 @@ $input = $app->input;
 
 
 
-		<?php echo JLayoutHelper::render('joomla.edit.params', $this); ?>
+		<?php echo JLayoutHelper::render('edit.params', $this, 'administrator/components/com_doska'); ?>
 
 
 		<?php echo $this->form->getField('id')->renderField();?>

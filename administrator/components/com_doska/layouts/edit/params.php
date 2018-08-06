@@ -18,6 +18,7 @@ if (empty($fieldSets))
 	return;
 }
 
+
 $ignoreFieldsets = $displayData->get('ignore_fieldsets') ?: array();
 $ignoreFields    = $displayData->get('ignore_fields') ?: array();
 $extraFields     = $displayData->get('extra_fields') ?: array();

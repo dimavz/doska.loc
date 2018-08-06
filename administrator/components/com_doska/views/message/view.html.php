@@ -8,6 +8,7 @@ class DoskaViewMessage extends JViewLegacy
 	protected $form;
 	protected $item;
 	protected $script;
+	protected $ignore_fieldsets;
 	
 	
 	
@@ -17,6 +18,7 @@ class DoskaViewMessage extends JViewLegacy
 		$this->form	= $this->get('Form');
 		$this->item = $this->get('Item');
 		$this->script = $this->get('Script');
+		$this->ignore_fieldsets = array('mesinfo', 'accesscontrol'); // Удаляем из вывода в шаблоне параметров вкладки  фиелдсетов
 
 
 		if (count($errors = $this->get('Errors')))

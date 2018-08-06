@@ -7,6 +7,10 @@
             <option value="0">JHIDE</option>
             <option value="1">JSHOW</option>
         </field>
+
+        <field name="img_path" type="text" label="COM_DOSKA_FIELD_IMGPATH" description="COM_DOSKA_FIELD_IMGPATH_DESC" default="images" required='true'/>
+
+        <field name="img_thumb" type="text" label="COM_DOSKA_FIELD_IMGTHUMBSPATH" description="COM_DOSKA_FIELD_IMGPATH_DESC" default="thumbs" required='true'/>
     </fieldset>
     <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
 

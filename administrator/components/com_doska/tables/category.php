@@ -2,6 +2,7 @@
 defined('_JEXEC') or die('Restricted Access');
 
 use Joomla\Registry\Registry;
+use Joomla\CMS\Table\Table;
 
 class DoskaTableCategory extends JTable
 {
@@ -58,6 +59,11 @@ class DoskaTableCategory extends JTable
             $array['params'] = (string)$registry;
         }
 
+	    if(isset($array['rules']) && is_array($array['rules'])) {
+		    $rules = new JAccessRules($array['rules']);
+		    $this->setRules($rules);
+	    }
+
         return parent::bind($array, $ignore);
     }
 
@@ -73,4 +79,29 @@ class DoskaTableCategory extends JTable
             return FALSE;
         }
     }
+
+	protected function _getAssetName()
+	{
+		return 'com_doska.category.'.(int)$this->id;//id
+	}
+
+	protected function _getAssetTitle()
+	{
+		return $this->name;
+	}
+
+	protected function _getAssetParentId(JTable $table =null, $id = NULL)
+	{
+		$assetParent = JTable::getInstance('Asset');
+
+		$assetParentId = $assetParent->getRootId();
+
+		$assetParent->loadByName('com_doska');
+
+		if($assetParent->id) {
+			$assetParentId = $assetParent->id;
+		}
+
+		return $assetParentId;
+	}
 }

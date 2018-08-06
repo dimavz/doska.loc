@@ -14,12 +14,13 @@ $params = $this->form->getFieldsets('params');
     <div class="row-fluid">
         <div class="span9">
             <?php echo JLayoutHelper::render('joomla.edit.title_alias', $this); ?>
-            <?php echo $this->form->getField('parentid')->renderField();?>
+            <?php //echo $this->form->getField('parentid')->renderField();?>
         </div>
         <div class="span3">
             <?php //echo JHtml::_('bootstrap.startAccordion')?>
 
             <?php //echo JHtml::_('bootstrap.addSlide','myAccordian','Публикация','id')?>
+	        <?php echo $this->form->getField('parentid')->renderField();?>
             <?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
             <?php //echo JHtml::_('bootstrap.endSlide')?>
 

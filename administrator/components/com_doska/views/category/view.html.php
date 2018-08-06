@@ -5,8 +5,11 @@ class DoskaViewCategory extends JViewLegacy {
 
     protected $form = null;
     protected $item = null;
+	protected $ignore_fieldsets;
 
     public function display($tpl=null){
+
+	    $this->ignore_fieldsets = array('accesscontrol'); // Удаляем из вывода в шаблоне edit параметров вкладки  фиелдсетов
 
         // Подключение другой модели, отличной от модели по умолчанию
         /*$model = JModelLegacy::getInstance('Test','DoskaModel'); // Первый параметр имя Модели, второй параметр - префикс имени класса модели
