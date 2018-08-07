@@ -95,13 +95,16 @@ class DoskaModelMessage extends JModelAdmin
 			{
 				continue;
 			}
-			$path = JPATH_SITE . '/';
+			$path = JPATH_SITE. '/' ;
+
+//			print_r($path . $img);
+//			exit();
 
 			$image = new JImage($path . $img);
 
 			$thumbs = $image->generateThumbs(array('250x250', '350x350'), 2);
 
-//			print_r($thumbs);
+//			print_r($path . $img);
 //			exit();
 
 
@@ -205,22 +208,27 @@ class DoskaModelMessage extends JModelAdmin
 	}
 
 	public function getItem($pk = null) {
+		$item = array();
 		if($item = parent::getItem($pk)) {
-
 
 			$registry = new Registry;
 			$registry->loadString($item->images);
 
 			$config = JComponentHelper::getParams('com_doska');
 
-
 			$item->images = $registry->toArray();
 
 			//DIR.'/'.name.jpg
 			foreach($item->images as $k=>$img) {
-				$item->images[$k] = $config->get('img_path').'/'.$img;
+
+				if (!empty($img))
+				{
+					$item->images[$k] = $config->get('img_path').'/'.$img;
+				}
+
 			}
 			return $item;
 		}
+		return $item;
 	}
 }
