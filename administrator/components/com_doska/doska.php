@@ -17,7 +17,7 @@ JLoader::register('DoskaHelper',__DIR__.'/helpers/doska.php');
 //print_r(JLoader::getClassList());
 //echo "</pre>";
 
-$input = jFactory::getApplication()->input; // Получаем объект, который содержит переменные строки запроса
+$input = JFactory::getApplication()->input; // Получаем объект, который содержит переменные строки запроса
 $controller->execute($input->get('task','display'));
 $controller->redirect();
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>messbox</name>
+	<description>TPL_MESSBOX_DESC</description>
+	<version>1.0.0</version>
+	<creationDate>March 2015</creationDate>
+	<author>Viktor</author>
+	<authorEmail>admin@admin.ru</authorEmail>
+	<authorUrl>http://site.ru</authorUrl>
+	<license>TPL_MESSBOX_LICENSE</license>
+	<copyright>TPL_MESSBOX_COPY</copyright>
+	
+	<files>
+		
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+		<filename>templateDetails.xml</filename>
+		
+		<folder>images</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>language</folder>
+		
+	</files>
+	
+	
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+	</positions>
+	
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_messbox.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_messbox.sys.ini</language>
+	</languages>
+	
+</extension>
