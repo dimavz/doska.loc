@@ -12,6 +12,7 @@ class DoskaViewMessages extends JViewLegacy {
 	protected $items;
 	protected $pagination;
 	protected $state;
+	protected $params;
 
 
 	public function display ($tpl = NULL) {
@@ -20,6 +21,16 @@ class DoskaViewMessages extends JViewLegacy {
 		$items = $this->get('Items');//getItems()
 		$this->pagination = $this->get('Pagination');//getPagination()
 		$this->state = $this->get('State');//getState()
+		$this->params = JFactory::getApplication()->getParams();
+
+//		print_r($this->state);
+//		exit();
+
+		if(is_array($items)) {
+			foreach($items as $item) {
+				$item->images = json_decode($item->images);
+			}
+		}
 
 		$this->items = $items;
 
