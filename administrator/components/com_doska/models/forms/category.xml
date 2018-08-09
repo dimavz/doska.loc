@@ -17,7 +17,7 @@
     <!--</fields>-->
     <fields name="params">
         <fieldset name="basic" label="COM_DOSKA_CATEGORY_PARAMS_BASIC">
-            <field name="show_category" type="list" label="COM_DOSKA_CATEGORY_FIELD_SHOW_CATEGORY_LABEL" description="COM_DOSKA__CATEGORYFIELD_SHOW_CATEGORY_DESC" default="" class="chzn-color-state" >
+            <field name="show_category" type="list" label="COM_DOSKA_CATEGORY_FIELD_SHOW_CATEGORY_LABEL" description="COM_DOSKA__CATEGORYFIELD_SHOW_CATEGORY_DESC" default="1" class="chzn-color-state" >
                 <option value="0">JHIDE</option>
                 <option value="1">JSHOW</option>
             </field>

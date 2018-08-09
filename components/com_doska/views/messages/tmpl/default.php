@@ -16,7 +16,7 @@ JHtml::_('bootstrap.loadCss');
 		<?php foreach($this->items as  $item) :?>
             <div class="t_mess">
                 <h4 class="title_p_mess">
-					<?php $link = 'index.php?option=com_doska&view=message&id'.$item->id?>
+					<?php $link = 'index.php?option=com_doska&view=message&id='.$item->id?>
                     <a href="<?php echo $link;?>">
 						<?php echo $item->title;?>
                     </a>
