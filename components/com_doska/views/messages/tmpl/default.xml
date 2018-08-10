@@ -3,4 +3,45 @@
     <layout title="COM_DOSKA_MESSAGES_VIEW_DEFAULT_TITLE">
         <message>COM_DOSKA_MESSAGES_VIEW_DEFAULT_DESC</message>
     </layout>
+
+    <fields name="request">
+        <fieldset name="request" addfieldpath='/administrator/components/com_doska/models/fields'>
+
+            <field name="idcat" type="doskacat" label="COM_DOSKA_CATEGORY_FIELD_LABEL"
+                   description="COM_DOSKA_CATEGORY_FIELD_DESC">
+                <option value="">COM_DOSKA_MESSAGES_CATEGORY</option>
+            </field>
+
+            <field
+                    name="idt"
+                    type="listmes"
+                    label="COM_DOSKA_MESSAGES_TYPE_FILTER"
+                    option="type"
+                    description="COM_DOSKA_MESSAGES_TYPE_FILTER_DESC"
+            >
+                <option value="">COM_DOSKA_MESSAGES_TYPES</option>
+            </field>
+        </fieldset>
+    </fields>
+
+    <fields name="params">
+        <fieldset name="basic" label="JGLOBAL_CATEGORY_OPTIONS">
+            <field
+                    name="param1"
+                    type="hidden"
+                    default="blog"
+            />
+
+            <field
+                    name="show_category_heading_title_text"
+                    type="list"
+                    label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+                    description="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_DESC"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
 </metadata>

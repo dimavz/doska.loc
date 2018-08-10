@@ -31,6 +31,7 @@ JHtml::_('bootstrap.loadCss');
                     <span><strong>Дата снятия с публикации:</strong><?php echo $item->publish_down;?> </span>
                     <span><strong>Цена:</strong><?php echo $item->price;?></span>
                     <span><strong>Автор:</strong><?php echo $item->author_name;?> </span>
+                    <span><strong>Просмотров:</strong> <?php echo $item->hits; ?> </span>
                 </p>
                 <p><img class="mini_mess" src="<?php echo $this->params->get('img_path').'/'.$this->params->get('img_thumb').'/'.$item->images->img?>">
 

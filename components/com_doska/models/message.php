@@ -85,4 +85,14 @@ class DoskaModelMessage extends JModelItem
 		//
 		return parent::getStoreId($id);
 	}
+
+	public function setHit($pk = 0){
+		$pk = (!empty($pk)) ? $pk : (int)$this->getState('message.id');
+
+		$table = JTable::getInstance('Message','DoskaTable');
+
+		if($table->load($pk)) {
+			$table->hit($pk);
+		}
+	}
 }

@@ -6,13 +6,12 @@ class DoskaViewMessage extends JViewLegacy {
 
 	protected $item;
 	protected $state;
-	protected $params;
 	
 	public function display($tpl = null) {
 		
 		$this->item = $this->get('Item');//getItem()
 		$this->state = $this->get('State');//getItem()
-		$this->params = JFactory::getApplication()->getParams();
+
 		
 		if (count($errors = $this->get('Errors')))
 		{
@@ -20,14 +19,30 @@ class DoskaViewMessage extends JViewLegacy {
 
 			return false;
 		}
-		
+
+		$model = $this->getModel();
+		$model->setHit();
+
 		parent::display($tpl);
 		$this->setDocument();
 
 		return true;
 	}
 	
-	protected function setDocument() {
-		
+	protected function setDocument()
+	{
+		$document = JFactory::getDocument();
+
+		$document->addScript(JUri::root(TRUE).'/media/com_doska/js/jquery.flexslider.js');
+		$document->addStyleSheet(JUri::root(TRUE).'/media/com_doska/css/flexslider.css');
+
+		$script = "jQuery(window).load(function() {
+				  jQuery('.flexslider').flexslider({
+				    animation: 'slide',
+				    controlNav: 'thumbnails'
+				  });
+				});";
+
+		$document->addScriptDeclaration($script);
 	}
 }
