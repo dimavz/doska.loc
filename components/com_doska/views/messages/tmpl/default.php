@@ -24,13 +24,13 @@ JHtml::_('bootstrap.loadCss');
 
                 <p class="p_mess_cat">
                     <span><strong>Категория:</strong> <?php echo $item->category;?></span>
-                    <span><strong>Тип объявления:</strong><?php echo $item->type;?> </span>
-                    <span><strong>Город:</strong><?php echo $item->town;?> </span></p>
+                    <span><strong>Тип объявления:</strong> <?php echo $item->type;?> </span>
+                    <span><strong>Город:</strong> <?php echo $item->town;?> </span></p>
                 <p class="p_mess_cat">
-                    <span><strong>Дата добавления объявления:</strong><?php echo $item->publish_up;?></span>
-                    <span><strong>Дата снятия с публикации:</strong><?php echo $item->publish_down;?> </span>
-                    <span><strong>Цена:</strong><?php echo $item->price;?></span>
-                    <span><strong>Автор:</strong><?php echo $item->author_name;?> </span>
+                    <span><strong>Дата добавления объявления:</strong> <?php echo $item->publish_up;?></span>
+                    <span><strong>Дата снятия с публикации:</strong> <?php echo $item->publish_down;?> </span>
+                    <span><strong>Цена:</strong> <?php echo $item->price;?></span>
+                    <span><strong>Автор:</strong> <?php echo $item->author_name;?> </span>
                     <span><strong>Просмотров:</strong> <?php echo $item->hits; ?> </span>
                 </p>
                 <p><img class="mini_mess" src="<?php echo $this->params->get('img_path').'/'.$this->params->get('img_thumb').'/'.$item->images->img?>">
