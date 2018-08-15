@@ -1,6 +1,9 @@
 <?php
 defined('_JEXEC') or die();
 
+//Регистрация класса DoskaHelper
+JLoader::register('DoskaHelper',JPATH_ADMINISTRATOR.'/components/com_doska/helpers/doska.php');
+
 $controller = JControllerLegacy::getInstance('Doska');//DoskaController
 
 $input = JFactory::getApplication()->input;

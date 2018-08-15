@@ -17,4 +17,8 @@
 	height: 18px !important;
 }
 
+.icon-expired:before{
+	content: '\4b';
+}
+
 
