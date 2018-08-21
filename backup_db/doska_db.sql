@@ -11,7 +11,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Дамп структуры для таблица doska.jos_assets
-DROP TABLE IF EXISTS `jos_assets`;
 CREATE TABLE IF NOT EXISTS `jos_assets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
@@ -122,7 +121,6 @@ INSERT INTO `jos_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `tit
 
 
 -- Дамп структуры для таблица doska.jos_associations
-DROP TABLE IF EXISTS `jos_associations`;
 CREATE TABLE IF NOT EXISTS `jos_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The context of the associated item.',
@@ -138,7 +136,6 @@ DELETE FROM `jos_associations`;
 
 
 -- Дамп структуры для таблица doska.jos_banners
-DROP TABLE IF EXISTS `jos_banners`;
 CREATE TABLE IF NOT EXISTS `jos_banners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL DEFAULT '0',
@@ -189,7 +186,6 @@ DELETE FROM `jos_banners`;
 
 
 -- Дамп структуры для таблица doska.jos_banner_clients
-DROP TABLE IF EXISTS `jos_banner_clients`;
 CREATE TABLE IF NOT EXISTS `jos_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -217,7 +213,6 @@ DELETE FROM `jos_banner_clients`;
 
 
 -- Дамп структуры для таблица doska.jos_banner_tracks
-DROP TABLE IF EXISTS `jos_banner_tracks`;
 CREATE TABLE IF NOT EXISTS `jos_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) unsigned NOT NULL,
@@ -236,7 +231,6 @@ DELETE FROM `jos_banner_tracks`;
 
 
 -- Дамп структуры для таблица doska.jos_categories
-DROP TABLE IF EXISTS `jos_categories`;
 CREATE TABLE IF NOT EXISTS `jos_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -294,7 +288,6 @@ INSERT INTO `jos_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `leve
 
 
 -- Дамп структуры для таблица doska.jos_contact_details
-DROP TABLE IF EXISTS `jos_contact_details`;
 CREATE TABLE IF NOT EXISTS `jos_contact_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -357,7 +350,6 @@ DELETE FROM `jos_contact_details`;
 
 
 -- Дамп структуры для таблица doska.jos_content
-DROP TABLE IF EXISTS `jos_content`;
 CREATE TABLE IF NOT EXISTS `jos_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -410,7 +402,6 @@ INSERT INTO `jos_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `ful
 
 
 -- Дамп структуры для таблица doska.jos_contentitem_tag_map
-DROP TABLE IF EXISTS `jos_contentitem_tag_map`;
 CREATE TABLE IF NOT EXISTS `jos_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
@@ -433,7 +424,6 @@ INSERT INTO `jos_contentitem_tag_map` (`type_alias`, `core_content_id`, `content
 
 
 -- Дамп структуры для таблица doska.jos_content_frontpage
-DROP TABLE IF EXISTS `jos_content_frontpage`;
 CREATE TABLE IF NOT EXISTS `jos_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
@@ -447,7 +437,6 @@ DELETE FROM `jos_content_frontpage`;
 
 
 -- Дамп структуры для таблица doska.jos_content_rating
-DROP TABLE IF EXISTS `jos_content_rating`;
 CREATE TABLE IF NOT EXISTS `jos_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `rating_sum` int(10) unsigned NOT NULL DEFAULT '0',
@@ -463,7 +452,6 @@ DELETE FROM `jos_content_rating`;
 
 
 -- Дамп структуры для таблица doska.jos_content_types
-DROP TABLE IF EXISTS `jos_content_types`;
 CREATE TABLE IF NOT EXISTS `jos_content_types` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -498,7 +486,6 @@ INSERT INTO `jos_content_types` (`type_id`, `type_title`, `type_alias`, `table`,
 
 
 -- Дамп структуры для таблица doska.jos_core_log_searches
-DROP TABLE IF EXISTS `jos_core_log_searches`;
 CREATE TABLE IF NOT EXISTS `jos_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
@@ -511,7 +498,6 @@ DELETE FROM `jos_core_log_searches`;
 
 
 -- Дамп структуры для таблица doska.jos_doska_categories
-DROP TABLE IF EXISTS `jos_doska_categories`;
 CREATE TABLE IF NOT EXISTS `jos_doska_categories` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -545,7 +531,6 @@ INSERT INTO `jos_doska_categories` (`id`, `name`, `parentid`, `alias`, `state`, 
 
 
 -- Дамп структуры для таблица doska.jos_doska_post
-DROP TABLE IF EXISTS `jos_doska_post`;
 CREATE TABLE IF NOT EXISTS `jos_doska_post` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `introtext` text NOT NULL,
@@ -574,21 +559,20 @@ CREATE TABLE IF NOT EXISTS `jos_doska_post` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы doska.jos_doska_post: ~7 rows (приблизительно)
+-- Дамп данных таблицы doska.jos_doska_post: ~6 rows (приблизительно)
 DELETE FROM `jos_doska_post`;
 /*!40000 ALTER TABLE `jos_doska_post` DISABLE KEYS */;
 INSERT INTO `jos_doska_post` (`id`, `introtext`, `fulltext`, `title`, `text`, `id_user`, `id_categories`, `id_types`, `town`, `images`, `confirm`, `price`, `created`, `publish_up`, `publish_down`, `ordering`, `hits`, `metadesc`, `metakey`, `modified`, `alias`, `state`, `params`, `asset_id`) VALUES
-	(1, '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n', '\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 'Автомобиль Pegout', '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n<hr id="system-readmore" />\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 173, 16, 5, 'Минск', '{"img":"peugeot1.jpg","mini1":"peugeot2.jpg","mini2":"peugeot3.jpg","mini3":""}', '1', 36, '2018-07-23 11:59:39', '2018-08-16 11:59:39', '2018-08-24 11:41:53', 0, 0, 'продажа машины', 'машины', '0000-00-00 00:00:00', 'avtomobil-pegout', 1, '{"show_category":"","show_type":"","show_town":""}', 84),
+	(1, '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n', '\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 'Автомобиль Pegout', '<p><b>Peugeot</b> (<small>МФА <span class="ref-info" style="cursor: help;" title="на французском языке">(фр.)</span>:</small> <span class="IPA"><a title="Международный фонетический алфавит" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82">[pø.ʒo]</a></span>; произношение названия близко к «<i>пёжо́</i>», однако в русском языке закрепилась <a title="Французско-русская практическая транскрипция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%BE-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%86%D0%B8%D1%8F">транскрипция</a> «<i>пежо́</i>») — один из основных <a title="Франция" href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F">французских</a> производителей автомобилей, часть <a class="mw-redirect" title="PSA Peugeot Citroën" href="https://ru.wikipedia.org/wiki/PSA_Peugeot_Citro%C3%ABn">PSA Peugeot Citroën</a>. По данным 2007 года материнская компания PSA Peugeot Citroën является вторым по величине в <a title="Европа" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0">Европе</a> производителем автомобилей<sup id="cite_ref-oica.net_2-0" class="reference"><a href="https://ru.wikipedia.org/wiki/Peugeot#cite_note-oica.net-2">[2]</a></sup>.</p>\r\n<hr id="system-readmore" />\r\n<p>Это крупнейший в Европе производитель лёгких коммерческих автомобилей (18,8 % рынка) и лидер в производстве автомобилей с низким уровнем выхлопа (26,2 % рынка автомобилей, уровень выхлопа которых менее 130 г/км).</p>', 173, 16, 5, 'Минск', '{"img":"peugeot1.jpg","mini1":"peugeot2.jpg","mini2":"peugeot3.jpg","mini3":""}', '1', 36, '2018-07-23 11:59:39', '2018-08-16 11:59:39', '2018-08-24 11:41:53', 0, 1, 'продажа машины', 'машины', '0000-00-00 00:00:00', 'avtomobil-pegout', 1, '{"show_category":"","show_type":"","show_town":""}', 84),
 	(2, '', '', 'Телевизор LG', '', 173, 4, 3, 'Могилёв', '{"img":"televizor.jpg","mini1":"televizor2.jpg","mini2":"televizor3.jpg","mini3":""}', '1', 350, '2018-07-25 08:34:55', '2018-08-17 08:34:55', '2018-08-24 11:41:16', 0, 6, '', '', '0000-00-00 00:00:00', 'televizor-lg', 1, '{"show_category":"1","show_type":"","show_town":""}', 82),
-	(3, '', '', 'Горный велосипед ', '', 173, 8, 3, 'Киев', '{"img":"velosiped.jpg","mini1":"velosiped2.jpg","mini2":"velosiped3.jpg","mini3":""}', '1', 354, '2018-08-02 07:26:37', '2018-08-17 07:26:37', '2018-08-24 11:40:52', 0, 14, 'Мета описание', 'Меда слова', '0000-00-00 00:00:00', 'gornyj-velosiped', 1, '{"show_category":"0","show_type":"","show_town":""}', 83),
+	(3, '', '', 'Горный велосипед ', '', 173, 8, 3, 'Киев', '{"img":"velosiped.jpg","mini1":"velosiped2.jpg","mini2":"velosiped3.jpg","mini3":""}', '1', 354, '2018-08-02 07:26:37', '2018-08-17 07:26:37', '2018-08-24 11:40:52', 0, 16, 'Мета описание', 'Меда слова', '0000-00-00 00:00:00', 'gornyj-velosiped', 1, '{"show_category":"0","show_type":"","show_town":""}', 83),
 	(4, '<p>Куплю тренажёр</p>', '', 'Велотренажёр', '<p>Куплю тренажёр</p>', 173, 14, 3, 'Борисов', '{"img":"velo.jpg","mini1":"velo2.jpg","mini2":"","mini3":""}', '1', 133, '2018-08-06 12:43:43', '2018-08-16 12:43:43', '2018-08-24 11:40:32', 0, 0, '', '', '0000-00-00 00:00:00', 'velotrenazhjor', 1, '{"show_category":"0","show_type":"","show_town":""}', 89),
-	(5, '', '', 'Мотоцикл Иж-Юпитер', '', 173, 7, 3, 'Могилёв', '{"img":"yupiter1.jpg","mini1":"yupiter4.jpg","mini2":"yupiter3.jpg","mini3":""}', '1', 245, '2018-08-07 07:00:36', '2018-08-16 07:00:36', '2018-08-24 11:44:01', 0, 2, '', '', '0000-00-00 00:00:00', 'mototsikl-izh-yupiter', 1, '{"show_category":"","show_type":"","show_town":""}', 90),
-	(6, '<p>Предварительная версия объявления</p>\r\n', '\r\n<p>Полная версия объявления</p>', 'Объявление User', '<p>Предварительная версия объявления</p>\r\n<hr id="system-readmore" />\r\n<p>Полная версия объявления</p>', 174, 16, 3, 'Борисов', '{"img":"avto1.jpg","mini1":"avto3.jpg","mini2":"","mini3":""}', '1', 323, '2018-08-20 14:02:55', '2018-08-20 14:02:55', '2018-08-27 14:02:55', 0, 1, '', '', '0000-00-00 00:00:00', 'ob-yavlenie-user', 1, '{"show_category":"","show_type":"","show_town":""}', 93);
+	(5, '', '', 'Мотоцикл Иж-Юпитер', '', 173, 7, 3, 'Могилёв', '{"img":"yupiter1.jpg","mini1":"yupiter4.jpg","mini2":"yupiter3.jpg","mini3":""}', '1', 245, '2018-08-07 07:00:36', '2018-08-16 07:00:36', '2018-08-24 11:44:01', 0, 4, '', '', '0000-00-00 00:00:00', 'mototsikl-izh-yupiter', 1, '{"show_category":"","show_type":"","show_town":""}', 90),
+	(6, '<p>Предварительная версия объявления</p>\r\n', '\r\n<p>Полная версия объявления</p>', 'Объявление User', '<p>Предварительная версия объявления</p>\r\n<hr id="system-readmore" />\r\n<p>Полная версия объявления</p>', 174, 16, 3, 'Борисов', '{"img":"avto1.jpg","mini1":"avto3.jpg","mini2":"","mini3":""}', '1', 323, '2018-08-20 14:02:55', '2018-08-20 14:02:55', '2018-08-27 14:02:55', 0, 4, '', '', '0000-00-00 00:00:00', 'ob-yavlenie-user', 1, '{"show_category":"","show_type":"","show_town":""}', 93);
 /*!40000 ALTER TABLE `jos_doska_post` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица doska.jos_doska_types
-DROP TABLE IF EXISTS `jos_doska_types`;
 CREATE TABLE IF NOT EXISTS `jos_doska_types` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -612,7 +596,6 @@ INSERT INTO `jos_doska_types` (`id`, `name`, `alias`, `state`, `asset_id`) VALUE
 
 
 -- Дамп структуры для таблица doska.jos_extensions
-DROP TABLE IF EXISTS `jos_extensions`;
 CREATE TABLE IF NOT EXISTS `jos_extensions` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Parent package ID for extensions installed as a package.',
@@ -769,9 +752,9 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1534753504}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '', '{"lastrun":1534851800}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1534773608,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '', '{"mode":1,"lastrun":1534855209,"unique_id":"713c198589bf63b8a97bba2adf382b45305cfd42","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'plg_installer_folderinstaller', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'plg_installer_urlinstaller', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -814,7 +797,6 @@ INSERT INTO `jos_extensions` (`extension_id`, `package_id`, `name`, `type`, `ele
 
 
 -- Дамп структуры для таблица doska.jos_fields
-DROP TABLE IF EXISTS `jos_fields`;
 CREATE TABLE IF NOT EXISTS `jos_fields` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -856,7 +838,6 @@ DELETE FROM `jos_fields`;
 
 
 -- Дамп структуры для таблица doska.jos_fields_categories
-DROP TABLE IF EXISTS `jos_fields_categories`;
 CREATE TABLE IF NOT EXISTS `jos_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT '0',
   `category_id` int(11) NOT NULL DEFAULT '0',
@@ -870,7 +851,6 @@ DELETE FROM `jos_fields_categories`;
 
 
 -- Дамп структуры для таблица doska.jos_fields_groups
-DROP TABLE IF EXISTS `jos_fields_groups`;
 CREATE TABLE IF NOT EXISTS `jos_fields_groups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -905,7 +885,6 @@ DELETE FROM `jos_fields_groups`;
 
 
 -- Дамп структуры для таблица doska.jos_fields_values
-DROP TABLE IF EXISTS `jos_fields_values`;
 CREATE TABLE IF NOT EXISTS `jos_fields_values` (
   `field_id` int(10) unsigned NOT NULL,
   `item_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
@@ -921,7 +900,6 @@ DELETE FROM `jos_fields_values`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_filters
-DROP TABLE IF EXISTS `jos_finder_filters`;
 CREATE TABLE IF NOT EXISTS `jos_finder_filters` (
   `filter_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -947,7 +925,6 @@ DELETE FROM `jos_finder_filters`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links
-DROP TABLE IF EXISTS `jos_finder_links`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) NOT NULL,
@@ -984,7 +961,6 @@ DELETE FROM `jos_finder_links`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms0
-DROP TABLE IF EXISTS `jos_finder_links_terms0`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms0` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1001,7 +977,6 @@ DELETE FROM `jos_finder_links_terms0`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms1
-DROP TABLE IF EXISTS `jos_finder_links_terms1`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms1` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1018,7 +993,6 @@ DELETE FROM `jos_finder_links_terms1`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms2
-DROP TABLE IF EXISTS `jos_finder_links_terms2`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms2` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1035,7 +1009,6 @@ DELETE FROM `jos_finder_links_terms2`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms3
-DROP TABLE IF EXISTS `jos_finder_links_terms3`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms3` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1052,7 +1025,6 @@ DELETE FROM `jos_finder_links_terms3`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms4
-DROP TABLE IF EXISTS `jos_finder_links_terms4`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms4` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1069,7 +1041,6 @@ DELETE FROM `jos_finder_links_terms4`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms5
-DROP TABLE IF EXISTS `jos_finder_links_terms5`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms5` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1086,7 +1057,6 @@ DELETE FROM `jos_finder_links_terms5`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms6
-DROP TABLE IF EXISTS `jos_finder_links_terms6`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms6` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1103,7 +1073,6 @@ DELETE FROM `jos_finder_links_terms6`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms7
-DROP TABLE IF EXISTS `jos_finder_links_terms7`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms7` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1120,7 +1089,6 @@ DELETE FROM `jos_finder_links_terms7`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms8
-DROP TABLE IF EXISTS `jos_finder_links_terms8`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms8` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1137,7 +1105,6 @@ DELETE FROM `jos_finder_links_terms8`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_terms9
-DROP TABLE IF EXISTS `jos_finder_links_terms9`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_terms9` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1154,7 +1121,6 @@ DELETE FROM `jos_finder_links_terms9`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termsa
-DROP TABLE IF EXISTS `jos_finder_links_termsa`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsa` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1171,7 +1137,6 @@ DELETE FROM `jos_finder_links_termsa`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termsb
-DROP TABLE IF EXISTS `jos_finder_links_termsb`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsb` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1188,7 +1153,6 @@ DELETE FROM `jos_finder_links_termsb`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termsc
-DROP TABLE IF EXISTS `jos_finder_links_termsc`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsc` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1205,7 +1169,6 @@ DELETE FROM `jos_finder_links_termsc`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termsd
-DROP TABLE IF EXISTS `jos_finder_links_termsd`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsd` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1222,7 +1185,6 @@ DELETE FROM `jos_finder_links_termsd`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termse
-DROP TABLE IF EXISTS `jos_finder_links_termse`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termse` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1239,7 +1201,6 @@ DELETE FROM `jos_finder_links_termse`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_links_termsf
-DROP TABLE IF EXISTS `jos_finder_links_termsf`;
 CREATE TABLE IF NOT EXISTS `jos_finder_links_termsf` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1256,7 +1217,6 @@ DELETE FROM `jos_finder_links_termsf`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_taxonomy
-DROP TABLE IF EXISTS `jos_finder_taxonomy`;
 CREATE TABLE IF NOT EXISTS `jos_finder_taxonomy` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1281,7 +1241,6 @@ INSERT INTO `jos_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `access`
 
 
 -- Дамп структуры для таблица doska.jos_finder_taxonomy_map
-DROP TABLE IF EXISTS `jos_finder_taxonomy_map`;
 CREATE TABLE IF NOT EXISTS `jos_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
   `node_id` int(10) unsigned NOT NULL,
@@ -1297,7 +1256,6 @@ DELETE FROM `jos_finder_taxonomy_map`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_terms
-DROP TABLE IF EXISTS `jos_finder_terms`;
 CREATE TABLE IF NOT EXISTS `jos_finder_terms` (
   `term_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `term` varchar(75) NOT NULL,
@@ -1322,7 +1280,6 @@ DELETE FROM `jos_finder_terms`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_terms_common
-DROP TABLE IF EXISTS `jos_finder_terms_common`;
 CREATE TABLE IF NOT EXISTS `jos_finder_terms_common` (
   `term` varchar(75) NOT NULL,
   `language` varchar(3) NOT NULL,
@@ -1448,7 +1405,6 @@ INSERT INTO `jos_finder_terms_common` (`term`, `language`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_finder_tokens
-DROP TABLE IF EXISTS `jos_finder_tokens`;
 CREATE TABLE IF NOT EXISTS `jos_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
@@ -1468,7 +1424,6 @@ DELETE FROM `jos_finder_tokens`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_tokens_aggregate
-DROP TABLE IF EXISTS `jos_finder_tokens_aggregate`;
 CREATE TABLE IF NOT EXISTS `jos_finder_tokens_aggregate` (
   `term_id` int(10) unsigned NOT NULL,
   `map_suffix` char(1) NOT NULL,
@@ -1492,7 +1447,6 @@ DELETE FROM `jos_finder_tokens_aggregate`;
 
 
 -- Дамп структуры для таблица doska.jos_finder_types
-DROP TABLE IF EXISTS `jos_finder_types`;
 CREATE TABLE IF NOT EXISTS `jos_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
@@ -1508,7 +1462,6 @@ DELETE FROM `jos_finder_types`;
 
 
 -- Дамп структуры для таблица doska.jos_languages
-DROP TABLE IF EXISTS `jos_languages`;
 CREATE TABLE IF NOT EXISTS `jos_languages` (
   `lang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1541,7 +1494,6 @@ INSERT INTO `jos_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `title
 
 
 -- Дамп структуры для таблица doska.jos_menu
-DROP TABLE IF EXISTS `jos_menu`;
 CREATE TABLE IF NOT EXISTS `jos_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of menu this item belongs to. FK to jos_menu_types.menutype',
@@ -1622,7 +1574,6 @@ INSERT INTO `jos_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `lin
 
 
 -- Дамп структуры для таблица doska.jos_menu_types
-DROP TABLE IF EXISTS `jos_menu_types`;
 CREATE TABLE IF NOT EXISTS `jos_menu_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1644,7 +1595,6 @@ INSERT INTO `jos_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descriptio
 
 
 -- Дамп структуры для таблица doska.jos_messages
-DROP TABLE IF EXISTS `jos_messages`;
 CREATE TABLE IF NOT EXISTS `jos_messages` (
   `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_from` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1666,7 +1616,6 @@ DELETE FROM `jos_messages`;
 
 
 -- Дамп структуры для таблица doska.jos_messages_cfg
-DROP TABLE IF EXISTS `jos_messages_cfg`;
 CREATE TABLE IF NOT EXISTS `jos_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1681,7 +1630,6 @@ DELETE FROM `jos_messages_cfg`;
 
 
 -- Дамп структуры для таблица doska.jos_modules
-DROP TABLE IF EXISTS `jos_modules`;
 CREATE TABLE IF NOT EXISTS `jos_modules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the jos_assets table.',
@@ -1737,7 +1685,6 @@ INSERT INTO `jos_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orderi
 
 
 -- Дамп структуры для таблица doska.jos_modules_menu
-DROP TABLE IF EXISTS `jos_modules_menu`;
 CREATE TABLE IF NOT EXISTS `jos_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
@@ -1776,7 +1723,6 @@ INSERT INTO `jos_modules_menu` (`moduleid`, `menuid`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_newsfeeds
-DROP TABLE IF EXISTS `jos_newsfeeds`;
 CREATE TABLE IF NOT EXISTS `jos_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT '0',
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1825,7 +1771,6 @@ DELETE FROM `jos_newsfeeds`;
 
 
 -- Дамп структуры для таблица doska.jos_overrider
-DROP TABLE IF EXISTS `jos_overrider`;
 CREATE TABLE IF NOT EXISTS `jos_overrider` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `constant` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1841,7 +1786,6 @@ DELETE FROM `jos_overrider`;
 
 
 -- Дамп структуры для таблица doska.jos_postinstall_messages
-DROP TABLE IF EXISTS `jos_postinstall_messages`;
 CREATE TABLE IF NOT EXISTS `jos_postinstall_messages` (
   `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to jos_extensions',
@@ -1874,7 +1818,6 @@ INSERT INTO `jos_postinstall_messages` (`postinstall_message_id`, `extension_id`
 
 
 -- Дамп структуры для таблица doska.jos_redirect_links
-DROP TABLE IF EXISTS `jos_redirect_links`;
 CREATE TABLE IF NOT EXISTS `jos_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `old_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1898,7 +1841,6 @@ DELETE FROM `jos_redirect_links`;
 
 
 -- Дамп структуры для таблица doska.jos_schemas
-DROP TABLE IF EXISTS `jos_schemas`;
 CREATE TABLE IF NOT EXISTS `jos_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1914,7 +1856,6 @@ INSERT INTO `jos_schemas` (`extension_id`, `version_id`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_session
-DROP TABLE IF EXISTS `jos_session`;
 CREATE TABLE IF NOT EXISTS `jos_session` (
   `session_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` tinyint(3) unsigned DEFAULT NULL,
@@ -1932,15 +1873,14 @@ CREATE TABLE IF NOT EXISTS `jos_session` (
 DELETE FROM `jos_session`;
 /*!40000 ALTER TABLE `jos_session` DISABLE KEYS */;
 INSERT INTO `jos_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	('j1tekkmgf6f06m4psao1ja5og1', 0, 0, '1534774861', 'joomla|s:1480:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo1ODtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1MzQ3NTM1MDM7czo0OiJsYXN0IjtpOjE1MzQ3NzQ4NjA7czozOiJub3ciO2k6MTUzNDc3NDg2MTt9czo1OiJ0b2tlbiI7czozMjoia1RZYUYzZVZKd2hXcTB6dmxJeTZJekhGVHk3bTk2YW8iO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo1OiJ1c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJsb2dpbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJmb3JtIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImRhdGEiO2E6MDp7fXM6NjoicmV0dXJuIjtzOjIwOiJpbmRleC5waHA/SXRlbWlkPTEwMSI7fX19czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjI6e3M6ODoibWVzc2FnZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3JkZXJjb2wiO3M6MjoiaWQiO31zOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6NzoibWVzc2FnZSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJkYXRhIjtOO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjE3NCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319czo5OiJjb21fbWVkaWEiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InJldHVybl91cmwiO3M6MTE1OiJpbmRleC5waHA/b3B0aW9uPWNvbV9tZWRpYSZ2aWV3PWltYWdlcyZ0bXBsPWNvbXBvbmVudCZmaWVsZGlkPWpmb3JtX2ltYWdlc19taW5pMSZlX25hbWU9JmFzc2V0PTkzJmF1dGhvcj1jcmVhdGVkX2J5Ijt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 174, 'user'),
+	('163rqlrvslckd1gm408j5g2827', 1, 1, '1534864110', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6IjU4T2kyTGZoY1hpQmhraWljbnlBUVh0UDdUZEFtRVBLIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
 	('jf585dmfvo0thlfpdjsquda4g7', 1, 1, '1533824139', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6IjJDNThrQ0pqR25Cdlp0QnFrUE5mbmd5ZlQ0M3ZTd2RHIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
-	('jo5ogochos4qpbq77fchft9oj3', 1, 0, '1534773786', 'joomla|s:936:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyOTtzOjU6InRva2VuIjtzOjMyOiI5YTEzTE1vT2xlU2h6dzlmYmlzbWFpTFRiaDVCMHRMOSI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTM0NzU3MTM0O3M6NDoibGFzdCI7aToxNTM0NzczNzg2O3M6Mzoibm93IjtpOjE1MzQ3NzM3ODY7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6ImNhdGVnb3JpZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3JkZXJjb2wiO047fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiIxNzMiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 173, 'Admin'),
-	('k83fh62m1cf14ji7eltavqpbi4', 1, 1, '1534325237', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6InVHcjA1amxadU5RaFNjQUNqaTMydG1wcWRQZ0RFQkp2Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, '');
+	('k83fh62m1cf14ji7eltavqpbi4', 1, 1, '1534325237', 'joomla|s:596:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6InVHcjA1amxadU5RaFNjQUNqaTMydG1wcWRQZ0RFQkp2Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
+	('vitmna9a2u2f8hu3ngcs2c4bo1', 0, 1, '1534863828', 'joomla|s:936:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyODtzOjU6InRva2VuIjtzOjMyOiJLYTFRR0xFYW1UeXFDVDNpaGtJRlhIa1VHY3hVamZXRSI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTM0ODU3MTQxO3M6NDoibGFzdCI7aToxNTM0ODYzODA5O3M6Mzoibm93IjtpOjE1MzQ4NjM4Mjg7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJjb21fZG9za2EiO086ODoic3RkQ2xhc3MiOjI6e3M6ODoibWVzc2FnZXMiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3JkZXJjb2wiO3M6MjoiaWQiO31zOjg6ImNhdGVnb3J5IjtPOjg6InN0ZENsYXNzIjoxOntzOjg6Im9yZGVyY29sIjtzOjI6ImlkIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, '');
 /*!40000 ALTER TABLE `jos_session` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица doska.jos_tags
-DROP TABLE IF EXISTS `jos_tags`;
 CREATE TABLE IF NOT EXISTS `jos_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1992,7 +1932,6 @@ INSERT INTO `jos_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title
 
 
 -- Дамп структуры для таблица doska.jos_template_styles
-DROP TABLE IF EXISTS `jos_template_styles`;
 CREATE TABLE IF NOT EXISTS `jos_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2018,7 +1957,6 @@ INSERT INTO `jos_template_styles` (`id`, `template`, `client_id`, `home`, `title
 
 
 -- Дамп структуры для таблица doska.jos_ucm_base
-DROP TABLE IF EXISTS `jos_ucm_base`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
   `ucm_item_id` int(10) NOT NULL,
@@ -2039,7 +1977,6 @@ INSERT INTO `jos_ucm_base` (`ucm_id`, `ucm_item_id`, `ucm_type_id`, `ucm_languag
 
 
 -- Дамп структуры для таблица doska.jos_ucm_content
-DROP TABLE IF EXISTS `jos_ucm_content`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_content` (
   `core_content_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `core_type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
@@ -2097,7 +2034,6 @@ INSERT INTO `jos_ucm_content` (`core_content_id`, `core_type_alias`, `core_title
 
 
 -- Дамп структуры для таблица doska.jos_ucm_history
-DROP TABLE IF EXISTS `jos_ucm_history`;
 CREATE TABLE IF NOT EXISTS `jos_ucm_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ucm_item_id` int(10) unsigned NOT NULL,
@@ -2129,7 +2065,6 @@ INSERT INTO `jos_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `vers
 
 
 -- Дамп структуры для таблица doska.jos_updates
-DROP TABLE IF EXISTS `jos_updates`;
 CREATE TABLE IF NOT EXISTS `jos_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
   `update_site_id` int(11) DEFAULT '0',
@@ -2155,7 +2090,6 @@ DELETE FROM `jos_updates`;
 
 
 -- Дамп структуры для таблица doska.jos_update_sites
-DROP TABLE IF EXISTS `jos_update_sites`;
 CREATE TABLE IF NOT EXISTS `jos_update_sites` (
   `update_site_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
@@ -2171,14 +2105,13 @@ CREATE TABLE IF NOT EXISTS `jos_update_sites` (
 DELETE FROM `jos_update_sites`;
 /*!40000 ALTER TABLE `jos_update_sites` DISABLE KEYS */;
 INSERT INTO `jos_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1534753524, ''),
-	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1534505526, ''),
-	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1534505546, '');
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1534857157, ''),
+	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1534857177, ''),
+	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1534857197, '');
 /*!40000 ALTER TABLE `jos_update_sites` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица doska.jos_update_sites_extensions
-DROP TABLE IF EXISTS `jos_update_sites_extensions`;
 CREATE TABLE IF NOT EXISTS `jos_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
@@ -2197,7 +2130,6 @@ INSERT INTO `jos_update_sites_extensions` (`update_site_id`, `extension_id`) VAL
 
 
 -- Дамп структуры для таблица doska.jos_usergroups
-DROP TABLE IF EXISTS `jos_usergroups`;
 CREATE TABLE IF NOT EXISTS `jos_usergroups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
@@ -2228,7 +2160,6 @@ INSERT INTO `jos_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_users
-DROP TABLE IF EXISTS `jos_users`;
 CREATE TABLE IF NOT EXISTS `jos_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2257,13 +2188,12 @@ CREATE TABLE IF NOT EXISTS `jos_users` (
 DELETE FROM `jos_users`;
 /*!40000 ALTER TABLE `jos_users` DISABLE KEYS */;
 INSERT INTO `jos_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-08-20 14:00:07', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0),
+	(173, 'Super User', 'Admin', 'zatulenko@gmail.com', '$2y$10$uZuq6HY9rXyxSVV5o93J3.9o.a5xOr0HfPHzU/03lsVzfFVlJIs42', 0, 1, '2018-06-25 11:21:27', '2018-08-21 12:40:08', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(174, 'User', 'user', 'user@mail.ru', '$2y$10$BZWBG53.4h.fvFWhC0usQe6ucb1k1huBBBkB3YEBEjwNmsVier5Hi', 0, 0, '2018-08-01 06:51:52', '2018-08-20 14:00:43', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `jos_users` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица doska.jos_user_keys
-DROP TABLE IF EXISTS `jos_user_keys`;
 CREATE TABLE IF NOT EXISTS `jos_user_keys` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2286,7 +2216,6 @@ DELETE FROM `jos_user_keys`;
 
 
 -- Дамп структуры для таблица doska.jos_user_notes
-DROP TABLE IF EXISTS `jos_user_notes`;
 CREATE TABLE IF NOT EXISTS `jos_user_notes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2315,7 +2244,6 @@ DELETE FROM `jos_user_notes`;
 
 
 -- Дамп структуры для таблица doska.jos_user_profiles
-DROP TABLE IF EXISTS `jos_user_profiles`;
 CREATE TABLE IF NOT EXISTS `jos_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2331,7 +2259,6 @@ DELETE FROM `jos_user_profiles`;
 
 
 -- Дамп структуры для таблица doska.jos_user_usergroup_map
-DROP TABLE IF EXISTS `jos_user_usergroup_map`;
 CREATE TABLE IF NOT EXISTS `jos_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to jos_users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to jos_usergroups.id',
@@ -2349,7 +2276,6 @@ INSERT INTO `jos_user_usergroup_map` (`user_id`, `group_id`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_utf8_conversion
-DROP TABLE IF EXISTS `jos_utf8_conversion`;
 CREATE TABLE IF NOT EXISTS `jos_utf8_conversion` (
   `converted` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2363,7 +2289,6 @@ INSERT INTO `jos_utf8_conversion` (`converted`) VALUES
 
 
 -- Дамп структуры для таблица doska.jos_viewlevels
-DROP TABLE IF EXISTS `jos_viewlevels`;
 CREATE TABLE IF NOT EXISTS `jos_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
