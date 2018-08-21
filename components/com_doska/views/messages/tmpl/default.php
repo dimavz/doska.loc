@@ -16,7 +16,10 @@ JHtml::_('bootstrap.loadCss');
 		<?php foreach($this->items as  $item) :?>
             <div class="t_mess">
                 <h4 class="title_p_mess">
-					<?php $link = 'index.php?option=com_doska&view=message&id='.$item->id?>
+					<?php // $link = 'index.php?option=com_doska&view=message&id='.$item->id  // Старый способ формирования ссылки?>
+					<?php $link = DoskaRoute::getMessageRoute($item->slug,$item->catslug, $item->typeslug );
+                    echo $link;
+                    ?>
                     <a href="<?php echo $link;?>">
 						<?php echo $item->title;?>
                     </a>
