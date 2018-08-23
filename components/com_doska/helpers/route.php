@@ -18,11 +18,11 @@ abstract class DoskaRoute {
 		$link .='&id='.$id;
 
 		if(!empty($catid)) {
-			$link .= '&idcat = '.$catid;
+			$link .= '&idcat='.$catid;
 		}
 
 		if(!empty($type)) {
-			$link .= '&idt = '.$type;
+			$link .= '&idt='.$type;
 		}
 
 		$menu = JFactory::getApplication()->getMenu('site');
@@ -103,7 +103,7 @@ abstract class DoskaRoute {
 
 		list($cid,$calias) = explode(':',$catid);
 
-		$link .= 'index.php?option=com_doska&view='.$view.'&idcat=' . $catid;
+		$link .= 'index.php?option=com_doska&view='.$view.'&idcat='.$catid;
 
 		$menu		= JFactory::getApplication()->getMenu('site');
 		$component  = JComponentHelper::getComponent('com_doska');
@@ -141,7 +141,7 @@ abstract class DoskaRoute {
 
 		list($t_id,$t_alias) = explode(':',$typeid);
 
-		$link .= 'index.php?option=com_doska&view='.$view.'&idt=' . $typeid;
+		$link .= 'index.php?option=com_doska&view='.$view.'&idt='.$typeid;
 
 		$menu		= JFactory::getApplication()->getMenu('site');
 		$component  = JComponentHelper::getComponent('com_doska');
@@ -172,7 +172,7 @@ abstract class DoskaRoute {
 		$view = 'messages';
 		$link = '';
 
-		$link .= 'index.php?option=com_doska&view='.$view.'&filter_'.$filter_type.'=' . $val;
+		$link .= 'index.php?option=com_doska&view='.$view.'&filter_'.$filter_type.'='.$val;
 
 		return $link;
 	}
