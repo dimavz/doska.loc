@@ -4,7 +4,6 @@ defined('_JEXEC') or die;
 class DoskaModelMessage extends JModelItem
 {
 
-
 	protected function populateState()
 	{
 		$app = JFactory::getApplication();

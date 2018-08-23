@@ -8,7 +8,8 @@ defined('_JEXEC') or die;
 //index.php?option=com_doska&view=message&id=id:alias
 abstract class DoskaRoute {
 
-	// slug == id:alias
+
+	// slug id:alias
 	public static  function getMessageRoute($id,$catid = 0, $type = 0) {
 		$link = '';
 		$view = 'message';
@@ -66,7 +67,10 @@ abstract class DoskaRoute {
 							$link_t = '&Itemid='.$item->id;
 						}
 					}
+
 				}
+
+
 			}
 
 			if($link_m) {
@@ -92,4 +96,86 @@ abstract class DoskaRoute {
 		$link .= '&Itemid='.$menu->getDefault()->id;
 		return $link;
 	}
+
+	public static function getCategoryRoute($catid = 0) {
+		$view = 'messages';
+		$link = '';
+
+		list($cid,$calias) = explode(':',$catid);
+
+		$link .= 'index.php?option=com_doska&view='.$view.'&idcat=' . $catid;
+
+		$menu		= JFactory::getApplication()->getMenu('site');
+		$component  = JComponentHelper::getComponent('com_doska');
+
+		$attributes = array('component_id');
+		$values     = array($component->id);
+
+		$items = $menu->getItems($attributes, $values); // Элементы меню
+
+		if(!empty($items) && is_array($items)) {
+			foreach($items as $item) {
+				if (isset($item->query) && isset($item->query['view']))	{
+
+					if($item->query['view'] == $view) {
+						if($item->query['idcat'] == $cid) {
+							$link .= '&Itemid=' . $item->id;
+							return $link;
+						}
+
+					}
+				}
+			}
+		}
+
+		$link .= '&Itemid='.$menu->getDefault()->id;
+		return $link;
+
+	}
+
+	public static function getTypeRoute($typeid = 0)	{
+
+		$view = 'messages';
+		$link = '';
+		// Create the link
+
+		list($t_id,$t_alias) = explode(':',$typeid);
+
+		$link .= 'index.php?option=com_doska&view='.$view.'&idt=' . $typeid;
+
+		$menu		= JFactory::getApplication()->getMenu('site');
+		$component  = JComponentHelper::getComponent('com_doska');
+
+		$attributes = array('component_id');
+		$values     = array($component->id);
+
+		$items = $menu->getItems($attributes, $values);
+		if(!empty($items) && is_array($items)) {
+			foreach($items as $item) {
+				if (isset($item->query) && isset($item->query['view']))	{
+					if($item->query['view'] == $view) {
+						if($item->query['idt'] == $t_id) {
+							$link .= '&Itemid=' . $item->id;
+							return $link;
+						}
+					}
+				}
+			}
+		}
+
+		$link .= '&Itemid='.$menu->getDefault()->id;
+		return $link;
+	}
+
+	public static function getFilterRoute($filter_type,$val)
+	{
+		$view = 'messages';
+		$link = '';
+
+		$link .= 'index.php?option=com_doska&view='.$view.'&filter_'.$filter_type.'=' . $val;
+
+		return $link;
+	}
+
+
 }

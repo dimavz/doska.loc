@@ -23,7 +23,7 @@ class DoskaViewMessages extends JViewLegacy {
 		$this->state = $this->get('State');//getState()
 		$this->params = JFactory::getApplication()->getParams();
 
-//		print_r($this->state);
+//		print_r($items);
 //		exit();
 
 		if(is_array($items)) {
@@ -36,7 +36,7 @@ class DoskaViewMessages extends JViewLegacy {
 				}
 
 				if($item->id_types && $item->typealias){
-					$item->catslug = $item->id_types.':'.$item->typealias;
+					$item->typeslug = $item->id_types.':'.$item->typealias;
 				}
 
 				$item->images = json_decode($item->images);
