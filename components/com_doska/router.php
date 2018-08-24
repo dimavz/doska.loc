@@ -1,15 +1,17 @@
 <?php
 defined('_JEXEC') or die;
 
+
 class DoskaRouter extends JComponentRouterBase {
+
 
 	public function build(&$query) {
 
 		$segments = array();
 
-//		echo '<pre>';
-//		print_r($query);
-//		echo '</pre>';
+		/*echo '<pre>';
+		print_r($query);
+		echo '</pre>';*/
 
 		if(!empty($query['Itemid'])) {
 			$menuItem = $this->menu->getItem($query['Itemid']);
@@ -43,6 +45,8 @@ class DoskaRouter extends JComponentRouterBase {
 			if(isset($query['filter_town'])) {
 				unset($query['filter_town']);
 			}
+
+
 			return $segments;
 		}
 
@@ -63,6 +67,66 @@ class DoskaRouter extends JComponentRouterBase {
 
 			//[option] => com_doska, [Itemid] => 231, array()
 			return $segments;
+
+
+		}
+		//edit message  from fronted
+		if($menuItem && $menuItem->query['view'] == $query['view']) {
+			if(empty($query['idcat']) && empty($query['idt'])) {
+
+				//menuItem?id = 7
+				unset($query['view']);
+				if(isset($query['layout'])) {
+					unset($query['layout']);
+					return $segments;
+				}
+			}
+		}
+
+		if($menuItem && ($menuItem->query['idcat'] || $menuItem->query['idt'] )) {
+
+			unset($query['view']);
+
+			if(isset($query['idcat'])) {
+				list($catid,$catalias) = explode(':',$query['idcat']);
+			}
+
+			if(isset($query['idt'])) {
+				list($typeid,$typealias) = explode(':',$query['idt']);
+			}
+
+			if($menuItem->query['idcat'] == $catid) {
+				unset($query['idcat']);
+
+				if(isset($query['idt'])) {
+					unset($query['idt']);
+				}
+
+				if(isset($query['id'])) {
+					$id = explode(':',$query['id']);
+					$segments[] = $id[0].'-'.$id[1];
+					unset($query['id']);
+				}
+
+				return $segments;
+
+			}
+
+			if($menuItem->query['idt'] == $typeid) {
+				unset($query['idt']);
+				if(isset($query['idcat'])) {
+					unset($query['idcat']);
+				}
+
+				if(isset($query['id'])) {
+					$id = explode(':',$query['id']);
+					$segments[] = $id[0].'-'.$id[1];
+					unset($query['id']);
+				}
+
+				return $segments;
+			}
+
 		}
 		return $segments;
 	}
