@@ -65,7 +65,7 @@ JHtml::_('behavior.framework'); // Подключение библиотеки m
 
 					if ($canEdit)
 					{
-						$link = JRoute::_('index.php?option=com_doska&view=form&layout=edit&Itemid=238&id=' . $val->id);
+						$link = JRoute::_('index.php?option=com_doska&view=form&layout=edit&Itemid='.$val->Itemid.'&id=' . $val->id);
 					}
 					?>
                     <tr>
