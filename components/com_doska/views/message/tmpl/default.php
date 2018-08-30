@@ -30,7 +30,7 @@ JHtml::_('jquery.framework');
 
 			<?php foreach ($images as $img) : ?>
 				<?php if (!empty($img)) : ?>
-                    <li data-thumb="<?php echo $this->item->params->get('img_path') . '/' . $this->item->params->get('img_thumb') . '/' . $img ?>">
+                    <li data-thumb="<?php echo JUri::base('TRUE').'/'.$this->item->params->get('img_path') . '/' . $this->item->params->get('img_thumb') . '/' . $img ?>">
                         <img src="<?php echo $this->item->params->get('img_path') . '/' . $img ?>">
                     </li>
 				<?php endif; ?>
